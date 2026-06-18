@@ -1,0 +1,3824 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "hyperedge_page_composition_home",
+        "label": "Home page section composition",
+        "nodes": [
+          "app_page_home",
+          "components_hero_hero",
+          "components_downloadsection_downloadsection",
+          "components_thunderdivider_thunderdivider",
+          "components_featuregrid_featuregrid",
+          "components_historytimeline_historytimeline",
+          "components_apkarchivetable_apkarchivetable",
+          "components_faqaccordion_faqaccordion",
+          "components_disclaimer_disclaimer"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "app/page.tsx"
+      },
+      {
+        "id": "hyperedge_shared_pattern_bg",
+        "label": "Sections sharing pattern.svg CSS mask background",
+        "nodes": [
+          "components_disclaimer_disclaimer",
+          "components_trustbar_trustbar",
+          "components_downloadsection_downloadsection",
+          "components_featuregrid_featuregrid",
+          "components_historytimeline_historytimeline",
+          "components_faqaccordion_faqaccordion",
+          "components_apkarchivetable_apkarchivetable",
+          "public_background_pattern_pattern"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "components/Disclaimer.tsx"
+      },
+      {
+        "id": "hyperedge_apkrelease_data_flow",
+        "label": "ApkRelease type flows from types -> data -> components",
+        "nodes": [
+          "lib_types_apkrelease",
+          "lib_data_releases",
+          "components_apkarchivetable_apkarchivetable",
+          "components_downloadsection_downloadsection",
+          "components_downloadcard_downloadcard"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "lib/types.ts"
+      },
+      {
+        "id": "hyperedge_seo_jsonld_producers",
+        "label": "SEO JSON-LD builder functions used across pages",
+        "nodes": [
+          "lib_seo_buildsoftwareapplicationjsonld",
+          "lib_seo_buildfaqjsonld",
+          "lib_seo_buildorganizationjsonld",
+          "lib_seo_buildwebsitejsonld",
+          "lib_seo_buildbreadcrumbjsonld",
+          "app_page_home",
+          "app_layout_rootlayout",
+          "app_archive_page_archivepage",
+          "app_faq_page_faqpage"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "lib/seo.ts"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package_json",
+      "community": 0,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "rebrawl_package_name",
+      "community": 0,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "rebrawl_package_version",
+      "community": 0,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "rebrawl_package_private",
+      "community": 0,
+      "norm_label": "private"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "rebrawl_package_scripts",
+      "community": 0,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "rebrawl_package_scripts_dev",
+      "community": 0,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "rebrawl_package_scripts_build",
+      "community": 0,
+      "norm_label": "build"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "rebrawl_package_scripts_start",
+      "community": 0,
+      "norm_label": "start"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "rebrawl_package_scripts_lint",
+      "community": 0,
+      "norm_label": "lint"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "id": "rebrawl_package_dependencies",
+      "community": 0,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "rebrawl_package_dependencies_next",
+      "community": 0,
+      "norm_label": "next"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "rebrawl_package_dependencies_react",
+      "community": 0,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "rebrawl_package_dependencies_react_dom",
+      "community": 0,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "rebrawl_package_devdependencies",
+      "community": 0,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "rebrawl_package_devdependencies_tailwindcss_postcss",
+      "community": 0,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "rebrawl_package_devdependencies_types_node",
+      "community": 0,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "rebrawl_package_devdependencies_types_react",
+      "community": 0,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "rebrawl_package_devdependencies_types_react_dom",
+      "community": 0,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "rebrawl_package_devdependencies_eslint",
+      "community": 0,
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-config-next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "rebrawl_package_devdependencies_eslint_config_next",
+      "community": 0,
+      "norm_label": "eslint-config-next"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "rebrawl_package_devdependencies_tailwindcss",
+      "community": 0,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "rebrawl_package_devdependencies_typescript",
+      "community": 0,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "id": "eslint_config_mjs",
+      "community": 9,
+      "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "eslintConfig",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L5",
+      "id": "rebrawl_eslint_config_eslintconfig",
+      "community": 9,
+      "norm_label": "eslintconfig"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "id": "tsconfig_json",
+      "community": 3,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "id": "rebrawl_tsconfig_compileroptions",
+      "community": 3,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "id": "rebrawl_tsconfig_compileroptions_target",
+      "community": 3,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "id": "rebrawl_tsconfig_compileroptions_lib",
+      "community": 3,
+      "norm_label": "lib"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "id": "rebrawl_tsconfig_compileroptions_allowjs",
+      "community": 3,
+      "norm_label": "allowjs"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "id": "rebrawl_tsconfig_compileroptions_skiplibcheck",
+      "community": 3,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "id": "rebrawl_tsconfig_compileroptions_strict",
+      "community": 3,
+      "norm_label": "strict"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "id": "rebrawl_tsconfig_compileroptions_noemit",
+      "community": 3,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "id": "rebrawl_tsconfig_compileroptions_esmoduleinterop",
+      "community": 3,
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "id": "rebrawl_tsconfig_compileroptions_module",
+      "community": 3,
+      "norm_label": "module"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "id": "rebrawl_tsconfig_compileroptions_moduleresolution",
+      "community": 3,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "id": "rebrawl_tsconfig_compileroptions_resolvejsonmodule",
+      "community": 3,
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "id": "rebrawl_tsconfig_compileroptions_isolatedmodules",
+      "community": 3,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "id": "rebrawl_tsconfig_compileroptions_jsx",
+      "community": 3,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "id": "rebrawl_tsconfig_compileroptions_incremental",
+      "community": 3,
+      "norm_label": "incremental"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "id": "rebrawl_tsconfig_compileroptions_plugins",
+      "community": 3,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "id": "rebrawl_tsconfig_compileroptions_paths",
+      "community": 3,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "id": "rebrawl_tsconfig_paths",
+      "community": 3,
+      "norm_label": "@/*"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "id": "rebrawl_tsconfig_include",
+      "community": 3,
+      "norm_label": "include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L33",
+      "id": "rebrawl_tsconfig_exclude",
+      "community": 3,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L1",
+      "id": "next_config_ts",
+      "community": 10,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "id": "rebrawl_next_config_nextconfig",
+      "community": 10,
+      "norm_label": "nextconfig"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "postcss_config_mjs",
+      "community": 11,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "id": "rebrawl_postcss_config_config",
+      "community": 11,
+      "norm_label": "config"
+    },
+    {
+      "label": "ThunderDivider.tsx",
+      "file_type": "code",
+      "source_file": "components/ThunderDivider.tsx",
+      "source_location": "L1",
+      "id": "components_thunderdivider_tsx",
+      "community": 5,
+      "norm_label": "thunderdivider.tsx"
+    },
+    {
+      "label": "ThunderDivider()",
+      "file_type": "code",
+      "source_file": "components/ThunderDivider.tsx",
+      "source_location": "L1",
+      "id": "components_thunderdivider_thunderdivider",
+      "community": 5,
+      "norm_label": "thunderdivider()"
+    },
+    {
+      "label": "Disclaimer.tsx",
+      "file_type": "code",
+      "source_file": "components/Disclaimer.tsx",
+      "source_location": "L1",
+      "id": "components_disclaimer_tsx",
+      "community": 5,
+      "norm_label": "disclaimer.tsx"
+    },
+    {
+      "label": "Disclaimer()",
+      "file_type": "code",
+      "source_file": "components/Disclaimer.tsx",
+      "source_location": "L1",
+      "id": "components_disclaimer_disclaimer",
+      "community": 5,
+      "norm_label": "disclaimer()"
+    },
+    {
+      "label": "TrustBar.tsx",
+      "file_type": "code",
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "L1",
+      "id": "components_trustbar_tsx",
+      "community": 1,
+      "norm_label": "trustbar.tsx"
+    },
+    {
+      "label": "badges",
+      "file_type": "code",
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "L1",
+      "id": "components_trustbar_badges",
+      "community": 1,
+      "norm_label": "badges"
+    },
+    {
+      "label": "TrustBar()",
+      "file_type": "code",
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "L10",
+      "id": "components_trustbar_trustbar",
+      "community": 1,
+      "norm_label": "trustbar()"
+    },
+    {
+      "label": "BrawlerImage.tsx",
+      "file_type": "code",
+      "source_file": "components/BrawlerImage.tsx",
+      "source_location": "L1",
+      "id": "components_brawlerimage_tsx",
+      "community": 4,
+      "norm_label": "brawlerimage.tsx"
+    },
+    {
+      "label": "BrawlerImageProps",
+      "file_type": "code",
+      "source_file": "components/BrawlerImage.tsx",
+      "source_location": "L5",
+      "id": "components_brawlerimage_brawlerimageprops",
+      "community": 4,
+      "norm_label": "brawlerimageprops"
+    },
+    {
+      "label": "BrawlerImage()",
+      "file_type": "code",
+      "source_file": "components/BrawlerImage.tsx",
+      "source_location": "L13",
+      "id": "components_brawlerimage_brawlerimage",
+      "community": 4,
+      "norm_label": "brawlerimage()"
+    },
+    {
+      "label": "ApkArchiveTable.tsx",
+      "file_type": "code",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L1",
+      "id": "components_apkarchivetable_tsx",
+      "community": 1,
+      "norm_label": "apkarchivetable.tsx"
+    },
+    {
+      "label": "ApkArchiveTableProps",
+      "file_type": "code",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L5",
+      "id": "components_apkarchivetable_apkarchivetableprops",
+      "community": 1,
+      "norm_label": "apkarchivetableprops"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L11",
+      "id": "components_apkarchivetable_formatdate",
+      "community": 1,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "ApkArchiveTable()",
+      "file_type": "code",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L19",
+      "id": "components_apkarchivetable_apkarchivetable",
+      "community": 1,
+      "norm_label": "apkarchivetable()"
+    },
+    {
+      "label": "DownloadSection.tsx",
+      "file_type": "code",
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "L1",
+      "id": "components_downloadsection_tsx",
+      "community": 1,
+      "norm_label": "downloadsection.tsx"
+    },
+    {
+      "label": "DownloadSection()",
+      "file_type": "code",
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "L4",
+      "id": "components_downloadsection_downloadsection",
+      "community": 1,
+      "norm_label": "downloadsection()"
+    },
+    {
+      "label": "Navbar.tsx",
+      "file_type": "code",
+      "source_file": "components/Navbar.tsx",
+      "source_location": "L1",
+      "id": "components_navbar_tsx",
+      "community": 2,
+      "norm_label": "navbar.tsx"
+    },
+    {
+      "label": "navLinks",
+      "file_type": "code",
+      "source_file": "components/Navbar.tsx",
+      "source_location": "L5",
+      "id": "components_navbar_navlinks",
+      "community": 2,
+      "norm_label": "navlinks"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "components/Navbar.tsx",
+      "source_location": "L12",
+      "id": "components_navbar_navbar",
+      "community": 2,
+      "norm_label": "navbar()"
+    },
+    {
+      "label": "FeatureGrid.tsx",
+      "file_type": "code",
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "L1",
+      "id": "components_featuregrid_tsx",
+      "community": 4,
+      "norm_label": "featuregrid.tsx"
+    },
+    {
+      "label": "FeatureGrid()",
+      "file_type": "code",
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "L3",
+      "id": "components_featuregrid_featuregrid",
+      "community": 4,
+      "norm_label": "featuregrid()"
+    },
+    {
+      "label": "DownloadCard.tsx",
+      "file_type": "code",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L1",
+      "id": "components_downloadcard_tsx",
+      "community": 1,
+      "norm_label": "downloadcard.tsx"
+    },
+    {
+      "label": "DownloadCardProps",
+      "file_type": "code",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L5",
+      "id": "components_downloadcard_downloadcardprops",
+      "community": 1,
+      "norm_label": "downloadcardprops"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L9",
+      "id": "components_downloadcard_formatdate",
+      "community": 1,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "DownloadCard()",
+      "file_type": "code",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L17",
+      "id": "components_downloadcard_downloadcard",
+      "community": 1,
+      "norm_label": "downloadcard()"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L1",
+      "id": "components_footer_tsx",
+      "community": 2,
+      "norm_label": "footer.tsx"
+    },
+    {
+      "label": "navLinks",
+      "file_type": "code",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L3",
+      "id": "components_footer_navlinks",
+      "community": 2,
+      "norm_label": "navlinks"
+    },
+    {
+      "label": "legalLinks",
+      "file_type": "code",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L9",
+      "id": "components_footer_legallinks",
+      "community": 2,
+      "norm_label": "legallinks"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L14",
+      "id": "components_footer_footer",
+      "community": 2,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "FaqAccordion.tsx",
+      "file_type": "code",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L1",
+      "id": "components_faqaccordion_tsx",
+      "community": 5,
+      "norm_label": "faqaccordion.tsx"
+    },
+    {
+      "label": "FaqAccordionProps",
+      "file_type": "code",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L5",
+      "id": "components_faqaccordion_faqaccordionprops",
+      "community": 5,
+      "norm_label": "faqaccordionprops"
+    },
+    {
+      "label": "FaqAccordion()",
+      "file_type": "code",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L10",
+      "id": "components_faqaccordion_faqaccordion",
+      "community": 5,
+      "norm_label": "faqaccordion()"
+    },
+    {
+      "label": "HistoryTimeline.tsx",
+      "file_type": "code",
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "L1",
+      "id": "components_historytimeline_tsx",
+      "community": 4,
+      "norm_label": "historytimeline.tsx"
+    },
+    {
+      "label": "HistoryTimeline()",
+      "file_type": "code",
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "L3",
+      "id": "components_historytimeline_historytimeline",
+      "community": 4,
+      "norm_label": "historytimeline()"
+    },
+    {
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L1",
+      "id": "components_hero_tsx",
+      "community": 4,
+      "norm_label": "hero.tsx"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L4",
+      "id": "components_hero_hero",
+      "community": 4,
+      "norm_label": "hero()"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L1",
+      "id": "lib_types_ts",
+      "community": 5,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "ApkRelease",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L1",
+      "id": "lib_types_apkrelease",
+      "community": 1,
+      "norm_label": "apkrelease"
+    },
+    {
+      "label": "TimelineEvent",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L12",
+      "id": "lib_types_timelineevent",
+      "community": 4,
+      "norm_label": "timelineevent"
+    },
+    {
+      "label": "FaqItem",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L18",
+      "id": "lib_types_faqitem",
+      "community": 5,
+      "norm_label": "faqitem"
+    },
+    {
+      "label": "Feature",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L23",
+      "id": "lib_types_feature",
+      "community": 4,
+      "norm_label": "feature"
+    },
+    {
+      "label": "Stat",
+      "file_type": "code",
+      "source_file": "lib/types.ts",
+      "source_location": "L29",
+      "id": "lib_types_stat",
+      "community": 4,
+      "norm_label": "stat"
+    },
+    {
+      "label": "seo.ts",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L1",
+      "id": "lib_seo_ts",
+      "community": 2,
+      "norm_label": "seo.ts"
+    },
+    {
+      "label": "defaultMetadata",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L7",
+      "id": "lib_seo_defaultmetadata",
+      "community": 2,
+      "norm_label": "defaultmetadata"
+    },
+    {
+      "label": "buildSoftwareApplicationJsonLd()",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L60",
+      "id": "lib_seo_buildsoftwareapplicationjsonld",
+      "community": 6,
+      "norm_label": "buildsoftwareapplicationjsonld()"
+    },
+    {
+      "label": "buildFaqJsonLd()",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L87",
+      "id": "lib_seo_buildfaqjsonld",
+      "community": 5,
+      "norm_label": "buildfaqjsonld()"
+    },
+    {
+      "label": "buildOrganizationJsonLd()",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L102",
+      "id": "lib_seo_buildorganizationjsonld",
+      "community": 2,
+      "norm_label": "buildorganizationjsonld()"
+    },
+    {
+      "label": "buildWebSiteJsonLd()",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L113",
+      "id": "lib_seo_buildwebsitejsonld",
+      "community": 2,
+      "norm_label": "buildwebsitejsonld()"
+    },
+    {
+      "label": "buildBreadcrumbJsonLd()",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": "L130",
+      "id": "lib_seo_buildbreadcrumbjsonld",
+      "community": 6,
+      "norm_label": "buildbreadcrumbjsonld()"
+    },
+    {
+      "label": "data.ts",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "id": "lib_data_ts",
+      "community": 4,
+      "norm_label": "data.ts"
+    },
+    {
+      "label": "releases",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L3",
+      "id": "lib_data_releases",
+      "community": 1,
+      "norm_label": "releases"
+    },
+    {
+      "label": "timeline",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L86",
+      "id": "lib_data_timeline",
+      "community": 4,
+      "norm_label": "timeline"
+    },
+    {
+      "label": "faq",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L119",
+      "id": "lib_data_faq",
+      "community": 5,
+      "norm_label": "faq"
+    },
+    {
+      "label": "features",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L162",
+      "id": "lib_data_features",
+      "community": 4,
+      "norm_label": "features"
+    },
+    {
+      "label": "stats",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L201",
+      "id": "lib_data_stats",
+      "community": 4,
+      "norm_label": "stats"
+    },
+    {
+      "label": "heroHeroIds",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": "L208",
+      "id": "lib_data_heroheroids",
+      "community": 4,
+      "norm_label": "heroheroids"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local_json",
+      "community": 7,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 7,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 7,
+      "norm_label": "allow"
+    },
+    {
+      "label": "robots.ts",
+      "file_type": "code",
+      "source_file": "app/robots.ts",
+      "source_location": "L1",
+      "id": "app_robots_ts",
+      "community": 2,
+      "norm_label": "robots.ts"
+    },
+    {
+      "label": "robots()",
+      "file_type": "code",
+      "source_file": "app/robots.ts",
+      "source_location": "L4",
+      "id": "app_robots_robots",
+      "community": 2,
+      "norm_label": "robots()"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L1",
+      "id": "app_layout_tsx",
+      "community": 2,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "inter",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L8",
+      "id": "app_layout_inter",
+      "community": 2,
+      "norm_label": "inter"
+    },
+    {
+      "label": "barlowCondensed",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L14",
+      "id": "app_layout_barlowcondensed",
+      "community": 2,
+      "norm_label": "barlowcondensed"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L23",
+      "id": "app_layout_rootlayout",
+      "community": 2,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L1",
+      "id": "app_page_tsx",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L13",
+      "id": "app_page_metadata",
+      "community": 5,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "app/page.tsx",
+      "source_location": "L22",
+      "id": "app_page_home",
+      "community": 5,
+      "norm_label": "home()"
+    },
+    {
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L1",
+      "id": "app_sitemap_ts",
+      "community": 2,
+      "norm_label": "sitemap.ts"
+    },
+    {
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L4",
+      "id": "app_sitemap_sitemap",
+      "community": 2,
+      "norm_label": "sitemap()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L1",
+      "id": "app_archive_page_tsx",
+      "community": 6,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L8",
+      "id": "archive_page_metadata",
+      "community": 6,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "ArchivePage()",
+      "file_type": "code",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L17",
+      "id": "archive_page_archivepage",
+      "community": 6,
+      "norm_label": "archivepage()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L1",
+      "id": "app_faq_page_tsx",
+      "community": 5,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L8",
+      "id": "faq_page_metadata",
+      "community": 5,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "FaqPage()",
+      "file_type": "code",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L17",
+      "id": "faq_page_faqpage",
+      "community": 5,
+      "norm_label": "faqpage()"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L21",
+      "id": "app_layout_metadata",
+      "community": 12,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "heroHeroIds",
+      "file_type": "code",
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_data_heroheroIds",
+      "community": 4,
+      "norm_label": "heroheroids"
+    },
+    {
+      "label": "seo",
+      "file_type": "code",
+      "source_file": "lib/seo.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "lib_seo_seo",
+      "community": 2,
+      "norm_label": "seo"
+    },
+    {
+      "label": "ArchivePage",
+      "file_type": "code",
+      "source_file": "app/archive/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_archive_page_archivepage",
+      "community": 6,
+      "norm_label": "archivepage"
+    },
+    {
+      "label": "FaqPage",
+      "file_type": "code",
+      "source_file": "app/faq/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "app_faq_page_faqpage",
+      "community": 5,
+      "norm_label": "faqpage"
+    },
+    {
+      "label": "hero-bg.png",
+      "file_type": "image",
+      "source_file": "public/hero-bg.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_hero_bg_herobg",
+      "community": 4,
+      "norm_label": "hero-bg.png"
+    },
+    {
+      "label": "pattern.svg",
+      "file_type": "image",
+      "source_file": "public/background/pattern.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_background_pattern_pattern",
+      "community": 1,
+      "norm_label": "pattern.svg"
+    },
+    {
+      "label": "box.svg",
+      "file_type": "image",
+      "source_file": "public/background/box.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_background_box_box",
+      "community": 13,
+      "norm_label": "box.svg"
+    },
+    {
+      "label": "skull.svg",
+      "file_type": "image",
+      "source_file": "public/background/skull.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_background_skull_skull",
+      "community": 14,
+      "norm_label": "skull.svg"
+    },
+    {
+      "label": "gun.svg",
+      "file_type": "image",
+      "source_file": "public/background/gun.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_background_gun_gun",
+      "community": 15,
+      "norm_label": "gun.svg"
+    },
+    {
+      "label": "star.svg",
+      "file_type": "image",
+      "source_file": "public/background/star.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "public_background_star_star",
+      "community": 16,
+      "norm_label": "star.svg"
+    },
+    {
+      "label": "ReBrawl Next.js Project",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_rebrawl_nextjs_project",
+      "community": 8,
+      "norm_label": "rebrawl next.js project"
+    },
+    {
+      "label": "Next.js Agent Rules",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_nextjs_agent_rules",
+      "community": 8,
+      "norm_label": "next.js agent rules"
+    },
+    {
+      "label": "APK Preservation Archive",
+      "file_type": "concept",
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_apk_preservation_archive",
+      "community": 1,
+      "norm_label": "apk preservation archive"
+    },
+    {
+      "label": "SHA-256 Verification",
+      "file_type": "concept",
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_sha256_verification",
+      "community": 1,
+      "norm_label": "sha-256 verification"
+    },
+    {
+      "label": "Brawl Stars Private Server",
+      "file_type": "concept",
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_brawl_stars_private_server",
+      "community": 1,
+      "norm_label": "brawl stars private server"
+    },
+    {
+      "label": "Pattern SVG Background Tile",
+      "file_type": "rationale",
+      "source_file": "public/background/pattern.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_pattern_svg_tile",
+      "community": 1,
+      "norm_label": "pattern svg background tile"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "rebrawl_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "rebrawl_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "rebrawl_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "rebrawl_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "rebrawl_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "rebrawl_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "rebrawl_package_scripts",
+      "target": "rebrawl_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rebrawl_package_scripts",
+      "target": "rebrawl_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "rebrawl_package_scripts",
+      "target": "rebrawl_package_scripts_lint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "rebrawl_package_scripts",
+      "target": "rebrawl_package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "rebrawl_package_dependencies",
+      "target": "rebrawl_package_dependencies_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "rebrawl_package_dependencies",
+      "target": "rebrawl_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "rebrawl_package_dependencies",
+      "target": "rebrawl_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_eslint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_eslint_config_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_tailwindcss_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "rebrawl_package_devdependencies",
+      "target": "rebrawl_package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "eslint_config_mjs",
+      "target": "rebrawl_eslint_config_eslintconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "tsconfig_json",
+      "target": "rebrawl_tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tsconfig_json",
+      "target": "rebrawl_tsconfig_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "tsconfig_json",
+      "target": "rebrawl_tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_allowjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_esmoduleinterop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_incremental",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_resolvejsonmodule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_strict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions",
+      "target": "rebrawl_tsconfig_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "rebrawl_tsconfig_compileroptions_paths",
+      "target": "rebrawl_tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "next_config_ts",
+      "target": "rebrawl_next_config_nextconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "postcss_config_mjs",
+      "target": "rebrawl_postcss_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_thunderdivider_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ThunderDivider.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_thunderdivider_tsx",
+      "target": "components_thunderdivider_thunderdivider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 35",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_thunderdivider_thunderdivider"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "line 17",
+      "weight": 0.5,
+      "source": "components_trustbar_trustbar",
+      "target": "components_thunderdivider_thunderdivider"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "components_disclaimer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "components_disclaimer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_disclaimer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Disclaimer.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_disclaimer_tsx",
+      "target": "components_disclaimer_disclaimer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "line 82",
+      "weight": 1.0,
+      "source": "app_archive_page_archivepage",
+      "target": "components_disclaimer_disclaimer"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "line 68",
+      "weight": 1.0,
+      "source": "app_faq_page_faqpage",
+      "target": "components_disclaimer_disclaimer"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 47",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_disclaimer_disclaimer"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Disclaimer.tsx",
+      "source_location": "line 4",
+      "weight": 1.0,
+      "source": "components_disclaimer_disclaimer",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_trustbar_tsx",
+      "target": "components_trustbar_badges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "components_trustbar_tsx",
+      "target": "components_trustbar_trustbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/TrustBar.tsx",
+      "source_location": "line 37",
+      "weight": 1.0,
+      "source": "components_trustbar_trustbar",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BrawlerImage.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_brawlerimage_tsx",
+      "target": "components_brawlerimage_brawlerimage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/BrawlerImage.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_brawlerimage_tsx",
+      "target": "components_brawlerimage_brawlerimageprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "components_brawlerimage_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Hero.tsx",
+      "source_location": "line 112",
+      "weight": 1.0,
+      "source": "components_hero_hero",
+      "target": "components_brawlerimage_brawlerimage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "components_apkarchivetable_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_apkarchivetable_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "components_apkarchivetable_apkarchivetable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "components_apkarchivetable_apkarchivetableprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "components_apkarchivetable_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "lib_data_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "lib_types_apkrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_tsx",
+      "target": "lib_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_apkarchivetableprops",
+      "target": "lib_types_apkrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "line 81",
+      "weight": 1.0,
+      "source": "app_archive_page_archivepage",
+      "target": "components_apkarchivetable_apkarchivetable"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 40",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_apkarchivetable_apkarchivetable"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "line 2",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_apkarchivetable",
+      "target": "lib_data_releases"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "line 3",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_apkarchivetable",
+      "target": "lib_types_apkrelease"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/ApkArchiveTable.tsx",
+      "source_location": "line 32",
+      "weight": 1.0,
+      "source": "components_apkarchivetable_apkarchivetable",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_downloadsection_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "components_downloadsection_tsx",
+      "target": "components_downloadcard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_downloadsection_tsx",
+      "target": "components_downloadsection_downloadsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_downloadsection_tsx",
+      "target": "lib_data_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_downloadsection_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 34",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_downloadsection_downloadsection"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "line 48",
+      "weight": 1.0,
+      "source": "components_downloadsection_downloadsection",
+      "target": "components_downloadcard_downloadcard"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "components_downloadsection_downloadsection",
+      "target": "lib_data_releases"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/DownloadSection.tsx",
+      "source_location": "line 19",
+      "weight": 1.0,
+      "source": "components_downloadsection_downloadsection",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "components_navbar_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Navbar.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "components_navbar_tsx",
+      "target": "components_navbar_navbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Navbar.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_navbar_tsx",
+      "target": "components_navbar_navlinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "line 51",
+      "weight": 1.0,
+      "source": "app_layout_rootlayout",
+      "target": "components_navbar_navbar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_featuregrid_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_featuregrid_tsx",
+      "target": "components_featuregrid_featuregrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_featuregrid_tsx",
+      "target": "lib_data_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_featuregrid_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 36",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_featuregrid_featuregrid"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "components_featuregrid_featuregrid",
+      "target": "lib_data_features"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/FeatureGrid.tsx",
+      "source_location": "line 6",
+      "weight": 1.0,
+      "source": "components_featuregrid_featuregrid",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "components_downloadcard_tsx",
+      "target": "components_downloadcard_downloadcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_downloadcard_tsx",
+      "target": "components_downloadcard_downloadcardprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_downloadcard_tsx",
+      "target": "components_downloadcard_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_downloadcard_tsx",
+      "target": "lib_types_apkrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_downloadcard_tsx",
+      "target": "lib_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_downloadcard_downloadcardprops",
+      "target": "lib_types_apkrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "components_downloadcard_downloadcard",
+      "target": "components_downloadcard_formatdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/DownloadCard.tsx",
+      "source_location": "line 3",
+      "weight": 1.0,
+      "source": "components_downloadcard_downloadcard",
+      "target": "lib_types_apkrelease"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "components_footer_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "components_footer_tsx",
+      "target": "components_footer_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "components_footer_tsx",
+      "target": "components_footer_legallinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_footer_tsx",
+      "target": "components_footer_navlinks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "line 53",
+      "weight": 1.0,
+      "source": "app_layout_rootlayout",
+      "target": "components_footer_footer"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "components_faqaccordion_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_faqaccordion_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "components_faqaccordion_tsx",
+      "target": "components_faqaccordion_faqaccordion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_faqaccordion_tsx",
+      "target": "components_faqaccordion_faqaccordionprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_faqaccordion_tsx",
+      "target": "lib_types_faqitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_faqaccordion_tsx",
+      "target": "lib_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_faqaccordion_faqaccordionprops",
+      "target": "lib_types_faqitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "line 67",
+      "weight": 1.0,
+      "source": "app_faq_page_faqpage",
+      "target": "components_faqaccordion_faqaccordion"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 42",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_faqaccordion_faqaccordion"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "line 3",
+      "weight": 1.0,
+      "source": "components_faqaccordion_faqaccordion",
+      "target": "lib_types_faqitem"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/FaqAccordion.tsx",
+      "source_location": "line 15",
+      "weight": 1.0,
+      "source": "components_faqaccordion_faqaccordion",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_historytimeline_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_historytimeline_tsx",
+      "target": "components_historytimeline_historytimeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_historytimeline_tsx",
+      "target": "lib_data_timeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_historytimeline_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 38",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_historytimeline_historytimeline"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "components_historytimeline_historytimeline",
+      "target": "lib_data_timeline"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/HistoryTimeline.tsx",
+      "source_location": "line 6",
+      "weight": 1.0,
+      "source": "components_historytimeline_historytimeline",
+      "target": "public_background_pattern_pattern"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "components_hero_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "components_hero_hero",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "lib_data_heroheroids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "lib_data_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Hero.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "components_hero_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 33",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "components_hero_hero"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Hero.tsx",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "components_hero_hero",
+      "target": "lib_data_heroheroIds"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Hero.tsx",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "components_hero_hero",
+      "target": "lib_data_stats"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Hero.tsx",
+      "source_location": "line 10",
+      "weight": 1.0,
+      "source": "components_hero_hero",
+      "target": "public_hero_bg_herobg"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_types_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_types_ts",
+      "target": "lib_types_apkrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "lib_types_ts",
+      "target": "lib_types_faqitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "lib_types_ts",
+      "target": "lib_types_feature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "lib_types_ts",
+      "target": "lib_types_stat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/types.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "lib_types_ts",
+      "target": "lib_types_timelineevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/data.ts",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "lib_data_releases",
+      "target": "lib_types_apkrelease"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_types_apkrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/data.ts",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "lib_data_timeline",
+      "target": "lib_types_timelineevent"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_types_timelineevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/data.ts",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "lib_data_faq",
+      "target": "lib_types_faqitem"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_types_faqitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/seo.ts",
+      "source_location": "line 87",
+      "weight": 1.0,
+      "source": "lib_seo_buildfaqjsonld",
+      "target": "lib_types_faqitem"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_types_faqitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/data.ts",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "lib_data_features",
+      "target": "lib_types_feature"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_types_feature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/data.ts",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "lib_data_stats",
+      "target": "lib_types_stat"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_types_stat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "lib_seo_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "lib_seo_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "lib_seo_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "lib_seo_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/robots.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_robots_ts",
+      "target": "lib_seo_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "app_sitemap_ts",
+      "target": "lib_seo_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_seo_buildbreadcrumbjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_seo_buildfaqjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_seo_buildorganizationjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_seo_buildsoftwareapplicationjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_seo_buildwebsitejsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/seo.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "lib_seo_ts",
+      "target": "lib_seo_defaultmetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "line 6",
+      "weight": 1.0,
+      "source": "app_layout_rootlayout",
+      "target": "lib_seo_defaultmetadata"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "lib_seo_defaultmetadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "line 29",
+      "weight": 1.0,
+      "source": "app_archive_page_archivepage",
+      "target": "lib_seo_buildsoftwareapplicationjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "lib_seo_buildsoftwareapplicationjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 27",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "lib_seo_buildsoftwareapplicationjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "lib_seo_buildsoftwareapplicationjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "archive_page_archivepage",
+      "target": "lib_seo_buildsoftwareapplicationjsonld"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "line 21",
+      "weight": 1.0,
+      "source": "app_faq_page_faqpage",
+      "target": "lib_seo_buildfaqjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "lib_seo_buildfaqjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 31",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "lib_seo_buildfaqjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "lib_seo_buildfaqjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "faq_page_faqpage",
+      "target": "lib_seo_buildfaqjsonld"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "line 41",
+      "weight": 1.0,
+      "source": "app_layout_rootlayout",
+      "target": "lib_seo_buildorganizationjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "lib_seo_buildorganizationjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/layout.tsx",
+      "source_location": "line 36",
+      "weight": 1.0,
+      "source": "app_layout_rootlayout",
+      "target": "lib_seo_buildwebsitejsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "lib_seo_buildwebsitejsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "line 22",
+      "weight": 1.0,
+      "source": "app_archive_page_archivepage",
+      "target": "lib_seo_buildbreadcrumbjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "lib_seo_buildbreadcrumbjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "line 26",
+      "weight": 1.0,
+      "source": "app_faq_page_faqpage",
+      "target": "lib_seo_buildbreadcrumbjsonld"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "lib_seo_buildbreadcrumbjsonld",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "archive_page_archivepage",
+      "target": "lib_seo_buildbreadcrumbjsonld"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "faq_page_faqpage",
+      "target": "lib_seo_buildbreadcrumbjsonld"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "lib_data_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_data_faq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_data_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_data_heroheroids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_data_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_data_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/data.ts",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "lib_data_ts",
+      "target": "lib_data_timeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/archive/page.tsx",
+      "source_location": "line 5",
+      "weight": 1.0,
+      "source": "app_archive_page_archivepage",
+      "target": "lib_data_releases"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "lib_data_releases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_data_releases",
+      "target": "concept_apk_preservation_archive"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "lib_data_releases",
+      "target": "concept_sha256_verification"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/faq/page.tsx",
+      "source_location": "line 5",
+      "weight": 1.0,
+      "source": "app_faq_page_faqpage",
+      "target": "lib_data_faq"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "lib_data_faq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx",
+      "source_location": "line 10",
+      "weight": 1.0,
+      "source": "app_page_home",
+      "target": "lib_data_faq"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "lib_data_faq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/robots.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_robots_ts",
+      "target": "app_robots_robots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/robots.ts",
+      "source_location": "line 2",
+      "weight": 1.0,
+      "source": "app_robots_robots",
+      "target": "lib_seo_seo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "app_layout_barlowcondensed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "app_layout_inter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "app_layout_tsx",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "app_page_home",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "app_page_tsx",
+      "target": "app_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/sitemap.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "app_sitemap_ts",
+      "target": "app_sitemap_sitemap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/sitemap.ts",
+      "source_location": "line 2",
+      "weight": 1.0,
+      "source": "app_sitemap_sitemap",
+      "target": "lib_seo_seo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "archive_page_archivepage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/archive/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_archive_page_tsx",
+      "target": "archive_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "faq_page_faqpage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/faq/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "app_faq_page_tsx",
+      "target": "faq_page_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/background/pattern.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_background_pattern_pattern",
+      "target": "concept_pattern_svg_tile"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 0.5,
+      "source": "agents_nextjs_agent_rules",
+      "target": "readme_rebrawl_nextjs_project"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "concept_apk_preservation_archive",
+      "target": "concept_sha256_verification"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "lib/data.ts",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "concept_brawl_stars_private_server",
+      "target": "concept_apk_preservation_archive"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "hyperedge_page_composition_home",
+      "label": "Home page section composition",
+      "nodes": [
+        "app_page_home",
+        "components_hero_hero",
+        "components_downloadsection_downloadsection",
+        "components_thunderdivider_thunderdivider",
+        "components_featuregrid_featuregrid",
+        "components_historytimeline_historytimeline",
+        "components_apkarchivetable_apkarchivetable",
+        "components_faqaccordion_faqaccordion",
+        "components_disclaimer_disclaimer"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/page.tsx"
+    },
+    {
+      "id": "hyperedge_shared_pattern_bg",
+      "label": "Sections sharing pattern.svg CSS mask background",
+      "nodes": [
+        "components_disclaimer_disclaimer",
+        "components_trustbar_trustbar",
+        "components_downloadsection_downloadsection",
+        "components_featuregrid_featuregrid",
+        "components_historytimeline_historytimeline",
+        "components_faqaccordion_faqaccordion",
+        "components_apkarchivetable_apkarchivetable",
+        "public_background_pattern_pattern"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/Disclaimer.tsx"
+    },
+    {
+      "id": "hyperedge_apkrelease_data_flow",
+      "label": "ApkRelease type flows from types -> data -> components",
+      "nodes": [
+        "lib_types_apkrelease",
+        "lib_data_releases",
+        "components_apkarchivetable_apkarchivetable",
+        "components_downloadsection_downloadsection",
+        "components_downloadcard_downloadcard"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/types.ts"
+    },
+    {
+      "id": "hyperedge_seo_jsonld_producers",
+      "label": "SEO JSON-LD builder functions used across pages",
+      "nodes": [
+        "lib_seo_buildsoftwareapplicationjsonld",
+        "lib_seo_buildfaqjsonld",
+        "lib_seo_buildorganizationjsonld",
+        "lib_seo_buildwebsitejsonld",
+        "lib_seo_buildbreadcrumbjsonld",
+        "app_page_home",
+        "app_layout_rootlayout",
+        "app_archive_page_archivepage",
+        "app_faq_page_faqpage"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "lib/seo.ts"
+    }
+  ],
+  "built_at_commit": "6f89211c3d256b08b7a1d4f469b0ad3700ac22bf"
+}
