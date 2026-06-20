@@ -109,7 +109,8 @@ export default function DownloadCard({ name, tagline, image, accent, features, c
 
         <a
           href={downloadUrl}
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className={`mt-8 flex items-center justify-center gap-2.5 rounded-xl py-4 text-base font-extrabold shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.99] ${a.button}`}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

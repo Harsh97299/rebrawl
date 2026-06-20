@@ -21,10 +21,7 @@ export default function DownloadButton({
   useEffect(() => {
     if (countdown === null) return
     if (countdown === 0) {
-      const link = document.createElement("a")
-      link.href = href
-      link.download = ""
-      link.click()
+      window.open(href, "_blank", "noopener,noreferrer")
       setCountdown(null)
       return
     }

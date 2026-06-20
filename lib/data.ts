@@ -6,7 +6,7 @@ import type {
   Feature,
   Stat,
   VersionPageData,
-} from "./types"
+} from "./types";
 
 export const downloadVersions: DownloadVersion[] = [
   {
@@ -16,12 +16,22 @@ export const downloadVersions: DownloadVersion[] = [
     image: "/mods.webp",
     accent: "purple",
     features: [
-      { label: "Custom Content", text: "30+ community-created brawlers you won't find anywhere else in Brawl Stars." },
-      { label: "Exclusive Skins", text: "Play as iconic pop-culture characters and fan-designed robot units — enough skins to make your favorite brawler question their identity." },
-      { label: "Best For", text: "Players who want creative, over-powered gameplay with custom content the community built from scratch." },
+      {
+        label: "Custom Content",
+        text: "30+ community-created brawlers you won't find anywhere else in Brawl Stars.",
+      },
+      {
+        label: "Exclusive Skins",
+        text: "Play as iconic pop-culture characters and fan-designed robot units — enough skins to make your favorite brawler question their identity.",
+      },
+      {
+        label: "Best For",
+        text: "Players who want creative, over-powered gameplay with custom content the community built from scratch.",
+      },
     ],
     cta: "Download reBrawl Mods",
-    downloadUrl: "#",
+    downloadUrl:
+      "https://www.mediafire.com/file/td1mytdear501pz/ReBrawl_Mod.apk/file",
   },
   {
     id: "classic",
@@ -31,12 +41,22 @@ export const downloadVersions: DownloadVersion[] = [
     accent: "gold",
     badge: "MOST POPULAR",
     features: [
-      { label: "Feature Set", text: "More gems than your account knows what to do with — plus unlimited Gold and Boxes." },
-      { label: "Originality", text: "No custom-coded brawlers — pure, original Brawl Stars mechanics the way Supercell designed them." },
-      { label: "Best For", text: "The community favorite for testing skins, opening unlimited boxes, and enjoying the original gameplay without spending a dime." },
+      {
+        label: "Feature Set",
+        text: "More gems than your account knows what to do with — plus unlimited Gold and Boxes.",
+      },
+      {
+        label: "Originality",
+        text: "No custom-coded brawlers — pure, original Brawl Stars mechanics the way Supercell designed them.",
+      },
+      {
+        label: "Best For",
+        text: "The community favorite for testing skins, opening unlimited boxes, and enjoying the original gameplay without spending a dime.",
+      },
     ],
     cta: "Download reBrawl Classic",
-    downloadUrl: "#",
+    downloadUrl:
+      "https://www.mediafire.com/file/te4gjvh9utc0ho4/ReBrawl_Classic.apk/file",
   },
   {
     id: "legacy",
@@ -45,14 +65,24 @@ export const downloadVersions: DownloadVersion[] = [
     image: "/legacy.webp",
     accent: "blue",
     features: [
-      { label: "Optimization", text: "Runs on Android 4.3 (KitKat) and above — even devices that can't handle the official client." },
-      { label: "Performance", text: "Optimized graphics for buttery-smooth gameplay on older and budget devices." },
-      { label: "Best For", text: "Players who want the full reBrawl experience without needing a flagship phone." },
+      {
+        label: "Optimization",
+        text: "Runs on Android 4.3 (KitKat) and above — even devices that can't handle the official client.",
+      },
+      {
+        label: "Performance",
+        text: "Optimized graphics for buttery-smooth gameplay on older and budget devices.",
+      },
+      {
+        label: "Best For",
+        text: "Players who want the full reBrawl experience without needing a flagship phone.",
+      },
     ],
     cta: "Download reBrawl Legacy",
-    downloadUrl: "#",
+    downloadUrl:
+      "https://www.mediafire.com/file/jl2sh7tig1463rg/Rebrawl_Legacy.apk/file",
   },
-]
+];
 
 export const releases: ApkRelease[] = [
   {
@@ -135,7 +165,7 @@ export const releases: ApkRelease[] = [
       "All base brawlers available",
     ],
   },
-]
+];
 
 export const timeline: TimelineEvent[] = [
   {
@@ -168,7 +198,7 @@ export const timeline: TimelineEvent[] = [
     description:
       "Every APK version becomes available through the Official reBrawl Archive — virus-scanned, SHA-256 verified, and ready to download. The community's favorite private server is always within reach.",
   },
-]
+];
 
 export const faq: FaqItem[] = [
   {
@@ -211,7 +241,7 @@ export const faq: FaqItem[] = [
     answer:
       "No. reBrawl is not affiliated with, endorsed by, or connected to Supercell Oy. Brawl Stars is a trademark of Supercell. The Official reBrawl Archive is maintained independently by the community.",
   },
-]
+];
 
 export const features: Feature[] = [
   {
@@ -250,14 +280,14 @@ export const features: Feature[] = [
     description:
       "Simple sideload installation on any Android 5.0+ device. No root, no complicated patches — just download reBrawl and start playing.",
   },
-]
+];
 
 export const stats: Stat[] = [
   { value: "500K+", label: "Players Served" },
   { value: "150+", label: "Versions Archived" },
   { value: "4+", label: "Years of History" },
   { value: "2M+", label: "Community Members" },
-]
+];
 
 export const versionPages: Record<string, VersionPageData> = {
   classic: {
@@ -298,7 +328,7 @@ export const versionPages: Record<string, VersionPageData> = {
     installSteps: [
       {
         title: "Preparation",
-        text: "Make sure no other versions of \"LWARB\" or \"reBrawl\" are currently installed on your device.",
+        text: 'Make sure no other versions of "LWARB" or "reBrawl" are currently installed on your device.',
       },
       {
         title: "Download",
@@ -306,16 +336,16 @@ export const versionPages: Record<string, VersionPageData> = {
       },
       {
         title: "Permissions",
-        text: "Go to Settings → Security and enable \"Unknown Sources\" to allow the installation.",
+        text: 'Go to Settings → Security and enable "Unknown Sources" to allow the installation.',
       },
       {
         title: "Install",
-        text: "Open the file and tap \"Install\". If Play Protect flags the app, select \"Install Anyway\" to proceed.",
+        text: 'Open the file and tap "Install". If Play Protect flags the app, select "Install Anyway" to proceed.',
       },
     ],
     faq: [
       {
-        question: "Why am I seeing a \"Connecting to Server\" error?",
+        question: 'Why am I seeing a "Connecting to Server" error?',
         answer:
           "The original reBrawl master servers are currently offline. Players typically use community-hosted DNS redirects to connect, or use the app for offline skin and asset viewing. Check the reBrawl community for the latest connection guides.",
       },
@@ -381,11 +411,11 @@ export const versionPages: Record<string, VersionPageData> = {
       },
       {
         title: "Permissions",
-        text: "Go to Settings → Security and enable \"Unknown Sources\" to allow the installation.",
+        text: 'Go to Settings → Security and enable "Unknown Sources" to allow the installation.',
       },
       {
         title: "Install",
-        text: "Open the file and tap \"Install\". If Play Protect flags the app, select \"Install Anyway\" to proceed.",
+        text: 'Open the file and tap "Install". If Play Protect flags the app, select "Install Anyway" to proceed.',
       },
     ],
     faq: [
@@ -456,11 +486,11 @@ export const versionPages: Record<string, VersionPageData> = {
       },
       {
         title: "Permissions",
-        text: "Go to Settings → Security and enable \"Unknown Sources\" to allow the installation.",
+        text: 'Go to Settings → Security and enable "Unknown Sources" to allow the installation.',
       },
       {
         title: "Install",
-        text: "Open the file and tap \"Install\". On older Android versions, you may need to use a file manager to locate the download.",
+        text: 'Open the file and tap "Install". On older Android versions, you may need to use a file manager to locate the download.',
       },
     ],
     faq: [
@@ -485,7 +515,7 @@ export const versionPages: Record<string, VersionPageData> = {
     downloadSize: "93 MB",
     downloadStatus: "Verified & Ready",
   },
-}
+};
 
 export const heroIcons = [
   "/icons/player_icon_anime_spike.webp",
@@ -494,4 +524,4 @@ export const heroIcons = [
   "/icons/player_icon_scream_edgar.webp",
   "/icons/player_icon_deku_mha.webp",
   "/icons/player_icon_anime_starrnova.webp",
-]
+];
