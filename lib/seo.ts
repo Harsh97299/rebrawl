@@ -2,47 +2,55 @@ import type { Metadata } from "next"
 import type { FaqItem } from "./types"
 
 export const BASE_URL = "https://rebrawl.net"
-export const SITE_NAME = "ReBrawl Archive"
+export const SITE_NAME = "Official reBrawl Archive"
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "ReBrawl — Official Archive",
-    template: "%s | ReBrawl Official Archive",
+    default: "reBrawl — Official Archive | Download Brawl Stars Private Server",
+    template: "%s | Official reBrawl Archive",
   },
   description:
-    "The official ReBrawl archive. Download all preserved Brawl Stars private server APK versions. Verified, virus-scanned, and ready to install on Android.",
+    "The Official reBrawl Archive. Download every reBrawl APK version — the legendary Brawl Stars private server with unlimited gems, all brawlers unlocked, and custom game modes. Verified and ready to install.",
   keywords: [
-    "ReBrawl",
-    "ReBrawl APK",
-    "ReBrawl download",
-    "Brawl Stars private server",
-    "Brawl Stars APK",
-    "ReBrawl archive",
-    "ReBrawl latest version",
+    "rebrawl",
+    "official rebrawl archive",
+    "rebrawl apk",
+    "rebrawl download",
+    "rebrawl mods",
+    "rebrawl classic",
+    "brawl stars private server",
+    "rebrawl update",
+    "rebrawl latest version",
+    "custom brawlers",
+    "custom skins",
   ],
-  authors: [{ name: "ReBrawl Archive" }],
+  authors: [{ name: "Official reBrawl Archive" }],
+  icons: {
+    icon: "/logo.webp",
+    apple: "/logo.webp",
+  },
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: "ReBrawl — The Official Brawl Stars Private Server Archive",
+    title: "reBrawl — Official Archive | The Legendary Brawl Stars Private Server",
     description:
-      "Download and preserve the legacy of ReBrawl. All APK versions archived, verified, and available for the community.",
+      "Download reBrawl — the community favorite Brawl Stars private server. Every APK version available, verified, and ready to play.",
     url: BASE_URL,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "ReBrawl — Official Archive",
+        alt: "reBrawl — Official Archive | Brawl Stars Private Server",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ReBrawl — Official Archive",
+    title: "reBrawl — Official Archive",
     description:
-      "The official ReBrawl APK archive. Verified builds, every version preserved.",
+      "The Official reBrawl Archive. Every version of the legendary Brawl Stars private server, verified and ready to download.",
   },
   robots: {
     index: true,
@@ -80,7 +88,7 @@ export function buildSoftwareApplicationJsonLd() {
       bestRating: "5",
     },
     description:
-      "ReBrawl is the legendary Brawl Stars private server offering unlimited gems, all brawlers unlocked, and custom game modes.",
+      "reBrawl is the legendary Brawl Stars private server — the community favorite offering unlimited gems, all brawlers unlocked, exclusive custom game modes, and a fresh experience for every player.",
   }
 }
 
@@ -106,7 +114,7 @@ export function buildOrganizationJsonLd() {
     name: SITE_NAME,
     url: BASE_URL,
     description:
-      "The official archive and preservation site for ReBrawl, the legendary Brawl Stars private server.",
+      "The Official reBrawl Archive — the community-driven home for reBrawl, the legendary Brawl Stars private server. Download every version, explore custom content, and discover what made reBrawl a player favorite.",
   }
 }
 

@@ -13,10 +13,10 @@ export default function Disclaimer() {
             <div>
               <h2 className="font-display font-bold text-lg text-white mb-2">Important Notice</h2>
               <p className="text-text-muted text-sm leading-relaxed">
-                This is an independent preservation archive maintained by the ReBrawl community. ReBrawl is
+                The Official reBrawl Archive is an independent, community-driven project. reBrawl is
                 not affiliated with, endorsed by, or connected to Supercell Oy. Brawl Stars® is a registered
-                trademark of Supercell. All APKs hosted here are preserved for historical and archival purposes
-                only. Download and use at your own discretion.
+                trademark of Supercell. All reBrawl APKs hosted here are available for the community
+                to download and enjoy. Use at your own discretion.
               </p>
             </div>
           </div>

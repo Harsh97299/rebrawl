@@ -29,10 +29,10 @@ export default function Hero() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full flex flex-col items-center text-center">
         {/* Official badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-purple/15 border border-brand-purple/30 text-brand-purple text-xs font-bold uppercase tracking-wider mb-8">
+        {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-purple/15 border border-brand-purple/30 text-brand-purple text-xs font-bold uppercase tracking-wider mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" aria-hidden="true" />
           Official ReBrawl Archive
-        </div>
+        </div> */}
 
         <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6">
           The Legendary
@@ -43,13 +43,13 @@ export default function Hero() {
         </h1>
 
         <p className="text-text-muted text-xl leading-relaxed mb-10 max-w-xl">
-          The official ReBrawl archive. Every version preserved, verified, and ready to download.
-          Relive unlimited gems, all brawlers unlocked, and exclusive game modes.
+          Welcome to the Official reBrawl Archive. Every version verified and ready to download.
+          Unlimited gems, all brawlers unlocked, exclusive custom game modes, and a community that keeps the experience fresh.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <a
-            href="#download"
+            href="/archive/classic"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-yellow text-bg-base rounded-xl font-extrabold text-lg hover:bg-brand-gold hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 shadow-xl shadow-brand-yellow/20"
           >
             <svg

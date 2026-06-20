@@ -10,39 +10,39 @@ export default function AboutSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-            About <span className="text-brand-yellow">ReBrawl</span>
+            About <span className="text-brand-yellow">reBrawl</span>
           </h2>
           <p className="text-text-muted text-lg max-w-2xl mx-auto">
-            The legendary Brawl Stars private server that redefined how the community played.
+            The legendary Brawl Stars private server that redefined how the community played — and the Official reBrawl Archive that keeps it all available.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-6">
           <div className="bg-bg-base rounded-2xl p-6 border border-white/5">
-            <h3 className="font-display font-bold text-xl text-white mb-3">What was ReBrawl?</h3>
+            <h3 className="font-display font-bold text-xl text-white mb-3">Why Players Choose reBrawl</h3>
             <p className="text-text-muted leading-relaxed text-sm">
-              ReBrawl was the most popular Brawl Stars private server ever created. From 2019 to 2023, it gave
+              reBrawl is the most popular Brawl Stars private server ever created. It gives
               players unlimited gems, every brawler fully unlocked at max power, exclusive custom game modes,
-              and cross-region multiplayer — all completely free. At its peak, over 500,000 players called
-              ReBrawl home.
+              and cross-region multiplayer — all completely free. With over 500,000 players and an active community
+              that keeps finding new ways to enjoy the game, reBrawl continues to be a player favorite.
             </p>
           </div>
 
           <div className="bg-bg-base rounded-2xl p-6 border border-white/5">
-            <h3 className="font-display font-bold text-xl text-white mb-3">The Official Archive</h3>
+            <h3 className="font-display font-bold text-xl text-white mb-3">The Official reBrawl Archive</h3>
             <p className="text-text-muted leading-relaxed text-sm">
-              This site is the official ReBrawl archive — the authoritative source preserving every version
-              for the community. Every APK hosted here is the original signed build, virus-scanned and verified
-              with a SHA-256 checksum. We never modify, repack, or tamper with any build.
+              This is the Official reBrawl Archive — the most trusted and complete source for every reBrawl version.
+              Every reBrawl APK hosted here is the original signed build, virus-scanned and verified
+              with a SHA-256 checksum. We never modify, repack, or tamper with any build. Just clean, verified downloads.
             </p>
           </div>
 
           <div className="bg-bg-base rounded-2xl p-6 border border-white/5">
-            <h3 className="font-display font-bold text-xl text-white mb-3">Our Mission</h3>
+            <h3 className="font-display font-bold text-xl text-white mb-3">Built by Players, for Players</h3>
             <p className="text-text-muted leading-relaxed text-sm">
-              ReBrawl may no longer have active servers, but its legacy lives on. Our mission is to preserve
-              every version of ReBrawl so players can revisit the experience that defined private server gaming
-              for the Brawl Stars community. Built by players, for players.
+              What makes reBrawl special is the creativity of its community. From custom skins to unique gameplay concepts,
+              players are constantly finding new ways to keep the experience fresh. Our mission is to make sure every version
+              of reBrawl stays available so the community can always come back to the game they love.
             </p>
           </div>
         </div>

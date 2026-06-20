@@ -9,9 +9,9 @@ import { faq } from "@/lib/data"
 import { buildSoftwareApplicationJsonLd, buildFaqJsonLd } from "@/lib/seo"
 
 export const metadata: Metadata = {
-  title: "ReBrawl — Official Archive | Download Brawl Stars Private Server APK",
+  title: "reBrawl — Official Archive | Download Brawl Stars Private Server APK",
   description:
-    "The official ReBrawl archive. Download all preserved Brawl Stars private server APK versions. Unlimited gems, all brawlers unlocked, custom game modes. Verified and virus-scanned.",
+    "Looking for a fresh way to experience Brawl Stars? The Official reBrawl Archive has every reBrawl APK version ready to download — unlimited gems, all brawlers unlocked, custom game modes, and exclusive content. Verified and virus-scanned.",
   alternates: {
     canonical: "/",
   },
@@ -38,7 +38,7 @@ export default function Home() {
       <ThunderDivider />
       <FaqAccordion
         items={faq.slice(0, 3)}
-        subtitle="Everything you need to know about ReBrawl and the archive."
+        subtitle="Everything you need to know about reBrawl and the Official reBrawl Archive."
         showAllLink
       />
     </>

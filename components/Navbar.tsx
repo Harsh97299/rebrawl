@@ -1,11 +1,17 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
+import { downloadVersions } from "@/lib/data"
+
+const accentColors: Record<string, string> = {
+  purple: "text-brand-purple",
+  gold: "text-brand-yellow",
+  blue: "text-brand-blue",
+}
 
 const navLinks = [
-  { href: "/#features", label: "Features" },
-  { href: "/#about", label: "About" },
-  { href: "/archive", label: "Archive" },
+  { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ]
@@ -13,6 +19,9 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [archiveOpen, setArchiveOpen] = useState(false)
+  const [mobileArchiveOpen, setMobileArchiveOpen] = useState(false)
+  const archiveTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60)
@@ -20,11 +29,20 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handler)
   }, [])
 
+  function handleArchiveEnter() {
+    if (archiveTimeout.current) clearTimeout(archiveTimeout.current)
+    setArchiveOpen(true)
+  }
+
+  function handleArchiveLeave() {
+    archiveTimeout.current = setTimeout(() => setArchiveOpen(false), 150)
+  }
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg-elevated/95 backdrop-blur-md border-b border-white/5 shadow-lg shadow-black/30"
+          ? "bg-bg-elevated/95 backdrop-blur-md shadow-lg shadow-black/30"
           : "bg-transparent"
       }`}
     >
@@ -32,9 +50,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="w-8 h-8 rounded-lg bg-brand-yellow flex items-center justify-center font-black text-bg-base text-lg leading-none select-none">
-              ⚡
-            </span>
+            <Image
+              src="/logo.webp"
+              alt="ReBrawl logo"
+              width={32}
+              height={32}
+              className="rounded-lg"
+            />
             <span className="font-display text-2xl font-extrabold tracking-tight text-white group-hover:text-brand-yellow transition-colors">
               Re<span className="text-brand-yellow">Brawl</span>
             </span>
@@ -42,7 +64,88 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-7" aria-label="Main navigation">
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 2).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-text-muted hover:text-white text-sm font-medium transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            {/* Archive dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={handleArchiveEnter}
+              onMouseLeave={handleArchiveLeave}
+            >
+              <Link
+                href="/archive"
+                className="flex items-center gap-1 text-text-muted hover:text-white text-sm font-medium transition-colors"
+              >
+                Archive
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  className={`transition-transform duration-200 ${archiveOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </Link>
+
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 transition-all duration-200 ${
+                  archiveOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-1 pointer-events-none"
+                }`}
+              >
+                <div className="w-56 rounded-xl border border-white/10 bg-bg-elevated/95 backdrop-blur-md shadow-2xl shadow-black/50 overflow-hidden">
+                  {downloadVersions.map((v) => (
+                    <Link
+                      key={v.id}
+                      href={`/archive/${v.id}`}
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
+                      onClick={() => setArchiveOpen(false)}
+                    >
+                      <Image
+                        src={v.image}
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="rounded-md object-contain"
+                      />
+                      <span className={`font-display font-bold text-sm ${accentColors[v.accent]}`}>
+                        {v.name}
+                      </span>
+                      {v.badge && (
+                        <span className="ml-auto text-[9px] font-extrabold uppercase tracking-wider text-brand-yellow bg-brand-yellow/15 border border-brand-yellow/25 rounded-full px-1.5 py-0.5">
+                          {v.badge}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                  <div className="border-t border-white/5">
+                    <Link
+                      href="/archive"
+                      className="flex items-center gap-2 px-4 py-3 text-text-muted hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
+                      onClick={() => setArchiveOpen(false)}
+                    >
+                      All Versions
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" className="ml-auto">
+                        <path d="m9 18 6-6-6-6" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {navLinks.slice(2).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -55,7 +158,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3">
             <a
-              href="#download"
+              href="/archive"
               className={`px-4 py-2 rounded-xl font-bold text-sm transition-all duration-200 ${
                 scrolled
                   ? "bg-brand-yellow text-bg-base hover:bg-brand-gold shadow-md shadow-brand-yellow/20"
@@ -95,11 +198,66 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-bg-elevated/95 backdrop-blur-md border-t border-white/5 px-4 py-3 flex flex-col gap-1">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, 2).map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="text-text-muted hover:text-white py-3 px-3 rounded-lg hover:bg-white/5 text-sm font-medium transition-colors block"
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          {/* Mobile archive accordion */}
+          <button
+            onClick={() => setMobileArchiveOpen((o) => !o)}
+            className="flex items-center justify-between text-text-muted hover:text-white py-3 px-3 rounded-lg hover:bg-white/5 text-sm font-medium transition-colors w-full text-left"
+          >
+            Archive
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              className={`transition-transform duration-200 ${mobileArchiveOpen ? "rotate-180" : ""}`}
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div
+            className={`overflow-hidden transition-all duration-200 ${
+              mobileArchiveOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            {downloadVersions.map((v) => (
+              <Link
+                key={v.id}
+                href={`/archive/${v.id}`}
+                onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
+                className={`flex items-center gap-3 py-2.5 px-6 text-sm font-medium transition-colors hover:bg-white/5 rounded-lg ${accentColors[v.accent]}`}
+              >
+                <Image src={v.image} alt="" width={20} height={20} className="rounded object-contain" />
+                {v.name}
+              </Link>
+            ))}
+            <Link
+              href="/archive"
+              onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
+              className="py-2.5 px-6 text-sm font-medium text-text-muted hover:text-white transition-colors hover:bg-white/5 rounded-lg block"
+            >
+              All Versions
+            </Link>
+          </div>
+
+          {navLinks.slice(2).map((link) => (
             <Link
               key={link.href}
               href={link.href}

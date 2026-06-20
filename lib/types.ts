@@ -42,3 +42,26 @@ export type Stat = {
   value: string
   label: string
 }
+
+export type TechDetail = {
+  label: string
+  value: string
+}
+
+export type InstallStep = {
+  title: string
+  text: string
+}
+
+export type VersionPageData = {
+  id: string
+  description: string
+  highlights: { title: string; text: string }[]
+  techDetails: TechDetail[]
+  installSteps: InstallStep[]
+  faq: FaqItem[]
+  downloadLabel: string
+  downloadVersion: string
+  downloadSize: string
+  downloadStatus: string
+}

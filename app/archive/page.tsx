@@ -1,14 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import ApkArchiveTable from "@/components/ApkArchiveTable"
+import ArchiveVersionPicker from "@/components/ArchiveVersionPicker"
 import Disclaimer from "@/components/Disclaimer"
 import { releases } from "@/lib/data"
 import { buildBreadcrumbJsonLd, buildSoftwareApplicationJsonLd } from "@/lib/seo"
 
 export const metadata: Metadata = {
-  title: "APK Archive — All ReBrawl Versions",
+  title: "Official reBrawl Archive Downloads — All reBrawl APK Versions",
   description:
-    "Complete archive of all preserved ReBrawl APK versions. Every build is virus-scanned, SHA-256 verified, and available for free download.",
+    "Browse the complete Official reBrawl Archive. Every reBrawl APK version is virus-scanned, SHA-256 verified, and ready for free download. Find reBrawl Mods, reBrawl Classic, and reBrawl Legacy.",
   alternates: {
     canonical: "/archive",
   },
@@ -35,13 +36,33 @@ export default function ArchivePage() {
 
       {/* Page hero */}
       <section
-        className="pt-28 pb-16 border-b border-white/5"
+        className="relative pt-28 pb-16 border-b border-white/5 overflow-hidden"
         style={{
           background:
             "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(124,58,237,0.15) 0%, transparent 60%), #0b0b16",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundColor: "rgba(124,58,237,0.18)",
+            maskImage: "url('/background/brawl-pattern-new-SHECXIEU.png')",
+            WebkitMaskImage: "url('/background/brawl-pattern-new-SHECXIEU.png')",
+            maskRepeat: "repeat",
+            WebkitMaskRepeat: "repeat",
+            maskSize: "400px 400px",
+            WebkitMaskSize: "400px 400px",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 70% 70% at 50% 50%, #0b0b16 20%, transparent 70%)",
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav
             className="flex items-center gap-2 text-sm text-text-muted mb-8"
             aria-label="Breadcrumb"
@@ -55,30 +76,82 @@ export default function ArchivePage() {
             </span>
           </nav>
 
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-            <div>
-              <h1 className="font-display text-5xl md:text-6xl font-extrabold text-white mb-4">
-                APK <span className="text-brand-yellow">Archive</span>
-              </h1>
-              <p className="text-text-muted text-xl max-w-2xl">
-                {releases.length} preserved builds — all virus-scanned, SHA-256 verified, and
-                permanently available.
-              </p>
-            </div>
-            <a
-              href={releases.find((r) => r.latest)?.downloadUrl ?? "#"}
-              className="inline-flex items-center gap-2.5 px-6 py-3 bg-brand-yellow text-bg-base rounded-xl font-extrabold hover:bg-brand-gold transition-colors shadow-lg shadow-brand-yellow/20 shrink-0"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z" />
-              </svg>
-              Download Latest
-            </a>
+          <div className="mb-12">
+            <h1 className="font-display text-5xl md:text-6xl font-extrabold text-white mb-4">
+              Official reBrawl <span className="text-brand-yellow">Archive Downloads</span>
+            </h1>
+            <p className="text-text-muted text-xl max-w-2xl">
+              {releases.length} reBrawl builds — all virus-scanned, SHA-256 verified, and
+              ready to download. Your one-stop destination for every reBrawl APK.
+            </p>
           </div>
+
+          <ArchiveVersionPicker />
         </div>
       </section>
 
-      <ApkArchiveTable data={releases} showHeading={false} />
+      {/* ── Edition Comparison ── */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-3 text-center">
+          Compare <span className="text-brand-yellow">Editions</span>
+        </h2>
+        <p className="text-text-muted text-center mb-10 max-w-xl mx-auto">
+          Not sure which reBrawl edition to pick? Here&apos;s how the three versions stack up — each one brings a unique gameplay experience.
+        </p>
+
+        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/2">
+          <table className="w-full text-sm md:text-base">
+            <thead>
+              <tr className="border-b border-white/10 text-left">
+                <th className="px-6 py-4 text-text-muted font-semibold">Feature</th>
+                <th className="px-6 py-4 text-brand-purple font-bold">Mods Edition</th>
+                <th className="px-6 py-4 text-brand-yellow font-bold">Classic Edition</th>
+                <th className="px-6 py-4 text-brand-blue font-bold">Legacy Edition</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5 text-white">
+              <tr>
+                <td className="px-6 py-4 text-text-muted">Custom Brawlers</td>
+                <td className="px-6 py-4">
+                  <span className="text-green-400">&#10003;</span> Yes (70+)
+                </td>
+                <td className="px-6 py-4">
+                  <span className="text-red-400">&#10007;</span> No
+                </td>
+                <td className="px-6 py-4">
+                  <span className="text-red-400">&#10007;</span> No
+                </td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 text-text-muted">Original Gameplay</td>
+                <td className="px-6 py-4">
+                  <span className="text-red-400">&#10007;</span> Modified
+                </td>
+                <td className="px-6 py-4">
+                  <span className="text-green-400">&#10003;</span> Original
+                </td>
+                <td className="px-6 py-4">
+                  <span className="text-green-400">&#10003;</span> Original
+                </td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 text-text-muted">Android Version</td>
+                <td className="px-6 py-4">9.0+ Recommended</td>
+                <td className="px-6 py-4">6.0+</td>
+                <td className="px-6 py-4">4.3+ (Old Devices)</td>
+              </tr>
+              <tr>
+                <td className="px-6 py-4 text-text-muted">Server Stability</td>
+                <td className="px-6 py-4">High</td>
+                <td className="px-6 py-4">Maximum</td>
+                <td className="px-6 py-4">Maximum</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+     
       <Disclaimer />
     </>
   )

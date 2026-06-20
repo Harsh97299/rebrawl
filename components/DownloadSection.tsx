@@ -39,11 +39,11 @@ export default function DownloadSection() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Download <span className="text-brand-yellow">Versions</span>
+            Download <span className="text-brand-yellow">reBrawl</span>
           </h2>
           <p className="text-text-muted text-lg max-w-xl mx-auto">
-            Three flavors of reBrawl — pick the build that fits your device and play style. Every
-            version is verified and virus-scanned.
+            Three editions of reBrawl — pick the one that fits your device and play style. Every
+            reBrawl download is verified, virus-scanned, and ready to install from the Official reBrawl Archive.
           </p>
         </div>
 

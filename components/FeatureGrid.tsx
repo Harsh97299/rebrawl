@@ -23,11 +23,11 @@ export default function FeatureGrid() {
 
       <div className="max-w-7xl mx-auto px-8 text-center mb-4 relative z-10">
         <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-          Why ReBrawl Was{" "}
-          <span className="text-brand-yellow">Legendary</span>
+          Best Features of{" "}
+          <span className="text-brand-yellow">reBrawl</span>
         </h2>
         <p className="mt-4 text-base text-text-muted max-w-2xl mx-auto">
-          The features that made millions of players choose ReBrawl over the official experience.
+          The feature-packed experience that makes reBrawl the community favorite Brawl Stars private server.
         </p>
       </div>
 
