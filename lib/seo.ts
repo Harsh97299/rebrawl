@@ -27,8 +27,9 @@ export const defaultMetadata: Metadata = {
   ],
   authors: [{ name: "Official reBrawl Archive" }],
   icons: {
-    icon: "/logo.webp",
-    apple: "/logo.webp",
+    icon: [{ url: "/logo.webp", type: "image/webp" }],
+    shortcut: [{ url: "/logo.webp", type: "image/webp" }],
+    apple: [{ url: "/logo.webp" }],
   },
   openGraph: {
     type: "website",
