@@ -8,6 +8,18 @@
       "title": "Hakkımızda — Resmi reBrawl Arşivi",
       "description": "Resmi reBrawl Arşivi hakkında bilgi edinin — dünyanın en ünlü Brawl Stars özel sunucusu için topluluk tarafından yönetilen merkez. Özel içerikleri, özel kostümleri ve reBrawl'un sunduğu her şeyi keşfedin."
     },
+    "dmca": {
+      "title": "DMCA Bildirimi — Resmi reBrawl Arşivi",
+      "description": "Resmi reBrawl Arşivi'nin telif hakkı taleplerini, kaldırma isteklerini ve DMCA uyumluluğunu nasıl ele aldığını öğrenin."
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası — Resmi reBrawl Arşivi",
+      "description": "reBrawl APK indirmelerini desteklerken verileri nasıl topladığımızı, kullandığımızı ve koruduğumuzu anlamak için Resmi reBrawl Arşivi gizlilik politikasını okuyun."
+    },
+    "terms": {
+      "title": "Şartlar ve Koşullar — Resmi reBrawl Arşivi",
+      "description": "Resmi reBrawl Arşivi'ni kullanmaya ilişkin şartlar ve koşulları inceleyin; izin verilen kullanım, indirme sorumluluğu ve içerik feragatleri dahil."
+    },
     "archive": {
       "title": "Resmi reBrawl Arşiv İndirmeleri — Tüm reBrawl APK Sürümleri",
       "description": "Resmi reBrawl Arşivi'nin tamamına göz atın. Her reBrawl APK sürümü virüs taramasından geçmiş, SHA-256 ile doğrulanmış ve ücretsiz indirmeye hazır. reBrawl Mods, reBrawl Classic ve reBrawl Legacy'yi bulun."
@@ -105,9 +117,18 @@
       "name": "reBrawl Mods",
       "tagline": "30+ özel savaşçı. Tam kaos. Saf eğlence.",
       "features": [
-        { "label": "Özel İçerik", "text": "Brawl Stars'ta başka hiçbir yerde bulamayacağınız 30+ topluluk tarafından oluşturulmuş savaşçı." },
-        { "label": "Özel Kostümler", "text": "İkonik pop kültürü karakterleri ve hayran tasarımı robot birimleri olarak oynayın — en sevdiğiniz savaşçının kimliğini sorgulamasına yetecek kadar kostüm." },
-        { "label": "En İyi", "text": "Topluluğun sıfırdan oluşturduğu özel içeriklerle yaratıcı, aşırı güçlü oynanış isteyen oyuncular için." }
+        {
+          "label": "Özel İçerik",
+          "text": "Brawl Stars'ta başka hiçbir yerde bulamayacağınız 30+ topluluk tarafından oluşturulmuş savaşçı."
+        },
+        {
+          "label": "Özel Kostümler",
+          "text": "İkonik pop kültürü karakterleri ve hayran tasarımı robot birimleri olarak oynayın — en sevdiğiniz savaşçının kimliğini sorgulamasına yetecek kadar kostüm."
+        },
+        {
+          "label": "En İyi",
+          "text": "Topluluğun sıfırdan oluşturduğu özel içeriklerle yaratıcı, aşırı güçlü oynanış isteyen oyuncular için."
+        }
       ],
       "cta": "reBrawl Mods İndir",
       "badge": ""
@@ -116,9 +137,18 @@
       "name": "reBrawl Classic",
       "tagline": "Orijinal mekanikler, sınırsız her şey.",
       "features": [
-        { "label": "Özellik Seti", "text": "Hesabınızın ne yapacağını bilemeyeceği kadar elmas — artı sınırsız Altın ve Kutular." },
-        { "label": "Orijinallik", "text": "Özel kodlanmış savaşçı yok — Supercell'in tasarladığı şekliyle saf, orijinal Brawl Stars mekanikleri." },
-        { "label": "En İyi", "text": "Kostümleri test etmek, sınırsız kutu açmak ve bir kuruş harcamadan orijinal oynanışın keyfini çıkarmak için topluluk favorisi." }
+        {
+          "label": "Özellik Seti",
+          "text": "Hesabınızın ne yapacağını bilemeyeceği kadar elmas — artı sınırsız Altın ve Kutular."
+        },
+        {
+          "label": "Orijinallik",
+          "text": "Özel kodlanmış savaşçı yok — Supercell'in tasarladığı şekliyle saf, orijinal Brawl Stars mekanikleri."
+        },
+        {
+          "label": "En İyi",
+          "text": "Kostümleri test etmek, sınırsız kutu açmak ve bir kuruş harcamadan orijinal oynanışın keyfini çıkarmak için topluluk favorisi."
+        }
       ],
       "cta": "reBrawl Classic İndir",
       "badge": "EN POPÜLER"
@@ -127,9 +157,18 @@
       "name": "reBrawl Legacy",
       "tagline": "Her Android cihazda akıcı oynanış.",
       "features": [
-        { "label": "Optimizasyon", "text": "Android 4.3 (KitKat) ve üzeri cihazlarda çalışır — resmi istemciyi kaldıramayan cihazlarda bile." },
-        { "label": "Performans", "text": "Eski ve bütçe dostu cihazlarda tereyağı gibi akıcı oynanış için optimize edilmiş grafikler." },
-        { "label": "En İyi", "text": "Amiral gemisi telefona ihtiyaç duymadan tam reBrawl deneyimi isteyen oyuncular için." }
+        {
+          "label": "Optimizasyon",
+          "text": "Android 4.3 (KitKat) ve üzeri cihazlarda çalışır — resmi istemciyi kaldıramayan cihazlarda bile."
+        },
+        {
+          "label": "Performans",
+          "text": "Eski ve bütçe dostu cihazlarda tereyağı gibi akıcı oynanış için optimize edilmiş grafikler."
+        },
+        {
+          "label": "En İyi",
+          "text": "Amiral gemisi telefona ihtiyaç duymadan tam reBrawl deneyimi isteyen oyuncular için."
+        }
       ],
       "cta": "reBrawl Legacy İndir",
       "badge": ""
@@ -244,11 +283,26 @@
       "metaTitle": "reBrawl Classic APK İndir — Resmi reBrawl Arşivi",
       "description": "reBrawl Classic topluluk favorisidir — özel sunucu özgürlüğüyle saf, değiştirilmemiş bir Brawl Stars deneyimi. reBrawl Mods kaotik özel içerik getirirken, Classic orijinal oynanış mekanikleri, sınırsız kaynaklar ve her savaşçı açık olarak gerçekliğini korur. Brawl Stars'ı Supercell'in tasarladığı şekliyle seviyorsanız ama her şeyin baştan itibaren mevcut olmasını istiyorsanız, bu sürüm tam size göre.",
       "highlights": [
-        { "title": "Sınırsız Kaynaklar", "text": "Her hesap 999.999+ Elmas ve Altın ile başlar. Kasma yok, satın alma yok — girdiğiniz andan itibaren her şey açık." },
-        { "title": "Orijinal Oyun Mekanikleri", "text": "Özel kodlanmış savaşçı veya değiştirilmiş istatistik yok. Saf, orijinal Brawl Stars oynanışı — tam da bildiğiniz ve sevdiğiniz şekliyle." },
-        { "title": "Kostüm ve Kutu Testi", "text": "Gerçek para harcamadan sınırsız kutu açmak ve her kostümü denemek için oyuncu favorisi. Bazı özel savaşçılar alternatif bir Brawl Stars evreninden kaçmış gibi görünüyor — ama Classic temiz tutar." },
-        { "title": "Sıfır Hesap Riski", "text": "Benzersiz bir paket adı (com.rebrawl.classic) kullanır, böylece ana hesabınızı riske atmadan resmi oyunun yanında çalışır." },
-        { "title": "Root Gerekmez", "text": "Standart Android cihazlarda çalışır. Root yok, yama yok — sadece indirin ve oynayın." }
+        {
+          "title": "Sınırsız Kaynaklar",
+          "text": "Her hesap 999.999+ Elmas ve Altın ile başlar. Kasma yok, satın alma yok — girdiğiniz andan itibaren her şey açık."
+        },
+        {
+          "title": "Orijinal Oyun Mekanikleri",
+          "text": "Özel kodlanmış savaşçı veya değiştirilmiş istatistik yok. Saf, orijinal Brawl Stars oynanışı — tam da bildiğiniz ve sevdiğiniz şekliyle."
+        },
+        {
+          "title": "Kostüm ve Kutu Testi",
+          "text": "Gerçek para harcamadan sınırsız kutu açmak ve her kostümü denemek için oyuncu favorisi. Bazı özel savaşçılar alternatif bir Brawl Stars evreninden kaçmış gibi görünüyor — ama Classic temiz tutar."
+        },
+        {
+          "title": "Sıfır Hesap Riski",
+          "text": "Benzersiz bir paket adı (com.rebrawl.classic) kullanır, böylece ana hesabınızı riske atmadan resmi oyunun yanında çalışır."
+        },
+        {
+          "title": "Root Gerekmez",
+          "text": "Standart Android cihazlarda çalışır. Root yok, yama yok — sadece indirin ve oynayın."
+        }
       ],
       "techDetails": [
         { "label": "Proje Adı", "value": "reBrawl Classic (Resmi Arşiv)" },
@@ -256,19 +310,43 @@
         { "label": "Dosya Boyutu", "value": "186 MB" },
         { "label": "Paket Adı", "value": "com.rebrawl.classic" },
         { "label": "Uyumluluk", "value": "Android 6.0+ Önerilir" },
-        { "label": "Güvenlik Durumu", "value": "Doğrulanmış ve Taranmış (Virüssüz)" },
+        {
+          "label": "Güvenlik Durumu",
+          "value": "Doğrulanmış ve Taranmış (Virüssüz)"
+        },
         { "label": "Geliştirici", "value": "reBrawl Ekibi (Önceden LWARB)" }
       ],
       "installSteps": [
-        { "title": "Hazırlık", "text": "Cihazınızda şu anda yüklü başka \"LWARB\" veya \"reBrawl\" sürümlerinin olmadığından emin olun." },
-        { "title": "İndirme", "text": "Aşağıdaki indirme bağlantısından doğrulanmış reBrawl Classic v30.231 APK'sını alın." },
-        { "title": "İzinler", "text": "Ayarlar → Güvenlik'e gidin ve kuruluma izin vermek için \"Bilinmeyen Kaynaklar\"ı etkinleştirin." },
-        { "title": "Kurulum", "text": "Dosyayı açın ve \"Yükle\"ye dokunun. Play Protect uygulamayı işaretlerse, devam etmek için \"Yine de Yükle\"yi seçin." }
+        {
+          "title": "Hazırlık",
+          "text": "Cihazınızda şu anda yüklü başka \"LWARB\" veya \"reBrawl\" sürümlerinin olmadığından emin olun."
+        },
+        {
+          "title": "İndirme",
+          "text": "Aşağıdaki indirme bağlantısından doğrulanmış reBrawl Classic v30.231 APK'sını alın."
+        },
+        {
+          "title": "İzinler",
+          "text": "Ayarlar → Güvenlik'e gidin ve kuruluma izin vermek için \"Bilinmeyen Kaynaklar\"ı etkinleştirin."
+        },
+        {
+          "title": "Kurulum",
+          "text": "Dosyayı açın ve \"Yükle\"ye dokunun. Play Protect uygulamayı işaretlerse, devam etmek için \"Yine de Yükle\"yi seçin."
+        }
       ],
       "faq": [
-        { "question": "Neden \"Sunucuya Bağlanılıyor\" hatası görüyorum?", "answer": "Orijinal reBrawl ana sunucuları şu anda çevrimdışı. Oyuncular genellikle bağlanmak için topluluk tarafından barındırılan DNS yönlendirmelerini kullanır veya uygulamayı çevrimdışı kostüm ve öğe görüntüleme için kullanır. En son bağlantı kılavuzları için reBrawl topluluğuna göz atın." },
-        { "question": "reBrawl Classic, reBrawl Mods'tan nasıl farklı?", "answer": "reBrawl Classic, özel kodlanmış savaşçı olmadan orijinal Brawl Stars mekaniklerini korur — saf deneyimdir. reBrawl Mods, topluluk tarafından oluşturulmuş 30+ özel savaşçı, değiştirilmiş yetenekler ve özel oyun modlarıyla sonuna kadar gider." },
-        { "question": "Cihazım reBrawl Classic ile uyumlu mu?", "answer": "reBrawl Classic, Android 6.0 (Marshmallow) veya üzerini gerektirir. 2015 sonrasında üretilen çoğu cihazda sorunsuz çalışır. Root erişimi veya özel donanım gerekmez." }
+        {
+          "question": "Neden \"Sunucuya Bağlanılıyor\" hatası görüyorum?",
+          "answer": "Orijinal reBrawl ana sunucuları şu anda çevrimdışı. Oyuncular genellikle bağlanmak için topluluk tarafından barındırılan DNS yönlendirmelerini kullanır veya uygulamayı çevrimdışı kostüm ve öğe görüntüleme için kullanır. En son bağlantı kılavuzları için reBrawl topluluğuna göz atın."
+        },
+        {
+          "question": "reBrawl Classic, reBrawl Mods'tan nasıl farklı?",
+          "answer": "reBrawl Classic, özel kodlanmış savaşçı olmadan orijinal Brawl Stars mekaniklerini korur — saf deneyimdir. reBrawl Mods, topluluk tarafından oluşturulmuş 30+ özel savaşçı, değiştirilmiş yetenekler ve özel oyun modlarıyla sonuna kadar gider."
+        },
+        {
+          "question": "Cihazım reBrawl Classic ile uyumlu mu?",
+          "answer": "reBrawl Classic, Android 6.0 (Marshmallow) veya üzerini gerektirir. 2015 sonrasında üretilen çoğu cihazda sorunsuz çalışır. Root erişimi veya özel donanım gerekmez."
+        }
       ],
       "downloadLabel": "reBrawl Classic APK İndir",
       "downloadVersion": "v30.231",
@@ -279,11 +357,26 @@
       "metaTitle": "reBrawl Mods APK İndir — Resmi reBrawl Arşivi",
       "description": "reBrawl Mods, topluluğun yaratıcı oyun alanıdır — her şeyin mümkün olduğu sürüm. 30'dan fazla özel kodlanmış savaşçı, değiştirilmiş yetenekler ve resmi Brawl Stars istemcisinde hiç bulunmayan özel oyun modlarıyla, reBrawl Mods bir Brawl Stars özel sunucusunun neler yapabileceğinin sınırlarını zorlar. Bu, tutkulu hayranlar tarafından topluluk için oluşturulmuş en kaliteli özel içeriktir.",
       "highlights": [
-        { "title": "30+ Özel Savaşçı", "text": "reBrawl modlama topluluğu tarafından tasarlanmış ve kodlanmış benzersiz yeteneklere sahip tamamen yeni karakterler. Brawl Stars'ta başka hiçbir yerde bulamayacağınız hayran yapımı içerik." },
-        { "title": "Değiştirilmiş Yetenekler ve İstatistikler", "text": "Mevcut savaşçılar aşırı güçlü yetenekler, deneysel yıldız güçleri ve en kaotik, eğlenceli oynanışı yaratan çılgın istatistik değişiklikleri alır." },
-        { "title": "Özel Oyun Modları", "text": "Sıfırdan oluşturulmuş özel oyun modları — boss rush varyantları, sınırsız mermi arenaları ve topluluk tarafından tasarlanmış harita zorlukları. Yaratıcı oynanışın zirvesi." },
-        { "title": "Pop Kültürü Kostümleri", "text": "Anime, oyun ve pop kültüründen ikonik karakter kostümleri — sadece reBrawl Mods'ta bulunan özel kostümler. En sevdiğiniz savaşçının kimliğini sorgulamasına yetecek kadar kostüm." },
-        { "title": "Root Gerekmez", "text": "Android 6.0+ herhangi bir cihaza standart APK olarak kurulur. Root veya gelişmiş kurulum gerekmez — sadece indirin ve başlayın." }
+        {
+          "title": "30+ Özel Savaşçı",
+          "text": "reBrawl modlama topluluğu tarafından tasarlanmış ve kodlanmış benzersiz yeteneklere sahip tamamen yeni karakterler. Brawl Stars'ta başka hiçbir yerde bulamayacağınız hayran yapımı içerik."
+        },
+        {
+          "title": "Değiştirilmiş Yetenekler ve İstatistikler",
+          "text": "Mevcut savaşçılar aşırı güçlü yetenekler, deneysel yıldız güçleri ve en kaotik, eğlenceli oynanışı yaratan çılgın istatistik değişiklikleri alır."
+        },
+        {
+          "title": "Özel Oyun Modları",
+          "text": "Sıfırdan oluşturulmuş özel oyun modları — boss rush varyantları, sınırsız mermi arenaları ve topluluk tarafından tasarlanmış harita zorlukları. Yaratıcı oynanışın zirvesi."
+        },
+        {
+          "title": "Pop Kültürü Kostümleri",
+          "text": "Anime, oyun ve pop kültüründen ikonik karakter kostümleri — sadece reBrawl Mods'ta bulunan özel kostümler. En sevdiğiniz savaşçının kimliğini sorgulamasına yetecek kadar kostüm."
+        },
+        {
+          "title": "Root Gerekmez",
+          "text": "Android 6.0+ herhangi bir cihaza standart APK olarak kurulur. Root veya gelişmiş kurulum gerekmez — sadece indirin ve başlayın."
+        }
       ],
       "techDetails": [
         { "label": "Proje Adı", "value": "reBrawl Mods (Resmi Arşiv)" },
@@ -291,19 +384,43 @@
         { "label": "Dosya Boyutu", "value": "210 MB" },
         { "label": "Paket Adı", "value": "com.rebrawl.mods" },
         { "label": "Uyumluluk", "value": "Android 6.0+ Önerilir" },
-        { "label": "Güvenlik Durumu", "value": "Doğrulanmış ve Taranmış (Virüssüz)" },
+        {
+          "label": "Güvenlik Durumu",
+          "value": "Doğrulanmış ve Taranmış (Virüssüz)"
+        },
         { "label": "Geliştirici", "value": "reBrawl Ekibi" }
       ],
       "installSteps": [
-        { "title": "Hazırlık", "text": "Kurulum sırasında sürüm çakışmalarını önlemek için önceki reBrawl Mods yapılarını kaldırın." },
-        { "title": "İndirme", "text": "Aşağıdaki indirme bağlantısından doğrulanmış reBrawl Mods v30.231-mod APK'sını alın." },
-        { "title": "İzinler", "text": "Ayarlar → Güvenlik'e gidin ve kuruluma izin vermek için \"Bilinmeyen Kaynaklar\"ı etkinleştirin." },
-        { "title": "Kurulum", "text": "Dosyayı açın ve \"Yükle\"ye dokunun. Play Protect uygulamayı işaretlerse, devam etmek için \"Yine de Yükle\"yi seçin." }
+        {
+          "title": "Hazırlık",
+          "text": "Kurulum sırasında sürüm çakışmalarını önlemek için önceki reBrawl Mods yapılarını kaldırın."
+        },
+        {
+          "title": "İndirme",
+          "text": "Aşağıdaki indirme bağlantısından doğrulanmış reBrawl Mods v30.231-mod APK'sını alın."
+        },
+        {
+          "title": "İzinler",
+          "text": "Ayarlar → Güvenlik'e gidin ve kuruluma izin vermek için \"Bilinmeyen Kaynaklar\"ı etkinleştirin."
+        },
+        {
+          "title": "Kurulum",
+          "text": "Dosyayı açın ve \"Yükle\"ye dokunun. Play Protect uygulamayı işaretlerse, devam etmek için \"Yine de Yükle\"yi seçin."
+        }
       ],
       "faq": [
-        { "question": "Özel savaşçılar dengeli mi?", "answer": "reBrawl Mods'taki özel savaşçılar kasıtlı olarak aşırı güçlü ve deneyseldir. Amaç yaratıcı eğlencedir, rekabetçi denge değil. Kaotik, sandbox tarzı oynanış bekleyin — onu oyuncu favorisi yapan da bu." },
-        { "question": "reBrawl Classic kullanıcılarıyla oynayabilir miyim?", "answer": "Hayır. reBrawl Mods ve reBrawl Classic farklı oyun verileriyle ayrı sunucularda çalışır. Her sürümdeki oyuncular yalnızca aynı sürümdeki diğerleriyle eşleşebilir." },
-        { "question": "reBrawl Mods dosya boyutu neden Classic'ten daha büyük?", "answer": "reBrawl Mods, 30+ özel savaşçı, özel kostümler ve değiştirilmiş oyun modları için ek öğeler içerir — tüm bu özel içerik toplanır, ama buna değer." }
+        {
+          "question": "Özel savaşçılar dengeli mi?",
+          "answer": "reBrawl Mods'taki özel savaşçılar kasıtlı olarak aşırı güçlü ve deneyseldir. Amaç yaratıcı eğlencedir, rekabetçi denge değil. Kaotik, sandbox tarzı oynanış bekleyin — onu oyuncu favorisi yapan da bu."
+        },
+        {
+          "question": "reBrawl Classic kullanıcılarıyla oynayabilir miyim?",
+          "answer": "Hayır. reBrawl Mods ve reBrawl Classic farklı oyun verileriyle ayrı sunucularda çalışır. Her sürümdeki oyuncular yalnızca aynı sürümdeki diğerleriyle eşleşebilir."
+        },
+        {
+          "question": "reBrawl Mods dosya boyutu neden Classic'ten daha büyük?",
+          "answer": "reBrawl Mods, 30+ özel savaşçı, özel kostümler ve değiştirilmiş oyun modları için ek öğeler içerir — tüm bu özel içerik toplanır, ama buna değer."
+        }
       ],
       "downloadLabel": "reBrawl Mods APK İndir",
       "downloadVersion": "v30.231-mod",
@@ -314,11 +431,26 @@
       "metaTitle": "reBrawl Legacy APK İndir — Resmi reBrawl Arşivi",
       "description": "reBrawl Legacy, eski ve bütçe dostu Android cihazlar için özel olarak tasarlanmıştır. Optimize edilmiş grafikler, küçültülmüş öğe boyutları ve Android 4.3'e (KitKat) kadar uzanan uyumlulukla, reBrawl Legacy her oyuncunun donanımından bağımsız olarak reBrawl deneyiminin tadını çıkarabilmesini sağlar. Hiçbir telefon geride kalmaz — bu sürümü bütçe cihazlarındaki oyuncular için topluluk favorisi yapan da budur.",
       "highlights": [
-        { "title": "Ultra Geniş Uyumluluk", "text": "Android 4.3 (KitKat) ve üzerinde çalışır — artık resmi Brawl Stars istemcisini çalıştıramayan cihazlara reBrawl'u getirir." },
-        { "title": "Optimize Performans", "text": "Sadeleştirilmiş grafikler ve azaltılmış parçacık efektleri, 1 GB RAM kadar az belleğe sahip cihazlarda akıcı, yaratıcı oynanış sunar." },
-        { "title": "Daha Küçük Dosya Boyutu", "text": "Sıkıştırılmış öğeler reBrawl APK'sını 95 MB'ın altında tutar — sınırlı depolama alanına sahip cihazlar için mükemmel." },
-        { "title": "Zengin Özellikli", "text": "Optimizasyonlara rağmen, tüm savaşçılar, elmaslar, altınlar ve temel oyun modları baştan itibaren tamamen açık ve mevcut." },
-        { "title": "Root Gerekmez", "text": "Standart APK kurulumu. Root yok, yama yok — sadece reBrawl Legacy'yi indirin ve oynamaya başlayın." }
+        {
+          "title": "Ultra Geniş Uyumluluk",
+          "text": "Android 4.3 (KitKat) ve üzerinde çalışır — artık resmi Brawl Stars istemcisini çalıştıramayan cihazlara reBrawl'u getirir."
+        },
+        {
+          "title": "Optimize Performans",
+          "text": "Sadeleştirilmiş grafikler ve azaltılmış parçacık efektleri, 1 GB RAM kadar az belleğe sahip cihazlarda akıcı, yaratıcı oynanış sunar."
+        },
+        {
+          "title": "Daha Küçük Dosya Boyutu",
+          "text": "Sıkıştırılmış öğeler reBrawl APK'sını 95 MB'ın altında tutar — sınırlı depolama alanına sahip cihazlar için mükemmel."
+        },
+        {
+          "title": "Zengin Özellikli",
+          "text": "Optimizasyonlara rağmen, tüm savaşçılar, elmaslar, altınlar ve temel oyun modları baştan itibaren tamamen açık ve mevcut."
+        },
+        {
+          "title": "Root Gerekmez",
+          "text": "Standart APK kurulumu. Root yok, yama yok — sadece reBrawl Legacy'yi indirin ve oynamaya başlayın."
+        }
       ],
       "techDetails": [
         { "label": "Proje Adı", "value": "reBrawl Legacy (Resmi Arşiv)" },
@@ -326,19 +458,43 @@
         { "label": "Dosya Boyutu", "value": "93 MB" },
         { "label": "Paket Adı", "value": "com.rebrawl.legacy" },
         { "label": "Uyumluluk", "value": "Android 4.3+ (KitKat)" },
-        { "label": "Güvenlik Durumu", "value": "Doğrulanmış ve Taranmış (Virüssüz)" },
+        {
+          "label": "Güvenlik Durumu",
+          "value": "Doğrulanmış ve Taranmış (Virüssüz)"
+        },
         { "label": "Geliştirici", "value": "reBrawl Ekibi" }
       ],
       "installSteps": [
-        { "title": "Hazırlık", "text": "reBrawl Legacy paket adıyla çakışabilecek mevcut reBrawl kurulumlarını kaldırın." },
-        { "title": "İndirme", "text": "Aşağıdaki indirme bağlantısından doğrulanmış reBrawl Legacy v28.189-lite APK'sını alın." },
-        { "title": "İzinler", "text": "Ayarlar → Güvenlik'e gidin ve kuruluma izin vermek için \"Bilinmeyen Kaynaklar\"ı etkinleştirin." },
-        { "title": "Kurulum", "text": "Dosyayı açın ve \"Yükle\"ye dokunun. Eski Android sürümlerinde indirmeyi bulmak için bir dosya yöneticisi kullanmanız gerekebilir." }
+        {
+          "title": "Hazırlık",
+          "text": "reBrawl Legacy paket adıyla çakışabilecek mevcut reBrawl kurulumlarını kaldırın."
+        },
+        {
+          "title": "İndirme",
+          "text": "Aşağıdaki indirme bağlantısından doğrulanmış reBrawl Legacy v28.189-lite APK'sını alın."
+        },
+        {
+          "title": "İzinler",
+          "text": "Ayarlar → Güvenlik'e gidin ve kuruluma izin vermek için \"Bilinmeyen Kaynaklar\"ı etkinleştirin."
+        },
+        {
+          "title": "Kurulum",
+          "text": "Dosyayı açın ve \"Yükle\"ye dokunun. Eski Android sürümlerinde indirmeyi bulmak için bir dosya yöneticisi kullanmanız gerekebilir."
+        }
       ],
       "faq": [
-        { "question": "reBrawl Legacy eski telefonumda çalışır mı?", "answer": "Cihazınız Android 4.3 veya üzerini çalıştırıyor ve en az 1 GB RAM'e sahipse, reBrawl Legacy harika çalışmalıdır. Modern Brawl Stars yapılarını kaldıramayan cihazlar için özel olarak optimize edilmiştir." },
-        { "question": "reBrawl Legacy neden Classic'ten farklı görünüyor?", "answer": "reBrawl Legacy, eski donanımlarda kare hızlarını akıcı tutmak için optimize edilmiş dokular, basitleştirilmiş parçacık efektleri ve düşük çözünürlüklü arayüz öğeleri kullanır. Oynanış hâlâ aynı harika deneyimdir." },
-        { "question": "reBrawl Legacy'de tüm savaşçılar var mı?", "answer": "reBrawl Legacy, temel sürümünden (v28) savaşçı kadrosunu içerir. Sonraki savaşçılar daha yeni oyun motoru özellikleri gerektirir, ancak yine de oynayabileceğiniz tam bir favori karakter kadrosuna sahipsiniz." }
+        {
+          "question": "reBrawl Legacy eski telefonumda çalışır mı?",
+          "answer": "Cihazınız Android 4.3 veya üzerini çalıştırıyor ve en az 1 GB RAM'e sahipse, reBrawl Legacy harika çalışmalıdır. Modern Brawl Stars yapılarını kaldıramayan cihazlar için özel olarak optimize edilmiştir."
+        },
+        {
+          "question": "reBrawl Legacy neden Classic'ten farklı görünüyor?",
+          "answer": "reBrawl Legacy, eski donanımlarda kare hızlarını akıcı tutmak için optimize edilmiş dokular, basitleştirilmiş parçacık efektleri ve düşük çözünürlüklü arayüz öğeleri kullanır. Oynanış hâlâ aynı harika deneyimdir."
+        },
+        {
+          "question": "reBrawl Legacy'de tüm savaşçılar var mı?",
+          "answer": "reBrawl Legacy, temel sürümünden (v28) savaşçı kadrosunu içerir. Sonraki savaşçılar daha yeni oyun motoru özellikleri gerektirir, ancak yine de oynayabileceğiniz tam bir favori karakter kadrosuna sahipsiniz."
+        }
       ],
       "downloadLabel": "reBrawl Legacy APK İndir",
       "downloadVersion": "v28.189-lite",
@@ -347,11 +503,31 @@
     }
   },
   "timeline": [
-    { "year": "2019", "title": "Özel Beta Lansmanı", "description": "reBrawl seçkin bir test grubuna açılır — ilk günden sınırsız elmas, altın ve her savaşçıyı sunar. Brawl Stars topluluğu oynamanın yeni bir yolunu keşfeder." },
-    { "year": "2019", "title": "Halka Açık Yayın", "description": "Sunucu dünya çapında tüm oyunculara açılır. İlk hafta içinde 10.000'den fazla oyuncu katılır. Oyun forumları, subreddit'ler ve YouTube kanallarında yayılır. Aktif topluluk hızla büyür." },
-    { "year": "2020", "title": "Sürüm 30 Büyük Güncelleme", "description": "reBrawl, Brawl Stars v30 ile eşitliğe ulaşır ve başka hiçbir yerde bulamayacağınız özel oyun modları ve topluluk tarafından barındırılan turnuva parantezleri sunar." },
-    { "year": "2021", "title": "Zirve Dönemi — 500K Oyuncu", "description": "reBrawl 500.000'den fazla kayıtlı oyuncuya ulaşır. Haftalık topluluk etkinlikleri, özel harita yarışmaları ve savaşçı vitrinleri, özel sunucularda yaratıcı oynanışın altın çağını tanımlar." },
-    { "year": "2023", "title": "Resmi reBrawl Arşivi Yayında", "description": "Her APK sürümü Resmi reBrawl Arşivi aracılığıyla kullanılabilir hale gelir — virüs taramasından geçmiş, SHA-256 ile doğrulanmış ve indirmeye hazır. Topluluğun favori özel sunucusu her zaman ulaşılabilir." }
+    {
+      "year": "2019",
+      "title": "Özel Beta Lansmanı",
+      "description": "reBrawl seçkin bir test grubuna açılır — ilk günden sınırsız elmas, altın ve her savaşçıyı sunar. Brawl Stars topluluğu oynamanın yeni bir yolunu keşfeder."
+    },
+    {
+      "year": "2019",
+      "title": "Halka Açık Yayın",
+      "description": "Sunucu dünya çapında tüm oyunculara açılır. İlk hafta içinde 10.000'den fazla oyuncu katılır. Oyun forumları, subreddit'ler ve YouTube kanallarında yayılır. Aktif topluluk hızla büyür."
+    },
+    {
+      "year": "2020",
+      "title": "Sürüm 30 Büyük Güncelleme",
+      "description": "reBrawl, Brawl Stars v30 ile eşitliğe ulaşır ve başka hiçbir yerde bulamayacağınız özel oyun modları ve topluluk tarafından barındırılan turnuva parantezleri sunar."
+    },
+    {
+      "year": "2021",
+      "title": "Zirve Dönemi — 500K Oyuncu",
+      "description": "reBrawl 500.000'den fazla kayıtlı oyuncuya ulaşır. Haftalık topluluk etkinlikleri, özel harita yarışmaları ve savaşçı vitrinleri, özel sunucularda yaratıcı oynanışın altın çağını tanımlar."
+    },
+    {
+      "year": "2023",
+      "title": "Resmi reBrawl Arşivi Yayında",
+      "description": "Her APK sürümü Resmi reBrawl Arşivi aracılığıyla kullanılabilir hale gelir — virüs taramasından geçmiş, SHA-256 ile doğrulanmış ve indirmeye hazır. Topluluğun favori özel sunucusu her zaman ulaşılabilir."
+    }
   ],
   "aboutPage": {
     "heroSubtitle": "reBrawl için topluluk tarafından yönetilen merkez — dünyanın en ünlü Brawl Stars özel sunucusu. Özel içerik, özel kostümler ve her oyuncu için taze bir deneyim.",
@@ -366,9 +542,18 @@
       "headingHighlight": "Bunu Yaptık",
       "subtitle": "reBrawl topluluğu, doğrulanmış indirmeler, güvenli reBrawl APK'ları ve Brawl Stars özel sunucu deneyimi hakkında dürüst bilgiler için güvenilir bir merkezi hak ediyor.",
       "items": [
-        { "title": "Doğrulanmış İndirmeler", "description": "Her reBrawl sürümünü orijinal geliştiricilerin yayınladığı şekliyle barındırıyoruz — doğrulanmış, virüs taramasından geçmiş ve indirmeye hazır." },
-        { "title": "Güvenli ve Güvenilir", "description": "Resmi reBrawl Arşivi'ndeki her reBrawl APK'sı dijital olarak taranmış ve doğrulanmıştır. Kötü amaçlı yazılım yok, reklam yazılımı yok — sadece güvenebileceğiniz temiz yapılar." },
-        { "title": "Önce Topluluk", "description": "Dürüst, net bilgi sunuyoruz. Açıklanması gereken bir şey varsa, onu açıklıyoruz. Aktif topluluk şeffaflığı hak ediyor." }
+        {
+          "title": "Doğrulanmış İndirmeler",
+          "description": "Her reBrawl sürümünü orijinal geliştiricilerin yayınladığı şekliyle barındırıyoruz — doğrulanmış, virüs taramasından geçmiş ve indirmeye hazır."
+        },
+        {
+          "title": "Güvenli ve Güvenilir",
+          "description": "Resmi reBrawl Arşivi'ndeki her reBrawl APK'sı dijital olarak taranmış ve doğrulanmıştır. Kötü amaçlı yazılım yok, reklam yazılımı yok — sadece güvenebileceğiniz temiz yapılar."
+        },
+        {
+          "title": "Önce Topluluk",
+          "description": "Dürüst, net bilgi sunuyoruz. Açıklanması gereken bir şey varsa, onu açıklıyoruz. Aktif topluluk şeffaflığı hak ediyor."
+        }
       ]
     },
     "editions": {
@@ -376,9 +561,18 @@
       "headingHighlight": "Sürümlerini Keşfedin",
       "subtitle": "Her biri reBrawl deneyiminin kendi tadını sunan üç benzersiz sürüm. Üçünde de özel savaşçıları, özel kostümleri ve yaratıcı oynanışı keşfedin.",
       "items": [
-        { "name": "reBrawl Mods", "description": "Yaratıcı oyun alanı — 30+ özel savaşçı, özel kostümler ve Brawl Stars'ın sınırlarını zorlayan hayran yapımı oyun modları." },
-        { "name": "reBrawl Classic", "description": "Topluluk favorisi — sınırsız kaynaklar ve baştan itibaren her savaşçı açık ile orijinal Brawl Stars mekanikleri." },
-        { "name": "reBrawl Legacy", "description": "Her cihaz için optimize edilmiş — hiçbir oyuncunun geride kalmaması için eski ve bütçe dostu Android telefonlarda akıcı oynanış." }
+        {
+          "name": "reBrawl Mods",
+          "description": "Yaratıcı oyun alanı — 30+ özel savaşçı, özel kostümler ve Brawl Stars'ın sınırlarını zorlayan hayran yapımı oyun modları."
+        },
+        {
+          "name": "reBrawl Classic",
+          "description": "Topluluk favorisi — sınırsız kaynaklar ve baştan itibaren her savaşçı açık ile orijinal Brawl Stars mekanikleri."
+        },
+        {
+          "name": "reBrawl Legacy",
+          "description": "Her cihaz için optimize edilmiş — hiçbir oyuncunun geride kalmaması için eski ve bütçe dostu Android telefonlarda akıcı oynanış."
+        }
       ]
     },
     "trust": {
@@ -416,9 +610,63 @@
     "urgentTag": "[ACİL]",
     "urgentSuffix": "ekleyin.",
     "channels": [
-      { "title": "E-posta", "description": "Genel sorular, ortaklık soruları veya reBrawl ile ilgili her şey için.", "linkText": "contact@rebrawl.app" },
-      { "title": "Reddit", "description": "Tartışmalar, heyecan verici güncellemeler ve destek için r/ReBrawl'daki aktif topluluğa katılın.", "linkText": "r/ReBrawl" }
+      {
+        "title": "E-posta",
+        "description": "Genel sorular, ortaklık soruları veya reBrawl ile ilgili her şey için.",
+        "linkText": "contact@rebrawl.app"
+      },
+      {
+        "title": "Reddit",
+        "description": "Tartışmalar, heyecan verici güncellemeler ve destek için r/ReBrawl'daki aktif topluluğa katılın.",
+        "linkText": "r/ReBrawl"
+      }
     ]
+  },
+  "dmcaPage": {
+    "heroSubtitle": "Resmi reBrawl Arşivi telif hakkına saygı gösterir ve DMCA kapsamında geçerli kaldırma isteklerine hızlı şekilde yanıt verir.",
+    "overviewHeading": "DMCA",
+    "overviewHeadingHighlight": "Bildirimi",
+    "overviewText": "ABD DMCA gerekliliklerine uyuyoruz ve bu sitede barındırılan içerik için telif hakkı taleplerini inceliyoruz. Çalışmanızın izinsiz kullanıldığını düşünüyorsanız, geçerli bir kaldırma isteği gönderin ve mümkün olan en kısa sürede yanıt vereceğiz.",
+    "processHeading": "Nasıl Gönderilir",
+    "processText": "DMCA bildiriminizi gerekli bilgilerle ekibimize gönderin. Geçerli bir bildirim, isteğinizi daha hızlı işlememize yardımcı olur ve arşivin uyumlu kalmasını sağlar.",
+    "processItems": [
+      "Tam yasal adınız ve iletişim bilgileriniz.",
+      "Telif hakkı ihlalinde bulunduğunu iddia ettiğiniz eser hakkında açıklama.",
+      "İhlal olduğunu düşündüğünüz içeriğin URL'si.",
+      "Kullanımın izinsiz olduğuna inanma konusunda iyi niyet beyanı.",
+      "Bilgilerin doğru olduğunu belgeleyen yeminli beyan."
+    ],
+    "contactText": "DMCA bildirimlerinizi konu satırına [DMCA] ekleyerek contact@rebrawl.app adresine gönderin."
+  },
+  "privacyPolicyPage": {
+    "heroSubtitle": "Sadece indirmeleri desteklemek, müşteri desteği sağlamak ve arşivi güvenli tutmak için gereken verileri topluyoruz.",
+    "overviewHeading": "Gizlilik",
+    "overviewHeadingHighlight": "Politikası",
+    "overviewText": "Resmi reBrawl Arşivi gizliliğinizi korumaya kararlıdır. Kişisel verileri satmıyoruz ve yalnızca siteyi işletmek, taleplere yanıt vermek ve kullanıcı deneyimini iyileştirmek için bilgi kullanıyoruz.",
+    "collectionHeading": "Topladığımız Bilgiler",
+    "collectionItems": [
+      "İletişim talep ettiğinizde veya destek istediğinizde verdiğiniz iletişim bilgileri.",
+      "Siteyi iyileştirmeye yardımcı olmak için tarayıcı türü, cihaz ve kullanım desenleri gibi teknik veriler.",
+      "Ziyaretçilerin arşivi nasıl kullandığını anlamak için çerezler ve analiz verileri."
+    ],
+    "useHeading": "Verileri Nasıl Kullanıyoruz",
+    "useText": "Verileri, taleplere yanıt vermek, siteyi suistimalden korumak ve indirmelerin sorunsuz çalışmasını sağlamak için kullanıyoruz. Kişisel ayrıntıları kanunen gerektiği durumlar haricinde üçüncü taraflarla paylaşmıyoruz.",
+    "rightsHeading": "Haklarınız",
+    "rightsText": "Hakkımızda tuttuğumuz verilere erişim talep edebilir veya yanlış bilgilerin düzeltilmesini isteyebilirsiniz. Gizlilik talepleri için contact@rebrawl.app adresiyle iletişime geçin."
+  },
+  "termsPage": {
+    "heroSubtitle": "Resmi reBrawl Arşivi'ni kullanarak, site kullanımı, indirmeler ve içerik feragatleri için bu şartlara uymayı kabul ediyorsunuz.",
+    "overviewHeading": "Şartlar ve",
+    "overviewHeadingHighlight": "Koşullar",
+    "overviewText": "Bu şartlar, Resmi reBrawl Arşivi'ni nasıl kullanabileceğinizi açıklıyor. Tüm indirmeler olduğu gibi sunulur ve cihazınıza içerik kurarken geçerli yerel yasalara uymanız sizinki sorumluluğundadır.",
+    "usageHeading": "İzin Verilen Kullanım",
+    "usageText": "Arşivi göz atabilir, APK indirebilir ve içeriği kişisel, ticari olmayan amaçlarla kullanabilirsiniz. Siteyi kötüye kullanmayın veya indirme korumalarını atlamaya çalışmayın.",
+    "downloadsHeading": "İndirme Sorumluluğu",
+    "downloadsText": "Tüm APK indirmeleri bilgilendirme ve arşiv amaçlı sağlanır. Cihazınızla uyumluluğu doğrulamak ve uygulamaları güvenle yüklemek sizin sorumluluğunuzdadır.",
+    "disclaimerHeading": "Feragat",
+    "disclaimerText": "Resmi reBrawl Arşivi bağımsız bir projedir ve Supercell ile bağlantılı değildir. Kesintisiz erişim garanti etmiyoruz ve site veya indirilen dosyaların kullanımı sonucu oluşabilecek herhangi bir zarardan sorumlu değiliz.",
+    "changesHeading": "Değişiklikler",
+    "changesText": "Bu şartları herhangi bir zamanda güncelleyebiliriz. Değişikliklerden sonra siteyi kullanmaya devam etmek, güncellenmiş şartları kabul ettiğiniz anlamına gelir."
   },
   "contactForm": {
     "name": "Ad",
@@ -459,6 +707,9 @@
     "apkArchive": "APK Arşivi",
     "disclaimer": "Sorumluluk Reddi",
     "safetyInfo": "Güvenlik Bilgisi",
+    "dmca": "DMCA",
+    "privacyPolicy": "Gizlilik Politikası",
+    "terms": "Şartlar ve Koşullar",
     "notAffiliated": "Supercell Oy ile bağlantılı değildir.",
     "trademark": "Brawl Stars\u00ae, Supercell'in ticari markasıdır.",
     "copyright": "Resmi reBrawl Arşivi. Topluluk tarafından yönetilen bir proje.",

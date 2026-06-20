@@ -1,25 +1,28 @@
-import Link from "next/link"
-import Image from "next/image"
-import type { Locale } from "@/lib/i18n"
-import { localePath } from "@/lib/i18n"
+import Link from "next/link";
+import Image from "next/image";
+import type { Locale } from "@/lib/i18n";
+import { localePath } from "@/lib/i18n";
 
 type FooterDict = {
-  tagline: string
-  navigate: string
-  legal: string
-  home: string
-  apkArchive: string
-  disclaimer: string
-  safetyInfo: string
-  notAffiliated: string
-  trademark: string
-  copyright: string
-  officialArchive: string
-}
+  tagline: string;
+  navigate: string;
+  legal: string;
+  home: string;
+  apkArchive: string;
+  disclaimer: string;
+  safetyInfo: string;
+  dmca: string;
+  privacyPolicy: string;
+  terms: string;
+  notAffiliated: string;
+  trademark: string;
+  copyright: string;
+  officialArchive: string;
+};
 
 interface FooterProps {
-  lang: Locale
-  dict: FooterDict
+  lang: Locale;
+  dict: FooterDict;
 }
 
 export default function Footer({ lang, dict }: FooterProps) {
@@ -27,13 +30,17 @@ export default function Footer({ lang, dict }: FooterProps) {
     { href: localePath("/", lang), label: dict.home },
     { href: localePath("/archive", lang), label: dict.apkArchive },
     { href: localePath("/faq", lang), label: "FAQ" },
-    { href: localePath("/contact", lang), label: lang === "tr" ? "İletişim" : "Contact" },
-  ]
+    {
+      href: localePath("/contact", lang),
+      label: lang === "tr" ? "İletişim" : "Contact",
+    },
+  ];
 
   const legalLinks = [
-    { href: localePath("/faq", lang) + "#disclaimer", label: dict.disclaimer },
-    { href: localePath("/faq", lang) + "#safety", label: dict.safetyInfo },
-  ]
+    { href: localePath("/dmca", lang), label: dict.dmca },
+    { href: localePath("/privacy-policy", lang), label: dict.privacyPolicy },
+    { href: localePath("/terms", lang), label: dict.terms },
+  ];
 
   return (
     <footer className="relative bg-black/60 border-t border-white/5 overflow-visible">
@@ -55,7 +62,13 @@ export default function Footer({ lang, dict }: FooterProps) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <Image src="/logo.webp" alt="ReBrawl logo" width={32} height={32} className="rounded-lg" />
+              <Image
+                src="/logo.webp"
+                alt="ReBrawl logo"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="font-display text-2xl font-extrabold text-white">
                 Re<span className="text-brand-yellow">Brawl</span>
               </span>
@@ -120,5 +133,5 @@ export default function Footer({ lang, dict }: FooterProps) {
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -7,6 +7,7 @@ import {
   buildBreadcrumbJsonLd,
   buildSoftwareApplicationJsonLd,
 } from "@/lib/seo";
+import { getDictionary } from "../[lang]/dictionaries";
 
 export const metadata: Metadata = {
   title: "Official reBrawl Archive Downloads — All reBrawl APK Versions",
@@ -17,7 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ArchivePage() {
+export default async function ArchivePage() {
+  const dict = await getDictionary("en");
+
   return (
     <>
       <script
@@ -98,7 +101,7 @@ export default function ArchivePage() {
             </p>
           </div>
 
-          <ArchiveVersionPicker lang="en" dict={{} as any} />
+          <ArchiveVersionPicker lang="en" dict={dict} />
         </div>
       </section>
 
