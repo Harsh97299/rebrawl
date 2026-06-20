@@ -1,6 +1,6 @@
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || "re_placeholder_key")
 
 export async function POST(request: Request) {
   try {
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: `ReBrawl Archive <onboarding@resend.dev>`,
-      to: process.env.CONTACT_EMAIL!,
+      to: process.env.CONTACT_EMAIL || "placeholder@example.com",
       replyTo: email,
       subject: `[ReBrawl Contact] ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
