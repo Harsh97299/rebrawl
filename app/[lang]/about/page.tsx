@@ -1,74 +1,50 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { buildBreadcrumbJsonLd } from "@/lib/seo"
+import { notFound } from "next/navigation"
+import { buildBreadcrumbJsonLd, getAlternates } from "@/lib/seo"
+import { isValidLocale, localePath, type Locale } from "@/lib/i18n"
+import { getDictionary } from "../dictionaries"
 
-export const metadata: Metadata = {
-  title: "About Us — Official reBrawl Archive",
-  description:
-    "Learn about the Official reBrawl Archive — the community-driven home for the world's most famous Brawl Stars private server. Explore custom content, exclusive skins, and everything reBrawl has to offer.",
-  alternates: {
-    canonical: "/about",
-  },
+type PageProps = {
+  params: Promise<{ lang: string }>
 }
 
-const values = [
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Verified Downloads",
-    description:
-      "We host every reBrawl version exactly as the original developers released it — verified, virus-scanned, and ready to download.",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-        <path d="m9 12 2 2 4-4" />
-      </svg>
-    ),
-    title: "Safe & Trusted",
-    description:
-      "Every reBrawl APK in the Official reBrawl Archive is digitally scanned and verified. No malware, no adware — just clean builds you can trust.",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-      </svg>
-    ),
-    title: "Community First",
-    description:
-      "We provide honest, clear information. If something needs explaining, we break it down. The active community deserves transparency.",
-  },
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang } = await params
+  if (!isValidLocale(lang)) return {}
+  const dict = await getDictionary(lang)
+  return {
+    title: dict.meta.about.title,
+    description: dict.meta.about.description,
+    alternates: getAlternates("/about"),
+  }
+}
+
+const valueIcons = [
+  (
+    <svg key="shield" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    </svg>
+  ),
+  (
+    <svg key="check-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  ),
+  (
+    <svg key="book" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+  ),
 ]
 
 const branches = [
-  {
-    name: "reBrawl Mods",
-    accent: "purple" as const,
-    image: "/background/mods-background.webp",
-    description:
-      "The creative playground — 30+ custom brawlers, exclusive skins, and fan-made game modes that push the limits of Brawl Stars.",
-  },
-  {
-    name: "reBrawl Classic",
-    accent: "gold" as const,
-    image: "/background/classic-background.webp",
-    description:
-      "The community favorite — original Brawl Stars mechanics with unlimited resources and every brawler unlocked from the start.",
-  },
-  {
-    name: "reBrawl Legacy",
-    accent: "blue" as const,
-    image: "/background/legacy-background.webp",
-    description:
-      "Optimized for every device — smooth gameplay on older and budget Android phones so no player gets left behind.",
-  },
+  { accent: "purple" as const, image: "/background/mods-background.webp" },
+  { accent: "gold" as const, image: "/background/classic-background.webp" },
+  { accent: "blue" as const, image: "/background/legacy-background.webp" },
 ]
 
 const accentMap = {
@@ -92,7 +68,13 @@ const accentMap = {
   },
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: PageProps) {
+  const { lang } = await params
+  if (!isValidLocale(lang)) notFound()
+
+  const dict = await getDictionary(lang as Locale)
+  const t = dict.aboutPage
+
   return (
     <>
       <script
@@ -100,9 +82,9 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             buildBreadcrumbJsonLd([
-              { name: "Home", url: "/" },
-              { name: "About", url: "/about" },
-            ])
+              { name: dict.common.home, url: "/" },
+              { name: dict.common.about, url: "/about" },
+            ], lang as Locale)
           ),
         }}
       />
@@ -137,12 +119,12 @@ export default function AboutPage() {
             className="flex items-center gap-2 text-sm text-text-muted mb-8"
             aria-label="Breadcrumb"
           >
-            <Link href="/" className="hover:text-white transition-colors">
-              Home
+            <Link href={localePath("/", lang as Locale)} className="hover:text-white transition-colors">
+              {dict.common.home}
             </Link>
             <span aria-hidden="true">›</span>
             <span className="text-white" aria-current="page">
-              About
+              {dict.common.about}
             </span>
           </nav>
 
@@ -151,7 +133,7 @@ export default function AboutPage() {
               About <span className="text-brand-yellow">Us</span>
             </h1>
             <p className="text-text-muted text-xl leading-relaxed">
-              The community-driven home for reBrawl — the world&apos;s most famous Brawl Stars private server. Custom content, exclusive skins, and a fresh experience for every player.
+              {t.heroSubtitle}
             </p>
           </div>
         </div>
@@ -184,13 +166,13 @@ export default function AboutPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-6">
-              Who We <span className="text-brand-purple">Are</span>
+              {t.whoWeAre.heading} <span className="text-brand-purple">{t.whoWeAre.headingHighlight}</span>
             </h2>
             <p className="text-text-muted text-lg leading-relaxed mb-6">
-              Welcome to the Official reBrawl Archive. We&apos;re a team of dedicated Brawl Stars fans, mobile gaming enthusiasts, and long-time members of the reBrawl community.
+              {t.whoWeAre.p1}
             </p>
             <p className="text-text-muted text-lg leading-relaxed">
-              Our mission is simple: to provide a safe, transparent, and feature-packed resource for players who want to explore everything reBrawl has to offer — from the chaotic custom content of reBrawl Mods to the smooth, optimized experience of reBrawl Legacy.
+              {t.whoWeAre.p2}
             </p>
           </div>
         </div>
@@ -223,20 +205,20 @@ export default function AboutPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-4 text-center">
-            Why We <span className="text-brand-yellow">Built This</span>
+            {t.values.heading} <span className="text-brand-yellow">{t.values.headingHighlight}</span>
           </h2>
           <p className="text-text-muted text-lg text-center max-w-2xl mx-auto mb-14">
-            The reBrawl community deserves a trusted home for verified downloads, safe reBrawl APKs, and honest information about the Brawl Stars private server experience.
+            {t.values.subtitle}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {values.map((value) => (
+            {t.values.items.map((value, index) => (
               <div
                 key={value.title}
                 className="bg-bg-base rounded-2xl p-6 border border-white/5 hover:border-brand-purple/25 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/20 flex items-center justify-center mb-5">
-                  {value.icon}
+                  {valueIcons[index]}
                 </div>
                 <h3 className="font-display font-bold text-xl text-white mb-2">
                   {value.title}
@@ -276,24 +258,25 @@ export default function AboutPage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-4 text-center">
-            Explore <span className="text-brand-yellow">reBrawl Editions</span>
+            {t.editions.heading} <span className="text-brand-yellow">{t.editions.headingHighlight}</span>
           </h2>
           <p className="text-text-muted text-lg text-center max-w-2xl mx-auto mb-14">
-            Three unique editions, each with its own flavor of the reBrawl experience. Discover custom brawlers, exclusive skins, and creative gameplay across all three.
+            {t.editions.subtitle}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {branches.map((branch) => {
+            {branches.map((branch, index) => {
               const colors = accentMap[branch.accent]
+              const edition = t.editions.items[index]
               return (
                 <div
-                  key={branch.name}
+                  key={edition.name}
                   className={`relative rounded-2xl border ${colors.border} overflow-hidden hover:-translate-y-1 transition-all duration-300 shadow-lg ${colors.glow}`}
                 >
                   <div className="relative h-40 overflow-hidden">
                     <Image
                       src={branch.image}
-                      alt={branch.name}
+                      alt={edition.name}
                       fill
                       className="object-cover"
                     />
@@ -301,10 +284,10 @@ export default function AboutPage() {
                   </div>
                   <div className="relative p-6 -mt-8">
                     <h3 className={`font-display font-bold text-2xl ${colors.text} mb-3`}>
-                      {branch.name}
+                      {edition.name}
                     </h3>
                     <p className="text-text-muted text-sm leading-relaxed">
-                      {branch.description}
+                      {edition.description}
                     </p>
                   </div>
                 </div>
@@ -342,10 +325,10 @@ export default function AboutPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-6">
-              Why <span className="text-brand-yellow">Trust</span> Us?
+              {t.trust.heading} <span className="text-brand-yellow">{t.trust.headingHighlight}</span> {t.trust.headingSuffix}
             </h2>
             <p className="text-text-muted text-lg leading-relaxed mb-8">
-              We are not the developers of reBrawl — we&apos;re an independent, community-driven project run by passionate Brawl Stars fans. By maintaining the Official reBrawl Archive, we make sure the incredible custom content, creative gameplay innovations, and community-driven features that the reBrawl team built are always accessible to players.
+              {t.trust.text}
             </p>
 
             <div className="bg-bg-base rounded-2xl p-8 border border-white/5">
@@ -357,11 +340,11 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="font-display font-bold text-xl text-white">
-                  Transparency Over Clicks
+                  {t.trust.boxTitle}
                 </h3>
               </div>
               <p className="text-text-muted text-sm leading-relaxed max-w-xl mx-auto">
-                Our guides are written based on real device testing (Android 4.3 through Android 14) and hands-on experience with every reBrawl edition. We believe in honest, clear information — not clickbait.
+                {t.trust.boxText}
               </p>
             </div>
           </div>
@@ -394,23 +377,23 @@ export default function AboutPage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-4">
-            Explore the <span className="text-brand-yellow">Official reBrawl Archive</span>
+            {t.cta.heading} <span className="text-brand-yellow">{t.cta.headingHighlight}</span>
           </h2>
           <p className="text-text-muted text-lg max-w-xl mx-auto mb-8">
-            Browse the complete collection of reBrawl builds, discover custom content, or get in touch with the team.
+            {t.cta.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/archive"
+              href={localePath("/archive", lang as Locale)}
               className="px-8 py-3 rounded-xl bg-brand-yellow text-bg-base font-bold text-sm hover:bg-brand-gold transition-all duration-200 shadow-md shadow-brand-yellow/20"
             >
-              Browse Archive
+              {t.cta.browseArchive}
             </Link>
             <Link
-              href="/contact"
+              href={localePath("/contact", lang as Locale)}
               className="px-8 py-3 rounded-xl bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold text-sm hover:bg-brand-yellow hover:text-bg-base transition-all duration-200"
             >
-              Contact Us
+              {t.cta.contactUs}
             </Link>
           </div>
         </div>

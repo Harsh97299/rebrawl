@@ -3,7 +3,26 @@ import { useState, type FormEvent } from "react"
 
 type Status = "idle" | "sending" | "sent" | "error"
 
-export default function ContactForm() {
+interface ContactFormDict {
+  name: string
+  namePlaceholder: string
+  email: string
+  emailPlaceholder: string
+  subject: string
+  subjectPlaceholder: string
+  message: string
+  messagePlaceholder: string
+  sending: string
+  send: string
+  sent: string
+  error: string
+}
+
+interface ContactFormProps {
+  dict: ContactFormDict
+}
+
+export default function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle")
   const [errorMsg, setErrorMsg] = useState("")
 
@@ -36,7 +55,7 @@ export default function ContactForm() {
       form.reset()
     } catch (err) {
       setStatus("error")
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong.")
+      setErrorMsg(err instanceof Error ? err.message : dict.error)
     }
   }
 
@@ -48,27 +67,27 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">
-            Name
+            {dict.name}
           </label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            placeholder="Your name"
+            placeholder={dict.namePlaceholder}
             className={inputBase}
           />
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-text-muted mb-2">
-            Email
+            {dict.email}
           </label>
           <input
             type="email"
             id="email"
             name="email"
             required
-            placeholder="you@example.com"
+            placeholder={dict.emailPlaceholder}
             className={inputBase}
           />
         </div>
@@ -76,28 +95,28 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="subject" className="block text-sm font-medium text-text-muted mb-2">
-          Subject
+          {dict.subject}
         </label>
         <input
           type="text"
           id="subject"
           name="subject"
           required
-          placeholder="What's this about?"
+          placeholder={dict.subjectPlaceholder}
           className={inputBase}
         />
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-text-muted mb-2">
-          Message
+          {dict.message}
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
-          placeholder="Tell us more..."
+          placeholder={dict.messagePlaceholder}
           className={`${inputBase} resize-none`}
         />
       </div>
@@ -107,7 +126,7 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="w-full sm:w-auto px-8 py-3 rounded-xl bg-brand-purple text-white font-bold text-sm transition-all duration-200 hover:bg-brand-purple/90 shadow-lg shadow-brand-purple/30 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {status === "sending" ? "Sending..." : "Send Message"}
+        {status === "sending" ? dict.sending : dict.send}
       </button>
 
       {status === "sent" && (
@@ -116,7 +135,7 @@ export default function ContactForm() {
             <path d="m9 12 2 2 4-4" />
             <circle cx="12" cy="12" r="10" />
           </svg>
-          Message sent. We&apos;ll get back to you within 24–48 hours.
+          {dict.sent}
         </p>
       )}
 

@@ -1,15 +1,21 @@
 "use client"
 import { useState } from "react"
 import type { FaqItem } from "@/lib/types"
+import type { Locale } from "@/lib/i18n"
+import { localePath } from "@/lib/i18n"
 
 interface FaqAccordionProps {
   items: FaqItem[]
   subtitle?: string
   showAllLink?: boolean
+  viewAllText?: string
+  lang?: Locale
 }
 
-export default function FaqAccordion({ items, subtitle, showAllLink }: FaqAccordionProps) {
+export default function FaqAccordion({ items, subtitle, showAllLink, viewAllText = "View all questions", lang = "en" }: FaqAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const heading1 = lang === "tr" ? "Sıkça Sorulan" : "Frequently Asked"
+  const heading2 = lang === "tr" ? "Sorular" : "Questions"
 
   return (
     <section id="faq" className="relative py-20 md:py-28 bg-bg-elevated overflow-hidden">
@@ -19,7 +25,7 @@ export default function FaqAccordion({ items, subtitle, showAllLink }: FaqAccord
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Frequently Asked <span className="text-brand-yellow">Questions</span>
+            {heading1} <span className="text-brand-yellow">{heading2}</span>
           </h2>
           {subtitle && <p className="text-text-muted text-lg">{subtitle}</p>}
         </div>
@@ -72,10 +78,10 @@ export default function FaqAccordion({ items, subtitle, showAllLink }: FaqAccord
         {showAllLink && (
           <div className="text-center mt-10">
             <a
-              href="/faq"
+              href={localePath("/faq", lang)}
               className="inline-flex items-center gap-2 text-brand-yellow font-display font-bold hover:text-brand-gold transition-colors"
             >
-              View all questions
+              {viewAllText}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                 <path d="m9 18 6-6-6-6" />
               </svg>

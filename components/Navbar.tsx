@@ -2,7 +2,9 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { downloadVersions } from "@/lib/data"
+import LanguageSwitcher from "./LanguageSwitcher"
+import type { Locale } from "@/lib/i18n"
+import { localePath } from "@/lib/i18n"
 
 const accentColors: Record<string, string> = {
   purple: "text-brand-purple",
@@ -10,18 +12,48 @@ const accentColors: Record<string, string> = {
   blue: "text-brand-blue",
 }
 
-const navLinks = [
-  { href: "/about", label: "About" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
+type NavDict = {
+  about: string
+  faq: string
+  contact: string
+  archive: string
+  allVersions: string
+  downloadApk: string
+  openMenu: string
+  closeMenu: string
+}
+
+type VersionDict = {
+  name: string
+  badge: string
+}
+
+type DownloadVersionsDict = Record<string, VersionDict>
+
+interface NavbarProps {
+  lang: Locale
+  dict: NavDict
+  downloadVersions: DownloadVersionsDict
+}
+
+const versionMeta = [
+  { id: "mods", image: "/mods.webp", accent: "purple" },
+  { id: "classic", image: "/classic.webp", accent: "gold" },
+  { id: "legacy", image: "/legacy.webp", accent: "blue" },
 ]
 
-export default function Navbar() {
+export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [archiveOpen, setArchiveOpen] = useState(false)
   const [mobileArchiveOpen, setMobileArchiveOpen] = useState(false)
   const archiveTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const navLinks = [
+    { href: localePath("/about", lang), label: dict.about },
+    { href: localePath("/faq", lang), label: dict.faq },
+    { href: localePath("/contact", lang), label: dict.contact },
+  ]
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60)
@@ -49,7 +81,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href={localePath("/", lang)} className="flex items-center gap-2.5 group">
             <Image
               src="/logo.webp"
               alt="ReBrawl logo"
@@ -81,10 +113,10 @@ export default function Navbar() {
               onMouseLeave={handleArchiveLeave}
             >
               <Link
-                href="/archive"
+                href={localePath("/archive", lang)}
                 className="flex items-center gap-1 text-text-muted hover:text-white text-sm font-medium transition-colors"
               >
-                Archive
+                {dict.archive}
                 <svg
                   width="12"
                   height="12"
@@ -105,37 +137,40 @@ export default function Navbar() {
                 }`}
               >
                 <div className="w-56 rounded-xl border border-white/10 bg-bg-elevated/95 backdrop-blur-md shadow-2xl shadow-black/50 overflow-hidden">
-                  {downloadVersions.map((v) => (
-                    <Link
-                      key={v.id}
-                      href={`/archive/${v.id}`}
-                      className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
-                      onClick={() => setArchiveOpen(false)}
-                    >
-                      <Image
-                        src={v.image}
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="rounded-md object-contain"
-                      />
-                      <span className={`font-display font-bold text-sm ${accentColors[v.accent]}`}>
-                        {v.name}
-                      </span>
-                      {v.badge && (
-                        <span className="ml-auto text-[9px] font-extrabold uppercase tracking-wider text-brand-yellow bg-brand-yellow/15 border border-brand-yellow/25 rounded-full px-1.5 py-0.5">
-                          {v.badge}
+                  {versionMeta.map((v) => {
+                    const vDict = downloadVersions[v.id]
+                    return (
+                      <Link
+                        key={v.id}
+                        href={localePath(`/archive/${v.id}`, lang)}
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
+                        onClick={() => setArchiveOpen(false)}
+                      >
+                        <Image
+                          src={v.image}
+                          alt=""
+                          width={24}
+                          height={24}
+                          className="rounded-md object-contain"
+                        />
+                        <span className={`font-display font-bold text-sm ${accentColors[v.accent]}`}>
+                          {vDict.name}
                         </span>
-                      )}
-                    </Link>
-                  ))}
+                        {vDict.badge && (
+                          <span className="ml-auto text-[9px] font-extrabold uppercase tracking-wider text-brand-yellow bg-brand-yellow/15 border border-brand-yellow/25 rounded-full px-1.5 py-0.5">
+                            {vDict.badge}
+                          </span>
+                        )}
+                      </Link>
+                    )
+                  })}
                   <div className="border-t border-white/5">
                     <Link
-                      href="/archive"
+                      href={localePath("/archive", lang)}
                       className="flex items-center gap-2 px-4 py-3 text-text-muted hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
                       onClick={() => setArchiveOpen(false)}
                     >
-                      All Versions
+                      {dict.allVersions}
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" className="ml-auto">
                         <path d="m9 18 6-6-6-6" />
                       </svg>
@@ -157,22 +192,23 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher lang={lang} />
             <a
-              href="/archive"
+              href={localePath("/archive", lang)}
               className={`px-4 py-2 rounded-xl font-bold text-sm transition-all duration-200 ${
                 scrolled
                   ? "bg-brand-yellow text-bg-base hover:bg-brand-gold shadow-md shadow-brand-yellow/20"
                   : "bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow hover:bg-brand-yellow hover:text-bg-base"
               }`}
             >
-              Download APK
+              {dict.downloadApk}
             </a>
 
             {/* Mobile hamburger */}
             <button
               onClick={() => setOpen((o) => !o)}
               className="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-[5px] rounded-lg hover:bg-white/5 transition-colors"
-              aria-label={open ? "Close menu" : "Open menu"}
+              aria-label={open ? dict.closeMenu : dict.openMenu}
               aria-expanded={open}
             >
               <span
@@ -218,7 +254,7 @@ export default function Navbar() {
             onClick={() => setMobileArchiveOpen((o) => !o)}
             className="flex items-center justify-between text-text-muted hover:text-white py-3 px-3 rounded-lg hover:bg-white/5 text-sm font-medium transition-colors w-full text-left"
           >
-            Archive
+            {dict.archive}
             <svg
               width="12"
               height="12"
@@ -237,23 +273,26 @@ export default function Navbar() {
               mobileArchiveOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            {downloadVersions.map((v) => (
-              <Link
-                key={v.id}
-                href={`/archive/${v.id}`}
-                onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
-                className={`flex items-center gap-3 py-2.5 px-6 text-sm font-medium transition-colors hover:bg-white/5 rounded-lg ${accentColors[v.accent]}`}
-              >
-                <Image src={v.image} alt="" width={20} height={20} className="rounded object-contain" />
-                {v.name}
-              </Link>
-            ))}
+            {versionMeta.map((v) => {
+              const vDict = downloadVersions[v.id]
+              return (
+                <Link
+                  key={v.id}
+                  href={localePath(`/archive/${v.id}`, lang)}
+                  onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
+                  className={`flex items-center gap-3 py-2.5 px-6 text-sm font-medium transition-colors hover:bg-white/5 rounded-lg ${accentColors[v.accent]}`}
+                >
+                  <Image src={v.image} alt="" width={20} height={20} className="rounded object-contain" />
+                  {vDict.name}
+                </Link>
+              )
+            })}
             <Link
-              href="/archive"
+              href={localePath("/archive", lang)}
               onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
               className="py-2.5 px-6 text-sm font-medium text-text-muted hover:text-white transition-colors hover:bg-white/5 rounded-lg block"
             >
-              All Versions
+              {dict.allVersions}
             </Link>
           </div>
 

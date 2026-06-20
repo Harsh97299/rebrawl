@@ -1,69 +1,92 @@
 import type { Metadata } from "next"
 import type { FaqItem } from "./types"
+import { type Locale, defaultLocale, hreflangMap, localePath } from "./i18n"
+import type { Dictionary } from "@/app/[lang]/dictionaries"
 
 export const BASE_URL = "https://rebrawl.net"
 export const SITE_NAME = "Official reBrawl Archive"
 
-export const defaultMetadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
-  title: {
-    default: "reBrawl — Official Archive | Download Brawl Stars Private Server",
-    template: "%s | Official reBrawl Archive",
-  },
-  description:
-    "The Official reBrawl Archive. Download every reBrawl APK version — the legendary Brawl Stars private server with unlimited gems, all brawlers unlocked, and custom game modes. Verified and ready to install.",
-  keywords: [
-    "rebrawl",
-    "official rebrawl archive",
-    "rebrawl apk",
-    "rebrawl download",
-    "rebrawl mods",
-    "rebrawl classic",
-    "brawl stars private server",
-    "rebrawl update",
-    "rebrawl latest version",
-    "custom brawlers",
-    "custom skins",
-  ],
-  authors: [{ name: "Official reBrawl Archive" }],
-  icons: {
-    icon: [{ url: "/logo.webp", type: "image/webp" }],
-    shortcut: [{ url: "/logo.webp", type: "image/webp" }],
-    apple: [{ url: "/logo.webp" }],
-  },
-  openGraph: {
-    type: "website",
-    siteName: SITE_NAME,
-    title: "reBrawl — Official Archive | The Legendary Brawl Stars Private Server",
-    description:
-      "Download reBrawl — the community favorite Brawl Stars private server. Every APK version available, verified, and ready to play.",
-    url: BASE_URL,
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "reBrawl — Official Archive | Brawl Stars Private Server",
-      },
+export function getAlternates(path: string) {
+  return {
+    canonical: path,
+    languages: {
+      en: `${BASE_URL}${path}`,
+      "tr-TR": `${BASE_URL}/tr${path}`,
+      "x-default": `${BASE_URL}${path}`,
+    },
+  }
+}
+
+export function getDefaultMetadata(lang: Locale, dict: Dictionary): Metadata {
+  const m = dict.meta
+  return {
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: m.defaultTitle,
+      template: m.titleTemplate,
+    },
+    description: m.defaultDescription,
+    keywords: [
+      "rebrawl",
+      "official rebrawl archive",
+      "rebrawl apk",
+      "rebrawl download",
+      "rebrawl mods",
+      "rebrawl classic",
+      "brawl stars private server",
+      "rebrawl update",
+      "rebrawl latest version",
+      "custom brawlers",
+      "custom skins",
+      ...(lang === "tr"
+        ? [
+            "rebrawl indir",
+            "rebrawl apk indir",
+            "brawl stars özel sunucu",
+            "rebrawl türkçe",
+          ]
+        : []),
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "reBrawl — Official Archive",
-    description:
-      "The Official reBrawl Archive. Every version of the legendary Brawl Stars private server, verified and ready to download.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    authors: [{ name: "Official reBrawl Archive" }],
+    icons: {
+      icon: [{ url: "/logo.webp", type: "image/webp" }],
+      shortcut: [{ url: "/logo.webp", type: "image/webp" }],
+      apple: [{ url: "/logo.webp" }],
+    },
+    openGraph: {
+      type: "website",
+      siteName: SITE_NAME,
+      title: m.ogTitle,
+      description: m.ogDescription,
+      url: BASE_URL,
+      locale: hreflangMap[lang],
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: m.ogAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.twitterTitle,
+      description: m.twitterDescription,
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
+    alternates: getAlternates(localePath("/", lang)),
+  }
 }
 
 export function buildSoftwareApplicationJsonLd() {
@@ -136,7 +159,10 @@ export function buildWebSiteJsonLd() {
   }
 }
 
-export function buildBreadcrumbJsonLd(items: { name: string; url: string }[]) {
+export function buildBreadcrumbJsonLd(
+  items: { name: string; url: string }[],
+  lang: Locale = defaultLocale
+) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -144,7 +170,7 @@ export function buildBreadcrumbJsonLd(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${BASE_URL}${item.url}`,
+      item: `${BASE_URL}${localePath(item.url, lang)}`,
     })),
   }
 }

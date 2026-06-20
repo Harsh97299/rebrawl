@@ -1,34 +1,51 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import Link from "next/link"
 import FaqAccordion from "@/components/FaqAccordion"
 import Disclaimer from "@/components/Disclaimer"
-import { faq } from "@/lib/data"
-import { buildFaqJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo"
+import { buildFaqJsonLd, buildBreadcrumbJsonLd, getAlternates } from "@/lib/seo"
+import { isValidLocale, localePath, type Locale } from "@/lib/i18n"
+import { getDictionary } from "../dictionaries"
 
-export const metadata: Metadata = {
-  title: "FAQ — reBrawl Questions & Answers",
-  description:
-    "Frequently asked questions about reBrawl, the Official reBrawl Archive, reBrawl APK safety, installation instructions, custom brawlers, and more. Everything you need to know about this Brawl Stars private server.",
-  alternates: {
-    canonical: "/faq",
-  },
+type PageProps = {
+  params: Promise<{ lang: string }>
 }
 
-export default function FaqPage() {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang } = await params
+  if (!isValidLocale(lang)) return {}
+  const dict = await getDictionary(lang)
+  return {
+    title: dict.meta.faq.title,
+    description: dict.meta.faq.description,
+    alternates: getAlternates("/faq"),
+  }
+}
+
+export default async function FaqPage({ params }: PageProps) {
+  const { lang } = await params
+  if (!isValidLocale(lang)) notFound()
+
+  const dict = await getDictionary(lang as Locale)
+  const faqItems = dict.faq.items.map((item) => ({
+    question: item.question,
+    answer: item.answer,
+  }))
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd(faq)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd(faqItems)) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             buildBreadcrumbJsonLd([
-              { name: "Home", url: "/" },
+              { name: dict.common.home, url: "/" },
               { name: "FAQ", url: "/faq" },
-            ])
+            ], lang as Locale)
           ),
         }}
       />
@@ -42,11 +59,8 @@ export default function FaqPage() {
           backgroundPosition: "center",
         }}
       >
-        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/80" aria-hidden="true" />
-        {/* Bottom vignette */}
         <div className="absolute bottom-0 inset-x-0 h-28 bg-linear-to-t from-bg-base to-transparent pointer-events-none z-20" aria-hidden="true" />
-        {/* Accent atmosphere */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -63,8 +77,8 @@ export default function FaqPage() {
             className="flex items-center gap-2 text-sm text-text-muted mb-8"
             aria-label="Breadcrumb"
           >
-            <Link href="/" className="hover:text-white transition-colors">
-              Home
+            <Link href={localePath("/", lang as Locale)} className="hover:text-white transition-colors">
+              {dict.common.home}
             </Link>
             <span aria-hidden="true">›</span>
             <span className="text-white" aria-current="page">
@@ -74,17 +88,17 @@ export default function FaqPage() {
 
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl md:text-6xl font-extrabold text-white mb-4">
-              Frequently Asked <span className="text-brand-yellow">Questions</span>
+              {dict.faqPage.heading} <span className="text-brand-yellow">{dict.faqPage.headingHighlight}</span>
             </h1>
             <p className="text-text-muted text-xl">
-              Everything you need to know about reBrawl — downloading, installing, custom content, and the Official reBrawl Archive.
+              {dict.faqPage.subtitle}
             </p>
           </div>
         </div>
       </section>
 
-      <FaqAccordion items={faq} />
-      <Disclaimer />
+      <FaqAccordion items={faqItems} lang={lang as Locale} />
+      <Disclaimer dict={dict.disclaimer} />
     </>
   )
 }

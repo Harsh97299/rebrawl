@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { downloadVersions } from "@/lib/data"
-import type { DownloadVersion } from "@/lib/types"
+import type { Locale } from "@/lib/i18n"
+import { localePath } from "@/lib/i18n"
+import type { Dictionary } from "@/app/[lang]/dictionaries"
 
 type AccentTokens = {
   border: string
@@ -14,7 +15,7 @@ type AccentTokens = {
   button: string
 }
 
-const accents: Record<DownloadVersion["accent"], AccentTokens> = {
+const accents: Record<string, AccentTokens> = {
   purple: {
     border: "border-brand-purple/25 hover:border-brand-purple/60",
     glow: "hover:shadow-brand-purple/25",
@@ -53,16 +54,28 @@ const accents: Record<DownloadVersion["accent"], AccentTokens> = {
   },
 }
 
-export default function ArchiveVersionPicker() {
+const versionMeta = [
+  { id: "mods", image: "/mods.webp", accent: "purple" },
+  { id: "classic", image: "/classic.webp", accent: "gold" },
+  { id: "legacy", image: "/legacy.webp", accent: "blue" },
+]
+
+interface ArchiveVersionPickerProps {
+  lang: Locale
+  dict: Dictionary
+}
+
+export default function ArchiveVersionPicker({ lang, dict }: ArchiveVersionPickerProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-      {downloadVersions.map((version) => {
-        const a = accents[version.accent]
+      {versionMeta.map((v) => {
+        const a = accents[v.accent]
+        const vDict = dict.downloadVersions[v.id as keyof typeof dict.downloadVersions]
 
         return (
           <Link
-            key={version.id}
-            href={`/archive/${version.id}`}
+            key={v.id}
+            href={localePath(`/archive/${v.id}`, lang)}
             className={`group flex h-full flex-col overflow-hidden rounded-2xl bg-bg-elevated border transition-all duration-300 hover:-translate-y-1.5 ${a.border} ${a.glow} shadow-xl shadow-black/30`}
           >
             {/* Featured image */}
@@ -72,17 +85,17 @@ export default function ArchiveVersionPicker() {
                 style={{ background: a.banner }}
                 aria-hidden="true"
               />
-              {version.badge && (
+              {vDict.badge && (
                 <span
                   className={`absolute top-4 left-4 z-10 rounded-full border px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider ${a.badge}`}
                 >
-                  ★ {version.badge}
+                  ★ {vDict.badge}
                 </span>
               )}
               <div className={`relative h-full aspect-square overflow-hidden rounded-xl ${a.imageGlow}`}>
                 <Image
-                  src={version.image}
-                  alt={`${version.name} featured artwork`}
+                  src={v.image}
+                  alt={`${vDict.name} featured artwork`}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-contain transition-transform duration-500 group-hover:scale-105"
@@ -93,12 +106,12 @@ export default function ArchiveVersionPicker() {
             {/* Body */}
             <div className="flex flex-1 flex-col p-5">
               <h3 className="font-display text-xl font-extrabold text-white">
-                {version.name}
+                {vDict.name}
               </h3>
-              <p className="mt-1 text-sm text-text-muted">{version.tagline}</p>
+              <p className="mt-1 text-sm text-text-muted">{vDict.tagline}</p>
 
               <ul className="mt-4 space-y-2.5">
-                {version.features.map((f) => (
+                {vDict.features.map((f) => (
                   <li key={f.label} className="flex items-start gap-2 text-sm">
                     <span className={`mt-0.5 shrink-0 font-bold ${a.bullet}`} aria-hidden="true">
                       ›
@@ -116,7 +129,7 @@ export default function ArchiveVersionPicker() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z" />
                 </svg>
-                {version.cta}
+                {vDict.cta}
               </span>
             </div>
           </Link>

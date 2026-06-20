@@ -1,8 +1,14 @@
 import Image from "next/image"
-import type { DownloadVersion } from "@/lib/types"
 
 interface DownloadCardProps {
-  version: DownloadVersion
+  name: string
+  tagline: string
+  image: string
+  accent: "purple" | "gold" | "blue"
+  features: { label: string; text: string }[]
+  cta: string
+  downloadUrl: string
+  badge?: string
 }
 
 type AccentStyle = {
@@ -16,7 +22,7 @@ type AccentStyle = {
   button: string
 }
 
-const accents: Record<DownloadVersion["accent"], AccentStyle> = {
+const accents: Record<string, AccentStyle> = {
   purple: {
     border: "border-brand-purple/25 hover:border-brand-purple/60",
     glow: "hover:shadow-brand-purple/25",
@@ -51,8 +57,8 @@ const accents: Record<DownloadVersion["accent"], AccentStyle> = {
   },
 }
 
-export default function DownloadCard({ version }: DownloadCardProps) {
-  const a = accents[version.accent]
+export default function DownloadCard({ name, tagline, image, accent, features, cta, downloadUrl, badge }: DownloadCardProps) {
+  const a = accents[accent]
 
   return (
     <div
@@ -65,17 +71,17 @@ export default function DownloadCard({ version }: DownloadCardProps) {
           style={{ background: a.banner }}
           aria-hidden="true"
         />
-        {version.badge && (
+        {badge && (
           <span
             className={`absolute top-6 left-6 z-10 rounded-full border px-3 py-1 text-xs font-extrabold uppercase tracking-wider ${a.badge}`}
           >
-            ★ {version.badge}
+            ★ {badge}
           </span>
         )}
         <div className={`relative h-full aspect-square overflow-hidden rounded-xl ${a.imageGlow}`}>
           <Image
-            src={version.image}
-            alt={`${version.name} featured artwork`}
+            src={image}
+            alt={`${name} featured artwork`}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-contain transition-transform duration-500 group-hover:scale-105"
@@ -85,11 +91,11 @@ export default function DownloadCard({ version }: DownloadCardProps) {
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-2xl font-extrabold text-white">{version.name}</h3>
-        <p className="mt-1 text-sm text-text-muted">{version.tagline}</p>
+        <h3 className="font-display text-2xl font-extrabold text-white">{name}</h3>
+        <p className="mt-1 text-sm text-text-muted">{tagline}</p>
 
         <ul className="mt-6 space-y-3.5">
-          {version.features.map((f) => (
+          {features.map((f) => (
             <li key={f.label} className="flex items-start gap-2.5 text-sm">
               <span className={`mt-0.5 shrink-0 font-bold ${a.bullet}`} aria-hidden="true">
                 ›
@@ -101,15 +107,15 @@ export default function DownloadCard({ version }: DownloadCardProps) {
           ))}
         </ul>
 
-        {/* CTA pinned to bottom for equal-height cards */}
         <a
-          href={version.downloadUrl}
+          href={downloadUrl}
+          download
           className={`mt-8 flex items-center justify-center gap-2.5 rounded-xl py-4 text-base font-extrabold shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.99] ${a.button}`}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z" />
           </svg>
-          {version.cta}
+          {cta}
         </a>
       </div>
     </div>

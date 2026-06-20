@@ -1,4 +1,8 @@
-export default function Disclaimer() {
+interface DisclaimerProps {
+  dict: { heading: string; text: string }
+}
+
+export default function Disclaimer({ dict }: DisclaimerProps) {
   return (
     <section className="relative py-12 bg-bg-base overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-28 bg-linear-to-b from-bg-base to-transparent pointer-events-none z-20" aria-hidden="true" />
@@ -11,13 +15,8 @@ export default function Disclaimer() {
               ℹ
             </div>
             <div>
-              <h2 className="font-display font-bold text-lg text-white mb-2">Important Notice</h2>
-              <p className="text-text-muted text-sm leading-relaxed">
-                The Official reBrawl Archive is an independent, community-driven project. reBrawl is
-                not affiliated with, endorsed by, or connected to Supercell Oy. Brawl Stars® is a registered
-                trademark of Supercell. All reBrawl APKs hosted here are available for the community
-                to download and enjoy. Use at your own discretion.
-              </p>
+              <h2 className="font-display font-bold text-lg text-white mb-2">{dict.heading}</h2>
+              <p className="text-text-muted text-sm leading-relaxed">{dict.text}</p>
             </div>
           </div>
         </div>

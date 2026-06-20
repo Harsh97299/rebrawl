@@ -1,6 +1,21 @@
-import { stats, heroIcons } from "@/lib/data"
+import { heroIcons } from "@/lib/data"
+import type { Locale } from "@/lib/i18n"
+import { localePath } from "@/lib/i18n"
+import type { Dictionary } from "@/app/[lang]/dictionaries"
 
-export default function Hero() {
+interface HeroProps {
+  lang: Locale
+  dict: Dictionary
+}
+
+export default function Hero({ lang, dict }: HeroProps) {
+  const stats = [
+    { value: "500K+", label: dict.stats.playersServed },
+    { value: "150+", label: dict.stats.versionsArchived },
+    { value: "4+", label: dict.stats.yearsOfHistory },
+    { value: "2M+", label: dict.stats.communityMembers },
+  ]
+
   return (
     <section
       id="hero"
@@ -12,10 +27,8 @@ export default function Hero() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Dark transparent overlay */}
       <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
 
-      {/* Subtle brand atmosphere */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -28,28 +41,21 @@ export default function Hero() {
       />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full flex flex-col items-center text-center">
-        {/* Official badge */}
-        {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-purple/15 border border-brand-purple/30 text-brand-purple text-xs font-bold uppercase tracking-wider mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" aria-hidden="true" />
-          Official ReBrawl Archive
-        </div> */}
-
         <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6">
-          The Legendary
+          {dict.hero.headlineLine1}
           <br />
-          <span className="text-brand-yellow">Brawl Stars</span>
+          <span className="text-brand-yellow">{dict.hero.headlineLine2}</span>
           <br />
-          Private Server
+          {dict.hero.headlineLine3}
         </h1>
 
         <p className="text-text-muted text-xl leading-relaxed mb-10 max-w-xl">
-          Welcome to the Official reBrawl Archive. Every version verified and ready to download.
-          Unlimited gems, all brawlers unlocked, exclusive custom game modes, and a community that keeps the experience fresh.
+          {dict.hero.subtitle}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <a
-            href="/archive/classic"
+            href={localePath("/archive/classic", lang)}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-yellow text-bg-base rounded-xl font-extrabold text-lg hover:bg-brand-gold hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 shadow-xl shadow-brand-yellow/20"
           >
             <svg
@@ -61,13 +67,13 @@ export default function Hero() {
             >
               <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z" />
             </svg>
-            Download Latest APK
+            {dict.hero.ctaDownload}
           </a>
           <a
-            href="/archive"
+            href={localePath("/archive", lang)}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/15 text-white rounded-xl font-bold text-lg hover:bg-white/10 hover:border-white/25 transition-all duration-200"
           >
-            Explore Archive
+            {dict.hero.ctaArchive}
             <svg
               width="16"
               height="16"
@@ -82,7 +88,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl w-full mb-14">
           {stats.map((stat) => (
             <div
@@ -97,7 +102,6 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Brawler collage */}
         <div className="relative w-full max-w-sm">
           <div className="grid grid-cols-3 gap-3" aria-hidden="true">
             {heroIcons.map((src, i) => (
@@ -117,7 +121,6 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          {/* Decorative glow */}
           <div
             className="absolute inset-0 -z-10 blur-3xl scale-125 bg-brand-purple/15 rounded-3xl"
             aria-hidden="true"
@@ -125,7 +128,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom vignette — merges into ThunderDivider */}
       <div
         className="absolute bottom-0 inset-x-0 h-32 bg-linear-to-t from-bg-base to-transparent pointer-events-none"
         aria-hidden="true"

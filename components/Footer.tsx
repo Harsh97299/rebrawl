@@ -1,22 +1,43 @@
 import Link from "next/link"
 import Image from "next/image"
+import type { Locale } from "@/lib/i18n"
+import { localePath } from "@/lib/i18n"
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/archive", label: "APK Archive" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
-]
+type FooterDict = {
+  tagline: string
+  navigate: string
+  legal: string
+  home: string
+  apkArchive: string
+  disclaimer: string
+  safetyInfo: string
+  notAffiliated: string
+  trademark: string
+  copyright: string
+  officialArchive: string
+}
 
-const legalLinks = [
-  { href: "/faq#disclaimer", label: "Disclaimer" },
-  { href: "/faq#safety", label: "Safety Info" },
-]
+interface FooterProps {
+  lang: Locale
+  dict: FooterDict
+}
 
-export default function Footer() {
+export default function Footer({ lang, dict }: FooterProps) {
+  const navLinks = [
+    { href: localePath("/", lang), label: dict.home },
+    { href: localePath("/archive", lang), label: dict.apkArchive },
+    { href: localePath("/faq", lang), label: "FAQ" },
+    { href: localePath("/contact", lang), label: lang === "tr" ? "İletişim" : "Contact" },
+  ]
+
+  const legalLinks = [
+    { href: localePath("/faq", lang) + "#disclaimer", label: dict.disclaimer },
+    { href: localePath("/faq", lang) + "#safety", label: dict.safetyInfo },
+  ]
+
   return (
     <footer className="relative bg-black/60 border-t border-white/5 overflow-visible">
-      {/* Brawler character — on mobile: centered above footer content; on desktop: straddles right edge */}
+      {/* Brawler character */}
       <div
         className="hidden lg:block absolute right-16 bottom-0 w-80 pointer-events-none z-30 -translate-y-[20%]"
         aria-hidden="true"
@@ -40,15 +61,14 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-text-muted text-sm leading-relaxed max-w-xs">
-              The Official reBrawl Archive — the legendary Brawl Stars private server. Every version
-              verified and ready to download for the community.
+              {dict.tagline}
             </p>
           </div>
 
           {/* Navigation */}
           <div>
             <h3 className="font-display font-bold text-xs text-text-muted uppercase tracking-wider mb-4">
-              Navigate
+              {dict.navigate}
             </h3>
             <ul className="space-y-2.5">
               {navLinks.map((link) => (
@@ -67,7 +87,7 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <h3 className="font-display font-bold text-xs text-text-muted uppercase tracking-wider mb-4">
-              Legal
+              {dict.legal}
             </h3>
             <ul className="space-y-2.5 mb-4">
               {legalLinks.map((link) => (
@@ -82,20 +102,20 @@ export default function Footer() {
               ))}
             </ul>
             <p className="text-text-muted text-xs leading-relaxed">
-              Not affiliated with Supercell Oy.
+              {dict.notAffiliated}
               <br />
-              Brawl Stars® is a trademark of Supercell.
+              {dict.trademark}
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-text-muted text-sm">
-            © {new Date().getFullYear()} Official reBrawl Archive. A community-driven project.
+            &copy; {new Date().getFullYear()} {dict.copyright}
           </p>
           <span className="inline-flex items-center gap-1.5 text-xs text-success bg-success/10 border border-success/20 px-3 py-1.5 rounded-full font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-success" />
-            Official Archive
+            {dict.officialArchive}
           </span>
         </div>
       </div>

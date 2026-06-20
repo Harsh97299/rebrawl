@@ -1,18 +1,26 @@
-import { downloadVersions } from "@/lib/data"
 import DownloadCard from "./DownloadCard"
+import type { Dictionary } from "@/app/[lang]/dictionaries"
 
-export default function DownloadSection() {
+interface DownloadSectionProps {
+  dict: Dictionary
+}
+
+const versionMeta = [
+  { id: "mods", image: "/mods.webp", accent: "purple" as const, downloadUrl: "https://www.mediafire.com/file/td1mytdear501pz/ReBrawl_Mod.apk/file" },
+  { id: "classic", image: "/classic.webp", accent: "gold" as const, downloadUrl: "https://www.mediafire.com/file/te4gjvh9utc0ho4/ReBrawl_Classic.apk/file" },
+  { id: "legacy", image: "/legacy.webp", accent: "blue" as const, downloadUrl: "https://www.mediafire.com/file/jl2sh7tig1463rg/Rebrawl_Legacy.apk/file" },
+]
+
+export default function DownloadSection({ dict }: DownloadSectionProps) {
   return (
     <section
       id="download"
       className="relative py-20 md:py-28 overflow-hidden"
       style={{ background: "#0b0b16" }}
     >
-      {/* Top & bottom vignettes — merge into ThunderDivider */}
       <div className="absolute top-0 inset-x-0 h-28 bg-linear-to-b from-bg-base to-transparent pointer-events-none z-20" aria-hidden="true" />
       <div className="absolute bottom-0 inset-x-0 h-28 bg-linear-to-t from-bg-base to-transparent pointer-events-none z-20" aria-hidden="true" />
 
-      {/* Single combined tile — all 4 icons in one 400×400 grid, guaranteed no overlap */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -27,7 +35,6 @@ export default function DownloadSection() {
         aria-hidden="true"
       />
 
-      {/* Radial vignette — fades pattern toward center so content stays readable */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -39,18 +46,30 @@ export default function DownloadSection() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-            Download <span className="text-brand-yellow">reBrawl</span>
+            {dict.download.heading} <span className="text-brand-yellow">{dict.download.headingHighlight}</span>
           </h2>
           <p className="text-text-muted text-lg max-w-xl mx-auto">
-            Three editions of reBrawl — pick the one that fits your device and play style. Every
-            reBrawl download is verified, virus-scanned, and ready to install from the Official reBrawl Archive.
+            {dict.download.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {downloadVersions.map((version) => (
-            <DownloadCard key={version.id} version={version} />
-          ))}
+          {versionMeta.map((v) => {
+            const vDict = dict.downloadVersions[v.id as keyof typeof dict.downloadVersions]
+            return (
+              <DownloadCard
+                key={v.id}
+                name={vDict.name}
+                tagline={vDict.tagline}
+                image={v.image}
+                accent={v.accent}
+                features={vDict.features}
+                cta={vDict.cta}
+                downloadUrl={v.downloadUrl}
+                badge={vDict.badge}
+              />
+            )
+          })}
         </div>
       </div>
     </section>

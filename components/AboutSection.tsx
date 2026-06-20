@@ -1,6 +1,17 @@
-import { stats } from "@/lib/data"
+import type { Dictionary } from "@/app/[lang]/dictionaries"
 
-export default function AboutSection() {
+interface AboutSectionProps {
+  dict: Dictionary
+}
+
+export default function AboutSection({ dict }: AboutSectionProps) {
+  const stats = [
+    { value: "500K+", label: dict.stats.playersServed },
+    { value: "150+", label: dict.stats.versionsArchived },
+    { value: "4+", label: dict.stats.yearsOfHistory },
+    { value: "2M+", label: dict.stats.communityMembers },
+  ]
+
   return (
     <section id="about" className="relative py-20 md:py-28 bg-bg-elevated overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-28 bg-linear-to-b from-bg-base to-transparent pointer-events-none z-20" aria-hidden="true" />
@@ -10,44 +21,30 @@ export default function AboutSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-            About <span className="text-brand-yellow">reBrawl</span>
+            {dict.aboutSection.heading} <span className="text-brand-yellow">{dict.aboutSection.headingHighlight}</span>
           </h2>
           <p className="text-text-muted text-lg max-w-2xl mx-auto">
-            The legendary Brawl Stars private server that redefined how the community played — and the Official reBrawl Archive that keeps it all available.
+            {dict.aboutSection.subtitle}
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto space-y-6">
           <div className="bg-bg-base rounded-2xl p-6 border border-white/5">
-            <h3 className="font-display font-bold text-xl text-white mb-3">Why Players Choose reBrawl</h3>
-            <p className="text-text-muted leading-relaxed text-sm">
-              reBrawl is the most popular Brawl Stars private server ever created. It gives
-              players unlimited gems, every brawler fully unlocked at max power, exclusive custom game modes,
-              and cross-region multiplayer — all completely free. With over 500,000 players and an active community
-              that keeps finding new ways to enjoy the game, reBrawl continues to be a player favorite.
-            </p>
+            <h3 className="font-display font-bold text-xl text-white mb-3">{dict.aboutSection.whyTitle}</h3>
+            <p className="text-text-muted leading-relaxed text-sm">{dict.aboutSection.whyText}</p>
           </div>
 
           <div className="bg-bg-base rounded-2xl p-6 border border-white/5">
-            <h3 className="font-display font-bold text-xl text-white mb-3">The Official reBrawl Archive</h3>
-            <p className="text-text-muted leading-relaxed text-sm">
-              This is the Official reBrawl Archive — the most trusted and complete source for every reBrawl version.
-              Every reBrawl APK hosted here is the original signed build, virus-scanned and verified
-              with a SHA-256 checksum. We never modify, repack, or tamper with any build. Just clean, verified downloads.
-            </p>
+            <h3 className="font-display font-bold text-xl text-white mb-3">{dict.aboutSection.archiveTitle}</h3>
+            <p className="text-text-muted leading-relaxed text-sm">{dict.aboutSection.archiveText}</p>
           </div>
 
           <div className="bg-bg-base rounded-2xl p-6 border border-white/5">
-            <h3 className="font-display font-bold text-xl text-white mb-3">Built by Players, for Players</h3>
-            <p className="text-text-muted leading-relaxed text-sm">
-              What makes reBrawl special is the creativity of its community. From custom skins to unique gameplay concepts,
-              players are constantly finding new ways to keep the experience fresh. Our mission is to make sure every version
-              of reBrawl stays available so the community can always come back to the game they love.
-            </p>
+            <h3 className="font-display font-bold text-xl text-white mb-3">{dict.aboutSection.communityTitle}</h3>
+            <p className="text-text-muted leading-relaxed text-sm">{dict.aboutSection.communityText}</p>
           </div>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mt-14">
           {stats.map((stat) => (
             <div

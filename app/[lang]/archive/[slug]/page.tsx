@@ -2,10 +2,13 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { downloadVersions, versionPages } from "@/lib/data"
+import { downloadVersions } from "@/lib/data"
+import DownloadButton from "@/components/DownloadButton"
 import Disclaimer from "@/components/Disclaimer"
 import FaqAccordion from "@/components/FaqAccordion"
-import { buildBreadcrumbJsonLd, buildSoftwareApplicationJsonLd } from "@/lib/seo"
+import { buildBreadcrumbJsonLd, buildSoftwareApplicationJsonLd, getAlternates } from "@/lib/seo"
+import { locales, isValidLocale, localePath, type Locale } from "@/lib/i18n"
+import { getDictionary } from "../../dictionaries"
 
 const accentStyles: Record<string, {
   gradient: string
@@ -95,33 +98,43 @@ const patternOverlay = (
 )
 
 export function generateStaticParams() {
-  return downloadVersions.map((v) => ({ slug: v.id }))
+  const slugs = ["mods", "classic", "legacy"]
+  return locales.flatMap((lang) => slugs.map((slug) => ({ lang, slug })))
 }
 
 type PageProps = {
-  params: Promise<{ slug: string }>
+  params: Promise<{ lang: string; slug: string }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { lang, slug } = await params
+  if (!isValidLocale(lang)) return {}
+  const dict = await getDictionary(lang)
   const version = downloadVersions.find((v) => v.id === slug)
-  const page = versionPages[slug]
-  if (!version || !page) return {}
+  const page = dict.versionPages[slug as keyof typeof dict.versionPages]
+  if (!version || !page || typeof page === "string") return {}
 
   return {
-    title: `${version.name} APK Download — Official reBrawl Archive`,
-    description: page.description.slice(0, 160),
-    alternates: { canonical: `/archive/${slug}` },
+    title: (page as { metaTitle: string }).metaTitle,
+    description: (page as { description: string }).description.slice(0, 160),
+    alternates: getAlternates(`/archive/${slug}`),
   }
 }
 
 export default async function VersionPage({ params }: PageProps) {
-  const { slug } = await params
+  const { lang, slug } = await params
+  if (!isValidLocale(lang)) notFound()
+  const dict = await getDictionary(lang)
+  const locale = lang as Locale
+
   const version = downloadVersions.find((v) => v.id === slug)
-  const page = versionPages[slug]
-  if (!version || !page) notFound()
+  const page = dict.versionPages[slug as keyof typeof dict.versionPages]
+  if (!version || !page || typeof page === "string") notFound()
+
+  const versionDict = dict.downloadVersions[slug as keyof typeof dict.downloadVersions]
 
   const a = accentStyles[version.accent]
+  const versionName = versionDict.name
 
   return (
     <>
@@ -132,8 +145,8 @@ export default async function VersionPage({ params }: PageProps) {
             buildBreadcrumbJsonLd([
               { name: "Home", url: "/" },
               { name: "APK Archive", url: "/archive" },
-              { name: version.name, url: `/archive/${slug}` },
-            ])
+              { name: versionName, url: `/archive/${slug}` },
+            ], locale)
           ),
         }}
       />
@@ -171,30 +184,34 @@ export default async function VersionPage({ params }: PageProps) {
             className="flex items-center gap-2 text-sm text-text-muted mb-8"
             aria-label="Breadcrumb"
           >
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href={localePath("/", locale)} className="hover:text-white transition-colors">
+              {dict.common.home}
+            </Link>
             <span aria-hidden="true">›</span>
-            <Link href="/archive" className="hover:text-white transition-colors">Archive</Link>
+            <Link href={localePath("/archive", locale)} className="hover:text-white transition-colors">
+              {dict.archive.heading} {dict.archive.headingHighlight}
+            </Link>
             <span aria-hidden="true">›</span>
-            <span className="text-white" aria-current="page">{version.name}</span>
+            <span className="text-white" aria-current="page">{versionName}</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              {version.badge && (
+              {versionDict.badge && (
                 <span
                   className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-extrabold uppercase tracking-wider mb-6 ${a.badge}`}
                 >
-                  ★ {version.badge}
+                  ★ {versionDict.badge}
                 </span>
               )}
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-5">
-                {version.name} APK
+                {versionName} APK
                 <span className="block text-lg sm:text-xl font-bold text-text-muted mt-2 font-sans tracking-normal">
-                  (Official Archive)
+                  {dict.versionPages.officialArchive}
                 </span>
               </h1>
               <p className="text-text-muted text-lg leading-relaxed max-w-xl">
-                {page.description}
+                {(page as { description: string }).description}
               </p>
             </div>
 
@@ -202,7 +219,7 @@ export default async function VersionPage({ params }: PageProps) {
               <div className={`relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 ${a.imageGlow}`}>
                 <Image
                   src={version.image}
-                  alt={`${version.name} featured artwork`}
+                  alt={`${versionName} featured artwork`}
                   fill
                   sizes="320px"
                   className="object-contain"
@@ -219,7 +236,7 @@ export default async function VersionPage({ params }: PageProps) {
         {patternOverlay}
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {page.highlights.map((h) => (
+            {(page as { highlights: { title: string; text: string }[] }).highlights.map((h) => (
               <div
                 key={h.title}
                 className={`rounded-xl border p-6 ${a.highlight} ${a.highlightBorder} border-l-4`}
@@ -239,16 +256,16 @@ export default async function VersionPage({ params }: PageProps) {
         {patternOverlay}
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-10 text-center">
-            Technical <span className={a.label}>Details</span>
+            {dict.versionPages.technicalDetails} <span className={a.label}>{dict.versionPages.technicalDetailsHighlight}</span>
           </h2>
           <div className={`rounded-2xl border bg-bg-elevated overflow-hidden ${a.tableAccent}`}>
             <table className="w-full text-sm">
               <tbody>
-                {page.techDetails.map((d, i) => (
+                {(page as { techDetails: { label: string; value: string }[] }).techDetails.map((d, i) => (
                   <tr
                     key={d.label}
                     className={`border-b border-white/5 last:border-0 ${
-                      i % 2 === 0 ? "" : "bg-white/[0.02]"
+                      i % 2 === 0 ? "" : "bg-white/2"
                     }`}
                   >
                     <td className="py-4 px-6 font-display font-bold text-text-muted text-xs uppercase tracking-wider w-1/3">
@@ -270,13 +287,13 @@ export default async function VersionPage({ params }: PageProps) {
         {patternOverlay}
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-10 text-center">
-            Installation & <span className={a.label}>Setup Guide</span>
+            {dict.versionPages.installGuide} <span className={a.label}>{dict.versionPages.installGuideHighlight}</span>
           </h2>
           <p className="text-text-muted text-center mb-10 -mt-4">
-            Follow these steps to get reBrawl running on your device — it only takes a minute.
+            {dict.versionPages.installSubtitle}
           </p>
           <div className="space-y-4">
-            {page.installSteps.map((step, i) => (
+            {(page as { installSteps: { title: string; text: string }[] }).installSteps.map((step, i) => (
               <div
                 key={step.title}
                 className="flex gap-5 items-start"
@@ -302,39 +319,36 @@ export default async function VersionPage({ params }: PageProps) {
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`rounded-2xl border bg-bg-elevated p-8 sm:p-10 text-center ${a.border}`}>
             <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-white mb-3">
-              {page.downloadLabel}
+              {(page as { downloadLabel: string }).downloadLabel}
             </h2>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-text-muted mb-8">
-              <span>Version: <strong className="text-white">{page.downloadVersion}</strong></span>
-              <span>Size: <strong className="text-white">{page.downloadSize}</strong></span>
+              <span>{dict.versionPages.downloadCta.version} <strong className="text-white">{(page as { downloadVersion: string }).downloadVersion}</strong></span>
+              <span>{dict.versionPages.downloadCta.size} <strong className="text-white">{(page as { downloadSize: string }).downloadSize}</strong></span>
               <span className="flex items-center gap-1.5">
-                Status:
+                {dict.versionPages.downloadCta.status}
                 <strong className="text-success flex items-center gap-1">
-                  {page.downloadStatus}
+                  {(page as { downloadStatus: string }).downloadStatus}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                   </svg>
                 </strong>
               </span>
             </div>
-            <a
+            <DownloadButton
               href={version.downloadUrl}
+              label={versionDict.cta}
               className={`inline-flex items-center gap-2.5 px-10 py-4 rounded-xl text-base font-extrabold shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.99] ${a.button}`}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z" />
-              </svg>
-              {version.cta}
-            </a>
+            />
           </div>
         </div>
       </section>
 
       {/* ── FAQ ── */}
-      {page.faq.length > 0 && (
+      {(page as { faq: { question: string; answer: string }[] }).faq.length > 0 && (
         <FaqAccordion
-          items={page.faq}
-          subtitle={`Common questions about the ${version.name} edition.`}
+          items={(page as { faq: { question: string; answer: string }[] }).faq}
+          subtitle={dict.versionPages.faqSubtitle.replace("{name}", versionName)}
+          lang={locale}
         />
       )}
 
@@ -343,34 +357,35 @@ export default async function VersionPage({ params }: PageProps) {
         {patternOverlay}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl font-extrabold text-white mb-2">
-            Choose Your reBrawl Edition
+            {dict.versionPages.otherVersions.heading}
           </h2>
           <p className="text-text-muted mb-8">
-            Each edition offers a unique gameplay experience. Find the one that fits your style.
+            {dict.versionPages.otherVersions.subtitle}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {downloadVersions
               .filter((v) => v.id !== slug)
               .map((v) => {
                 const va = accentStyles[v.accent]
+                const otherDict = dict.downloadVersions[v.id as keyof typeof dict.downloadVersions]
                 return (
                   <Link
                     key={v.id}
-                    href={`/archive/${v.id}`}
+                    href={localePath(`/archive/${v.id}`, locale)}
                     className={`flex items-center gap-4 p-5 rounded-xl border bg-bg-elevated hover:bg-bg-hover transition-all duration-200 ${va.border}`}
                   >
                     <div className={`relative w-14 h-14 shrink-0 ${va.imageGlow}`}>
                       <Image
                         src={v.image}
-                        alt={v.name}
+                        alt={otherDict.name}
                         fill
                         sizes="56px"
                         className="object-contain"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-display font-bold text-white">{v.name}</h3>
-                      <p className="text-sm text-text-muted truncate">{v.tagline}</p>
+                      <h3 className="font-display font-bold text-white">{otherDict.name}</h3>
+                      <p className="text-sm text-text-muted truncate">{otherDict.tagline}</p>
                     </div>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-text-muted shrink-0" aria-hidden="true">
                       <path d="m9 18 6-6-6-6" />
@@ -382,7 +397,7 @@ export default async function VersionPage({ params }: PageProps) {
         </div>
       </section>
 
-      <Disclaimer />
+      <Disclaimer dict={dict.disclaimer} />
     </>
   )
 }

@@ -1,6 +1,10 @@
-import { timeline } from "@/lib/data"
+import type { Dictionary } from "@/app/[lang]/dictionaries"
 
-export default function HistoryTimeline() {
+interface HistoryTimelineProps {
+  dict: Dictionary
+}
+
+export default function HistoryTimeline({ dict }: HistoryTimelineProps) {
   return (
     <section id="history" className="relative py-20 md:py-28 bg-bg-elevated overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-28 bg-linear-to-b from-bg-base to-transparent pointer-events-none z-20" aria-hidden="true" />
@@ -9,17 +13,14 @@ export default function HistoryTimeline() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4">
-            The ReBrawl <span className="text-brand-yellow">Story</span>
+            {dict.historyTimeline.heading} <span className="text-brand-yellow">{dict.historyTimeline.headingHighlight}</span>
           </h2>
           <p className="text-text-muted text-lg max-w-2xl mx-auto">
-            From private beta to half a million players — the history of the most beloved Brawl Stars
-            private server.
+            {dict.historyTimeline.subtitle}
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="max-w-3xl mx-auto relative pl-10">
-          {/* Vertical gradient line */}
           <div
             className="absolute left-4 top-2 bottom-2 w-px"
             style={{
@@ -29,9 +30,8 @@ export default function HistoryTimeline() {
             aria-hidden="true"
           />
 
-          {timeline.map((event, i) => (
+          {dict.timeline.map((event, i) => (
             <div key={i} className="relative mb-10 last:mb-0">
-              {/* Dot on line */}
               <div
                 className="absolute -left-[21px] top-4 w-3 h-3 rounded-full bg-brand-purple ring-4 ring-bg-elevated z-10"
                 aria-hidden="true"

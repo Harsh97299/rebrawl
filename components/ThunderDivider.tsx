@@ -12,7 +12,7 @@ export default function ThunderDivider() {
         <path fill="#ffd400" d="M0 0h1727v42L864 58l10.5-16L0 58V0Z" />
       </svg>
       <svg
-        className="block w-full"
+        className="block w-full -mt-px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1727 58"
         height="58"
