@@ -143,8 +143,8 @@ export default async function VersionPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             buildBreadcrumbJsonLd([
-              { name: "Home", url: "/" },
-              { name: "APK Archive", url: "/archive" },
+              { name: dict.common.home, url: "/" },
+              { name: dict.common.apkArchive, url: "/archive" },
               { name: versionName, url: `/archive/${slug}` },
             ], locale)
           ),
@@ -189,7 +189,7 @@ export default async function VersionPage({ params }: PageProps) {
             </Link>
             <span aria-hidden="true">›</span>
             <Link href={localePath("/archive", locale)} className="hover:text-white transition-colors">
-              {dict.archive.heading} {dict.archive.headingHighlight}
+              {dict.common.apkArchive}
             </Link>
             <span aria-hidden="true">›</span>
             <span className="text-white" aria-current="page">{versionName}</span>

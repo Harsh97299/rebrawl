@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 interface DownloadCardProps {
   name: string
@@ -7,7 +8,7 @@ interface DownloadCardProps {
   accent: "purple" | "gold" | "blue"
   features: { label: string; text: string }[]
   cta: string
-  downloadUrl: string
+  href: string
   badge?: string
 }
 
@@ -57,7 +58,7 @@ const accents: Record<string, AccentStyle> = {
   },
 }
 
-export default function DownloadCard({ name, tagline, image, accent, features, cta, downloadUrl, badge }: DownloadCardProps) {
+export default function DownloadCard({ name, tagline, image, accent, features, cta, href, badge }: DownloadCardProps) {
   const a = accents[accent]
 
   return (
@@ -107,17 +108,15 @@ export default function DownloadCard({ name, tagline, image, accent, features, c
           ))}
         </ul>
 
-        <a
-          href={downloadUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={href}
           className={`mt-8 flex items-center justify-center gap-2.5 rounded-xl py-4 text-base font-extrabold shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.99] ${a.button}`}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-8 2h16v2H4v-2z" />
-          </svg>
           {cta}
-        </a>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </Link>
       </div>
     </div>
   )

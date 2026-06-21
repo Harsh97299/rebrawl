@@ -1,17 +1,19 @@
 import DownloadCard from "./DownloadCard"
 import type { Dictionary } from "@/app/[lang]/dictionaries"
+import { localePath, type Locale } from "@/lib/i18n"
 
 interface DownloadSectionProps {
   dict: Dictionary
+  lang: Locale
 }
 
 const versionMeta = [
-  { id: "mods", image: "/mods.webp", accent: "purple" as const, downloadUrl: "https://www.mediafire.com/file/td1mytdear501pz/ReBrawl_Mod.apk/file" },
-  { id: "classic", image: "/classic.webp", accent: "gold" as const, downloadUrl: "https://www.mediafire.com/file/te4gjvh9utc0ho4/ReBrawl_Classic.apk/file" },
-  { id: "legacy", image: "/legacy.webp", accent: "blue" as const, downloadUrl: "https://www.mediafire.com/file/jl2sh7tig1463rg/Rebrawl_Legacy.apk/file" },
+  { id: "mods", image: "/mods.webp", accent: "purple" as const },
+  { id: "classic", image: "/classic.webp", accent: "gold" as const },
+  { id: "legacy", image: "/legacy.webp", accent: "blue" as const },
 ]
 
-export default function DownloadSection({ dict }: DownloadSectionProps) {
+export default function DownloadSection({ dict, lang }: DownloadSectionProps) {
   return (
     <section
       id="download"
@@ -65,7 +67,7 @@ export default function DownloadSection({ dict }: DownloadSectionProps) {
                 accent={v.accent}
                 features={vDict.features}
                 cta={vDict.cta}
-                downloadUrl={v.downloadUrl}
+                href={localePath(`/archive/${v.id}`, lang)}
                 badge={vDict.badge}
               />
             )

@@ -8,6 +8,9 @@ type FooterDict = {
   navigate: string;
   legal: string;
   home: string;
+  about: string;
+  faq: string;
+  contact: string;
   apkArchive: string;
   disclaimer: string;
   safetyInfo: string;
@@ -28,12 +31,10 @@ interface FooterProps {
 export default function Footer({ lang, dict }: FooterProps) {
   const navLinks = [
     { href: localePath("/", lang), label: dict.home },
+    { href: localePath("/about", lang), label: dict.about },
     { href: localePath("/archive", lang), label: dict.apkArchive },
-    { href: localePath("/faq", lang), label: "FAQ" },
-    {
-      href: localePath("/contact", lang),
-      label: lang === "tr" ? "İletişim" : "Contact",
-    },
+    { href: localePath("/faq", lang), label: dict.faq },
+    { href: localePath("/contact", lang), label: dict.contact },
   ];
 
   const legalLinks = [

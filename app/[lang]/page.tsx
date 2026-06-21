@@ -51,7 +51,7 @@ export default async function Home({ params }: PageProps) {
       <ThunderDivider />
       <AboutSection dict={dict} />
       <ThunderDivider />
-      <DownloadSection dict={dict} />
+      <DownloadSection dict={dict} lang={lang as Locale} />
       <ThunderDivider />
       <FaqAccordion
         items={faqItems.slice(0, 3)}

@@ -195,7 +195,7 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
             <LanguageSwitcher lang={lang} />
             <a
               href={localePath("/archive", lang)}
-              className={`px-4 py-2 rounded-xl font-bold text-sm transition-all duration-200 ${
+              className={`px-4 py-2 rounded-xl font-bold text-sm max-[400px]:px-2.5 max-[400px]:py-1.5 max-[400px]:text-xs transition-all duration-200 ${
                 scrolled
                   ? "bg-brand-yellow text-bg-base hover:bg-brand-gold shadow-md shadow-brand-yellow/20"
                   : "bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow hover:bg-brand-yellow hover:text-bg-base"

@@ -36,8 +36,8 @@ export default async function ArchivePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
             buildBreadcrumbJsonLd([
-              { name: dict.common.home, url: localePath("/", lang as Locale) },
-              { name: dict.common.apkArchive, url: localePath("/archive", lang as Locale) },
+              { name: dict.common.home, url: "/" },
+              { name: dict.common.apkArchive, url: "/archive" },
             ], lang as Locale)
           ),
         }}
