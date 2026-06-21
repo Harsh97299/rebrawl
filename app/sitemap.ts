@@ -3,14 +3,17 @@ import { BASE_URL } from "@/lib/seo"
 import { locales, defaultLocale, hreflangMap } from "@/lib/i18n"
 
 const routes = [
-  { path: "/", changeFrequency: "weekly" as const, priority: 1 },
-  { path: "/about", changeFrequency: "monthly" as const, priority: 0.8 },
-  { path: "/archive", changeFrequency: "weekly" as const, priority: 0.9 },
-  { path: "/archive/mods", changeFrequency: "weekly" as const, priority: 0.85 },
-  { path: "/archive/classic", changeFrequency: "weekly" as const, priority: 0.85 },
-  { path: "/archive/legacy", changeFrequency: "weekly" as const, priority: 0.85 },
-  { path: "/faq", changeFrequency: "monthly" as const, priority: 0.7 },
-  { path: "/contact", changeFrequency: "monthly" as const, priority: 0.6 },
+  { path: "/", changeFrequency: "weekly" as const, priority: 1, lastModified: "2026-06-21" },
+  { path: "/about", changeFrequency: "monthly" as const, priority: 0.8, lastModified: "2026-06-15" },
+  { path: "/archive", changeFrequency: "weekly" as const, priority: 0.9, lastModified: "2026-06-21" },
+  { path: "/archive/mods", changeFrequency: "weekly" as const, priority: 0.85, lastModified: "2026-06-21" },
+  { path: "/archive/classic", changeFrequency: "weekly" as const, priority: 0.85, lastModified: "2026-06-21" },
+  { path: "/archive/legacy", changeFrequency: "weekly" as const, priority: 0.85, lastModified: "2026-06-21" },
+  { path: "/faq", changeFrequency: "monthly" as const, priority: 0.7, lastModified: "2026-06-15" },
+  { path: "/contact", changeFrequency: "monthly" as const, priority: 0.6, lastModified: "2026-06-01" },
+  { path: "/privacy-policy", changeFrequency: "yearly" as const, priority: 0.3, lastModified: "2026-06-01" },
+  { path: "/terms", changeFrequency: "yearly" as const, priority: 0.3, lastModified: "2026-06-01" },
+  { path: "/dmca", changeFrequency: "yearly" as const, priority: 0.3, lastModified: "2026-06-01" },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -35,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url,
-        lastModified: new Date(),
+        lastModified: new Date(route.lastModified),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         alternates: { languages },

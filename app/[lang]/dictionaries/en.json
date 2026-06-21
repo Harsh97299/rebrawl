@@ -5,23 +5,23 @@
       "description": "Looking for a fresh way to experience Brawl Stars? The Official reBrawl Archive has every reBrawl APK version ready to download — unlimited gems, all brawlers unlocked, custom game modes, and exclusive content. Verified and virus-scanned."
     },
     "about": {
-      "title": "About Us — Official reBrawl Archive",
+      "title": "About Us — reBrawl",
       "description": "Learn about the Official reBrawl Archive — the community-driven home for the world's most famous Brawl Stars private server. Explore custom content, exclusive skins, and everything reBrawl has to offer."
     },
     "dmca": {
-      "title": "DMCA Notice — Official reBrawl Archive",
+      "title": "DMCA Notice — reBrawl",
       "description": "Learn how the Official reBrawl Archive handles copyright claims, takedown requests, and DMCA compliance for reBrawl content."
     },
     "privacy": {
-      "title": "Privacy Policy — Official reBrawl Archive",
+      "title": "Privacy Policy — reBrawl",
       "description": "Read the Official reBrawl Archive privacy policy to understand how we collect, use, and protect data while supporting reBrawl APK downloads."
     },
     "terms": {
-      "title": "Terms & Conditions — Official reBrawl Archive",
+      "title": "Terms & Conditions — reBrawl",
       "description": "Review the terms and conditions for using the Official reBrawl Archive, including permitted use, download responsibility, and content disclaimers."
     },
     "archive": {
-      "title": "Official reBrawl Archive Downloads — All reBrawl APK Versions",
+      "title": "Archive Downloads — All reBrawl APK Versions",
       "description": "Browse the complete Official reBrawl Archive. Every reBrawl APK version is virus-scanned, SHA-256 verified, and ready for free download. Find reBrawl Mods, reBrawl Classic, and reBrawl Legacy."
     },
     "faq": {
@@ -29,7 +29,7 @@
       "description": "Frequently asked questions about reBrawl, the Official reBrawl Archive, reBrawl APK safety, installation instructions, custom brawlers, and more. Everything you need to know about this Brawl Stars private server."
     },
     "contact": {
-      "title": "Contact Us — Official reBrawl Archive",
+      "title": "Contact Us — reBrawl",
       "description": "Get in touch with the Official reBrawl Archive team. Report issues, ask questions about the reBrawl download, or share feedback about your Brawl Stars private server experience."
     },
     "defaultTitle": "reBrawl — Official Archive | Download Brawl Stars Private Server",
@@ -280,7 +280,7 @@
     },
     "faqSubtitle": "Common questions about the {name} edition.",
     "classic": {
-      "metaTitle": "reBrawl Classic APK Download — Official reBrawl Archive",
+      "metaTitle": "reBrawl Classic APK Download — Free Archive",
       "description": "reBrawl Classic is the community favorite — a pure, unmodified Brawl Stars experience with the freedom of a private server. While reBrawl Mods brings chaotic custom content, Classic keeps it real with original gameplay mechanics, unlimited resources, and every brawler unlocked. If you love Brawl Stars the way Supercell designed it but want everything available from the start, this is the edition for you.",
       "highlights": [
         {
@@ -357,7 +357,7 @@
       "downloadStatus": "Verified & Ready"
     },
     "mods": {
-      "metaTitle": "reBrawl Mods APK Download — Official reBrawl Archive",
+      "metaTitle": "reBrawl Mods APK Download — Free Archive",
       "description": "reBrawl Mods is the community's creative playground — the edition where anything goes. With over 30 custom-coded brawlers, modified abilities, and exclusive game modes that never existed in the official Brawl Stars client, reBrawl Mods pushes the boundaries of what a Brawl Stars private server can be. This is custom content at its finest, built by passionate fans for the community.",
       "highlights": [
         {
@@ -431,7 +431,7 @@
       "downloadStatus": "Verified & Ready"
     },
     "legacy": {
-      "metaTitle": "reBrawl Legacy APK Download — Official reBrawl Archive",
+      "metaTitle": "reBrawl Legacy APK Download — Free Archive",
       "description": "reBrawl Legacy is purpose-built for older and budget Android devices. With optimized graphics, reduced asset sizes, and compatibility reaching back to Android 4.3 (KitKat), reBrawl Legacy makes sure every player can enjoy the reBrawl experience regardless of their hardware. No phone left behind — that's what makes this edition a community favorite for players on budget devices.",
       "highlights": [
         {

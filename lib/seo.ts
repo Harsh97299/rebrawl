@@ -3,7 +3,7 @@ import type { FaqItem } from "./types"
 import { type Locale, defaultLocale, hreflangMap, localePath } from "./i18n"
 import type { Dictionary } from "@/app/[lang]/dictionaries"
 
-export const BASE_URL = "https://rebrawl.net"
+export const BASE_URL = "https://rebrawl.app"
 export const SITE_NAME = "Official reBrawl Archive"
 
 export function getAlternates(path: string) {
@@ -49,9 +49,12 @@ export function getDefaultMetadata(lang: Locale, dict: Dictionary): Metadata {
     ],
     authors: [{ name: "Official reBrawl Archive" }],
     icons: {
-      icon: [{ url: "/logo.webp", type: "image/webp" }],
-      shortcut: [{ url: "/logo.webp", type: "image/webp" }],
-      apple: [{ url: "/logo.webp" }],
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48" },
+        { url: "/logo.webp", type: "image/webp" },
+      ],
+      shortcut: [{ url: "/favicon.ico" }],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     },
     openGraph: {
       type: "website",
@@ -62,7 +65,7 @@ export function getDefaultMetadata(lang: Locale, dict: Dictionary): Metadata {
       locale: hreflangMap[lang],
       images: [
         {
-          url: "/opengraph-image",
+          url: "/opengraph-image.png",
           width: 1200,
           height: 630,
           alt: m.ogAlt,
@@ -74,6 +77,7 @@ export function getDefaultMetadata(lang: Locale, dict: Dictionary): Metadata {
       title: m.twitterTitle,
       description: m.twitterDescription,
     },
+    manifest: "/manifest.json",
     robots: {
       index: true,
       follow: true,
@@ -137,8 +141,17 @@ export function buildOrganizationJsonLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: BASE_URL,
+    logo: `${BASE_URL}/logo.webp`,
     description:
       "The Official reBrawl Archive — the community-driven home for reBrawl, the legendary Brawl Stars private server. Download every version, explore custom content, and discover what made reBrawl a player favorite.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "contact@rebrawl.app",
+      contactType: "customer support",
+    },
+    sameAs: [
+      "https://www.reddit.com/r/ReBrawl/",
+    ],
   }
 }
 

@@ -5,23 +5,23 @@
       "description": "Brawl Stars'ı yeni bir şekilde deneyimlemek mi istiyorsunuz? Resmi reBrawl Arşivi'nde her reBrawl APK sürümü indirmeye hazır — sınırsız elmas, tüm savaşçılar açık, özel oyun modları ve özel içerikler. Doğrulanmış ve virüs taramasından geçmiş."
     },
     "about": {
-      "title": "Hakkımızda — Resmi reBrawl Arşivi",
+      "title": "Hakkımızda — reBrawl",
       "description": "Resmi reBrawl Arşivi hakkında bilgi edinin — dünyanın en ünlü Brawl Stars özel sunucusu için topluluk tarafından yönetilen merkez. Özel içerikleri, özel kostümleri ve reBrawl'un sunduğu her şeyi keşfedin."
     },
     "dmca": {
-      "title": "DMCA Bildirimi — Resmi reBrawl Arşivi",
+      "title": "DMCA Bildirimi — reBrawl",
       "description": "Resmi reBrawl Arşivi'nin telif hakkı taleplerini, kaldırma isteklerini ve DMCA uyumluluğunu nasıl ele aldığını öğrenin."
     },
     "privacy": {
-      "title": "Gizlilik Politikası — Resmi reBrawl Arşivi",
+      "title": "Gizlilik Politikası — reBrawl",
       "description": "reBrawl APK indirmelerini desteklerken verileri nasıl topladığımızı, kullandığımızı ve koruduğumuzu anlamak için Resmi reBrawl Arşivi gizlilik politikasını okuyun."
     },
     "terms": {
-      "title": "Şartlar ve Koşullar — Resmi reBrawl Arşivi",
+      "title": "Şartlar ve Koşullar — reBrawl",
       "description": "Resmi reBrawl Arşivi'ni kullanmaya ilişkin şartlar ve koşulları inceleyin; izin verilen kullanım, indirme sorumluluğu ve içerik feragatleri dahil."
     },
     "archive": {
-      "title": "Resmi reBrawl Arşiv İndirmeleri — Tüm reBrawl APK Sürümleri",
+      "title": "reBrawl Arşiv İndirmeleri — Tüm APK Sürümleri",
       "description": "Resmi reBrawl Arşivi'nin tamamına göz atın. Her reBrawl APK sürümü virüs taramasından geçmiş, SHA-256 ile doğrulanmış ve ücretsiz indirmeye hazır. reBrawl Mods, reBrawl Classic ve reBrawl Legacy'yi bulun."
     },
     "faq": {
@@ -29,7 +29,7 @@
       "description": "reBrawl, Resmi reBrawl Arşivi, reBrawl APK güvenliği, kurulum talimatları, özel savaşçılar ve daha fazlası hakkında sıkça sorulan sorular. Bu Brawl Stars özel sunucusu hakkında bilmeniz gereken her şey."
     },
     "contact": {
-      "title": "Bize Ulaşın — Resmi reBrawl Arşivi",
+      "title": "Bize Ulaşın — reBrawl",
       "description": "Resmi reBrawl Arşivi ekibiyle iletişime geçin. Sorunları bildirin, reBrawl indirme hakkında sorular sorun veya Brawl Stars özel sunucu deneyiminiz hakkında geri bildirim paylaşın."
     },
     "defaultTitle": "reBrawl — Resmi Arşiv | Brawl Stars Özel Sunucu İndir",
@@ -280,7 +280,7 @@
     },
     "faqSubtitle": "{name} sürümü hakkında sık sorulan sorular.",
     "classic": {
-      "metaTitle": "reBrawl Classic APK İndir — Resmi reBrawl Arşivi",
+      "metaTitle": "reBrawl Classic APK İndir — Ücretsiz Arşiv",
       "description": "reBrawl Classic topluluk favorisidir — özel sunucu özgürlüğüyle saf, değiştirilmemiş bir Brawl Stars deneyimi. reBrawl Mods kaotik özel içerik getirirken, Classic orijinal oynanış mekanikleri, sınırsız kaynaklar ve her savaşçı açık olarak gerçekliğini korur. Brawl Stars'ı Supercell'in tasarladığı şekliyle seviyorsanız ama her şeyin baştan itibaren mevcut olmasını istiyorsanız, bu sürüm tam size göre.",
       "highlights": [
         {
@@ -354,7 +354,7 @@
       "downloadStatus": "Doğrulanmış ve Hazır"
     },
     "mods": {
-      "metaTitle": "reBrawl Mods APK İndir — Resmi reBrawl Arşivi",
+      "metaTitle": "reBrawl Mods APK İndir — Ücretsiz Arşiv",
       "description": "reBrawl Mods, topluluğun yaratıcı oyun alanıdır — her şeyin mümkün olduğu sürüm. 30'dan fazla özel kodlanmış savaşçı, değiştirilmiş yetenekler ve resmi Brawl Stars istemcisinde hiç bulunmayan özel oyun modlarıyla, reBrawl Mods bir Brawl Stars özel sunucusunun neler yapabileceğinin sınırlarını zorlar. Bu, tutkulu hayranlar tarafından topluluk için oluşturulmuş en kaliteli özel içeriktir.",
       "highlights": [
         {
@@ -428,7 +428,7 @@
       "downloadStatus": "Doğrulanmış ve Hazır"
     },
     "legacy": {
-      "metaTitle": "reBrawl Legacy APK İndir — Resmi reBrawl Arşivi",
+      "metaTitle": "reBrawl Legacy APK İndir — Ücretsiz Arşiv",
       "description": "reBrawl Legacy, eski ve bütçe dostu Android cihazlar için özel olarak tasarlanmıştır. Optimize edilmiş grafikler, küçültülmüş öğe boyutları ve Android 4.3'e (KitKat) kadar uzanan uyumlulukla, reBrawl Legacy her oyuncunun donanımından bağımsız olarak reBrawl deneyiminin tadını çıkarabilmesini sağlar. Hiçbir telefon geride kalmaz — bu sürümü bütçe cihazlarındaki oyuncular için topluluk favorisi yapan da budur.",
       "highlights": [
         {

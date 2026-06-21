@@ -96,7 +96,7 @@ export default async function PrivacyPolicyPage({ params }: PageProps) {
 
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl md:text-6xl font-extrabold text-white mb-4">
-              {dict.footer.privacyPolicy}{" "}
+              {t.overviewHeading}{" "}
               <span className="text-brand-yellow">
                 {t.overviewHeadingHighlight}
               </span>

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { heroIcons } from "@/lib/data"
 import type { Locale } from "@/lib/i18n"
 import { localePath } from "@/lib/i18n"
@@ -112,10 +113,12 @@ export default function Hero({ lang, dict }: HeroProps) {
                 }`}
                 style={{ animationDelay: `${i * 0.4}s` }}
               >
-                <img
+                <Image
                   src={src}
                   alt="ReBrawl brawler"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 30vw, 120px"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/30 to-transparent pointer-events-none" />
               </div>

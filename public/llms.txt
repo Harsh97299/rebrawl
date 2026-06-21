@@ -1,0 +1,34 @@
+# Official reBrawl Archive
+
+> The community-driven home for reBrawl — the legendary Brawl Stars private server. Every APK version verified, virus-scanned, and ready to download.
+
+## About
+
+The Official reBrawl Archive preserves every version of reBrawl, the most popular Brawl Stars private server ever created. reBrawl offers unlimited gems, all brawlers unlocked, exclusive custom game modes, and cross-region multiplayer — completely free.
+
+## Editions
+
+- **reBrawl Mods**: 30+ custom-coded brawlers, modified abilities, exclusive game modes. The creative playground.
+- **reBrawl Classic**: Original Brawl Stars mechanics with unlimited resources. The community favorite.
+- **reBrawl Legacy**: Optimized for older and budget Android devices (Android 4.3+).
+
+## Key Pages
+
+- Homepage: https://rebrawl.app
+- Archive Downloads: https://rebrawl.app/archive
+- reBrawl Mods: https://rebrawl.app/archive/mods
+- reBrawl Classic: https://rebrawl.app/archive/classic
+- reBrawl Legacy: https://rebrawl.app/archive/legacy
+- FAQ: https://rebrawl.app/faq
+- About: https://rebrawl.app/about
+- Contact: https://rebrawl.app/contact
+
+## Key Facts
+
+- Over 500,000 registered players at peak
+- Every APK is SHA-256 verified and virus-scanned
+- Three editions: Mods, Classic, Legacy
+- Android only (APK sideload)
+- Not affiliated with Supercell
+- Free to download and play
+- Active since 2019
