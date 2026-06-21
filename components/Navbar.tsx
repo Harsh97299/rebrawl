@@ -81,14 +81,16 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={localePath("/", lang)} className="flex items-center gap-2.5 group">
-            <Image
-              src="/logo.webp"
-              alt="ReBrawl logo"
-              width={32}
-              height={32}
-              className="rounded-lg"
-            />
+          <Link href={localePath("/", lang)} className="flex items-center gap-2 group">
+            <span className="relative block w-8 h-8 shrink-0 overflow-hidden rounded-lg">
+              <Image
+                src="/logo.webp"
+                alt="ReBrawl logo"
+                fill
+                sizes="32px"
+                className="object-cover scale-150"
+              />
+            </span>
             <span className="font-display text-2xl font-extrabold tracking-tight text-white group-hover:text-brand-yellow transition-colors">
               Re<span className="text-brand-yellow">Brawl</span>
             </span>
