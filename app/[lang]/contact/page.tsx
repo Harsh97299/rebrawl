@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: dict.meta.contact.title,
     description: dict.meta.contact.description,
-    alternates: getAlternates("/contact"),
+    alternates: getAlternates("/contact", lang),
   }
 }
 

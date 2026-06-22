@@ -19,7 +19,7 @@ export async function generateMetadata({
   return {
     title: dict.meta.dmca.title,
     description: dict.meta.dmca.description,
-    alternates: getAlternates("/dmca"),
+    alternates: getAlternates("/dmca", lang),
   };
 }
 

@@ -1,19 +1,25 @@
 import type { Metadata } from "next"
 import type { FaqItem } from "./types"
-import { type Locale, defaultLocale, hreflangMap, localePath } from "./i18n"
+import { type Locale, locales, defaultLocale, hreflangMap, localePath } from "./i18n"
 import type { Dictionary } from "@/app/[lang]/dictionaries"
 
 export const BASE_URL = "https://rebrawl.app"
 export const SITE_NAME = "Official reBrawl Archive"
 
-export function getAlternates(path: string) {
+export function getAlternates(path: string, lang: Locale = defaultLocale) {
+  // Strip any locale prefix to recover the unprefixed (default-locale) path
+  const basePath = path.replace(/^\/(tr|fr|it|ru|uk)(?=\/|$)/, "") || "/"
+  const languages: Record<string, string> = {
+    "x-default": `${BASE_URL}${basePath}`,
+  }
+  for (const locale of locales) {
+    languages[hreflangMap[locale]] = `${BASE_URL}${localePath(basePath, locale)}`
+  }
   return {
-    canonical: path,
-    languages: {
-      en: `${BASE_URL}${path}`,
-      "tr-TR": `${BASE_URL}/tr${path}`,
-      "x-default": `${BASE_URL}${path}`,
-    },
+    // Self-referencing canonical: must point to the current locale's URL,
+    // otherwise non-default locales canonicalize to English and get dropped.
+    canonical: localePath(basePath, lang),
+    languages,
   }
 }
 
@@ -61,7 +67,7 @@ export function getDefaultMetadata(lang: Locale, dict: Dictionary): Metadata {
       siteName: SITE_NAME,
       title: m.ogTitle,
       description: m.ogDescription,
-      url: BASE_URL,
+      url: `${BASE_URL}${localePath("/", lang)}`,
       locale: hreflangMap[lang],
       images: [
         {
@@ -108,12 +114,6 @@ export function buildSoftwareApplicationJsonLd() {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "14200",
-      bestRating: "5",
     },
     description:
       "reBrawl is the legendary Brawl Stars private server — the community favorite offering unlimited gems, all brawlers unlocked, exclusive custom game modes, and a fresh experience for every player.",

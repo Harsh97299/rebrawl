@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: dict.meta.archive.title,
     description: dict.meta.archive.description,
-    alternates: getAlternates("/archive"),
+    alternates: getAlternates("/archive", lang),
   }
 }
 

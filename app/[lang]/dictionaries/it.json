@@ -1,0 +1,736 @@
+{
+  "meta": {
+    "home": {
+      "title": "reBrawl — Archivio Ufficiale | Scarica l'APK del server privato di Brawl Stars",
+      "description": "Cerchi un nuovo modo di vivere Brawl Stars? L'Archivio Ufficiale reBrawl offre ogni versione dell'APK reBrawl pronta per il download — gemme illimitate, tutti i brawler sbloccati, modalità di gioco personalizzate e contenuti esclusivi. Verificato e analizzato contro i virus."
+    },
+    "about": {
+      "title": "Chi siamo — reBrawl",
+      "description": "Scopri l'Archivio Ufficiale reBrawl — la casa guidata dalla community del server privato di Brawl Stars più famoso al mondo. Esplora contenuti personalizzati, skin esclusive e tutto ciò che reBrawl ha da offrire."
+    },
+    "dmca": {
+      "title": "Avviso DMCA — reBrawl",
+      "description": "Scopri come l'Archivio Ufficiale reBrawl gestisce le rivendicazioni di copyright, le richieste di rimozione e la conformità DMCA per i contenuti reBrawl."
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy — reBrawl",
+      "description": "Leggi l'informativa sulla privacy dell'Archivio Ufficiale reBrawl per capire come raccogliamo, usiamo e proteggiamo i dati supportando i download dell'APK reBrawl."
+    },
+    "terms": {
+      "title": "Termini e condizioni — reBrawl",
+      "description": "Consulta i termini e le condizioni per l'utilizzo dell'Archivio Ufficiale reBrawl, inclusi l'uso consentito, la responsabilità di download e le clausole di esclusione sui contenuti."
+    },
+    "archive": {
+      "title": "Download dall'archivio — Tutte le versioni dell'APK reBrawl",
+      "description": "Sfoglia l'Archivio Ufficiale reBrawl completo. Ogni versione dell'APK reBrawl è analizzata contro i virus, verificata con SHA-256 e pronta per il download gratuito. Trova reBrawl Mods, reBrawl Classic e reBrawl Legacy."
+    },
+    "faq": {
+      "title": "FAQ — Domande e risposte su reBrawl",
+      "description": "Domande frequenti su reBrawl, l'Archivio Ufficiale reBrawl, la sicurezza dell'APK reBrawl, le istruzioni di installazione, i brawler personalizzati e altro ancora. Tutto ciò che devi sapere su questo server privato di Brawl Stars."
+    },
+    "contact": {
+      "title": "Contattaci — reBrawl",
+      "description": "Mettiti in contatto con il team dell'Archivio Ufficiale reBrawl. Segnala problemi, fai domande sul download di reBrawl o condividi feedback sulla tua esperienza con il server privato di Brawl Stars."
+    },
+    "defaultTitle": "reBrawl — Archivio Ufficiale | Scarica il server privato di Brawl Stars",
+    "titleTemplate": "%s | Archivio Ufficiale reBrawl",
+    "defaultDescription": "L'Archivio Ufficiale reBrawl. Scarica ogni versione dell'APK reBrawl — il leggendario server privato di Brawl Stars con gemme illimitate, tutti i brawler sbloccati e modalità di gioco personalizzate. Verificato e pronto da installare.",
+    "ogTitle": "reBrawl — Archivio Ufficiale | Il leggendario server privato di Brawl Stars",
+    "ogDescription": "Scarica reBrawl — il server privato di Brawl Stars preferito dalla community. Ogni versione dell'APK disponibile, verificata e pronta per giocare.",
+    "ogAlt": "reBrawl — Archivio Ufficiale | Server privato di Brawl Stars",
+    "twitterTitle": "reBrawl — Archivio Ufficiale",
+    "twitterDescription": "L'Archivio Ufficiale reBrawl. Ogni versione del leggendario server privato di Brawl Stars, verificata e pronta per il download."
+  },
+  "nav": {
+    "about": "Chi siamo",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "archive": "Archivio",
+    "allVersions": "Tutte le versioni",
+    "downloadApk": "Scarica APK",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu"
+  },
+  "hero": {
+    "headlineLine1": "Il leggendario",
+    "headlineLine2": "Brawl Stars",
+    "headlineLine3": "Server privato",
+    "subtitle": "Benvenuto nell'Archivio Ufficiale reBrawl. Ogni versione verificata e pronta per il download. Gemme illimitate, tutti i brawler sbloccati, modalità di gioco personalizzate esclusive e una community che mantiene l'esperienza sempre fresca.",
+    "ctaDownload": "Scarica l'ultimo APK",
+    "ctaArchive": "Esplora l'archivio"
+  },
+  "stats": {
+    "playersServed": "Giocatori serviti",
+    "versionsArchived": "Versioni archiviate",
+    "yearsOfHistory": "Anni di storia",
+    "communityMembers": "Membri della community"
+  },
+  "features": {
+    "heading": "Le migliori funzionalità di",
+    "headingHighlight": "reBrawl",
+    "subtitle": "L'esperienza ricca di funzionalità che rende reBrawl il server privato di Brawl Stars preferito dalla community.",
+    "items": [
+      {
+        "title": "Gemme e monete illimitate",
+        "description": "Più gemme di quante il tuo account possa gestire. Tutta la valuta di gioco completamente sbloccata — ogni skin, potenziamento e acquisto disponibile dal momento in cui installi reBrawl."
+      },
+      {
+        "title": "Tutti i brawler sbloccati",
+        "description": "Ogni brawler al livello di potenza massimo fin dal primo giorno. Niente grinding, niente punti stella, niente attese per quel drop leggendario. L'intero roster è tuo."
+      },
+      {
+        "title": "Modalità di gioco personalizzate esclusive",
+        "description": "Modalità di gioco creative create dalla community reBrawl — esperienze realizzate dai fan che non sono mai state disponibili nel client ufficiale di Brawl Stars."
+      },
+      {
+        "title": "Multigiocatore inter-regionale",
+        "description": "Connettiti e competi con giocatori di qualsiasi paese. Server dedicati mantengono bassa la latenza così la community attiva può combattere insieme, indipendentemente dalla regione."
+      },
+      {
+        "title": "Download verificati e sicuri",
+        "description": "Ogni APK reBrawl è analizzato contro i virus e verificato con un checksum SHA-256. Build originali e firmate dall'Archivio Ufficiale reBrawl — mai modificate o riconfezionate."
+      },
+      {
+        "title": "Nessun root richiesto",
+        "description": "Semplice installazione tramite sideload su qualsiasi dispositivo Android 5.0+. Niente root, niente patch complicate — basta scaricare reBrawl e iniziare a giocare."
+      }
+    ]
+  },
+  "aboutSection": {
+    "heading": "Informazioni su",
+    "headingHighlight": "reBrawl",
+    "subtitle": "Il leggendario server privato di Brawl Stars che ha ridefinito il modo di giocare della community — e l'Archivio Ufficiale reBrawl che mantiene tutto disponibile.",
+    "whyTitle": "Perché i giocatori scelgono reBrawl",
+    "whyText": "reBrawl è il server privato di Brawl Stars più popolare mai creato. Offre ai giocatori gemme illimitate, ogni brawler completamente sbloccato al massimo della potenza, modalità di gioco personalizzate esclusive e multigiocatore inter-regionale — tutto completamente gratuito. Con oltre 500.000 giocatori e una community attiva che continua a trovare nuovi modi per godersi il gioco, reBrawl resta uno dei preferiti dei giocatori.",
+    "archiveTitle": "L'Archivio Ufficiale reBrawl",
+    "archiveText": "Questo è l'Archivio Ufficiale reBrawl — la fonte più affidabile e completa per ogni versione di reBrawl. Ogni APK reBrawl ospitato qui è la build originale firmata, analizzata contro i virus e verificata con un checksum SHA-256. Non modifichiamo, riconfezioniamo o manomettiamo mai alcuna build. Solo download puliti e verificati.",
+    "communityTitle": "Creato dai giocatori, per i giocatori",
+    "communityText": "Ciò che rende reBrawl speciale è la creatività della sua community. Dalle skin personalizzate ai concetti di gameplay unici, i giocatori trovano costantemente nuovi modi per mantenere fresca l'esperienza. La nostra missione è garantire che ogni versione di reBrawl resti disponibile così che la community possa sempre tornare al gioco che ama."
+  },
+  "download": {
+    "heading": "Scarica",
+    "headingHighlight": "reBrawl",
+    "subtitle": "Tre edizioni di reBrawl — scegli quella adatta al tuo dispositivo e al tuo stile di gioco. Ogni download di reBrawl è verificato, analizzato contro i virus e pronto da installare dall'Archivio Ufficiale reBrawl."
+  },
+  "downloadVersions": {
+    "mods": {
+      "name": "reBrawl Mods",
+      "tagline": "Oltre 30 brawler personalizzati. Caos totale. Puro divertimento.",
+      "features": [
+        {
+          "label": "Contenuti personalizzati",
+          "text": "Oltre 30 brawler creati dalla community che non troverai da nessun'altra parte in Brawl Stars."
+        },
+        {
+          "label": "Skin esclusive",
+          "text": "Gioca con personaggi iconici della cultura pop e unità robotiche disegnate dai fan — abbastanza skin da far dubitare al tuo brawler preferito della propria identità."
+        },
+        {
+          "label": "Ideale per",
+          "text": "Giocatori che vogliono un gameplay creativo e sovrappotenziato con contenuti personalizzati creati da zero dalla community."
+        }
+      ],
+      "cta": "Scarica reBrawl Mods",
+      "badge": ""
+    },
+    "classic": {
+      "name": "reBrawl Classic",
+      "tagline": "Meccaniche originali, tutto illimitato.",
+      "features": [
+        {
+          "label": "Set di funzionalità",
+          "text": "Più gemme di quante il tuo account possa gestire — oltre a oro e casse illimitati."
+        },
+        {
+          "label": "Originalità",
+          "text": "Nessun brawler programmato su misura — meccaniche di Brawl Stars pure e originali, così come le ha progettate Supercell."
+        },
+        {
+          "label": "Ideale per",
+          "text": "Il preferito della community per testare skin, aprire casse illimitate e godersi il gameplay originale senza spendere un centesimo."
+        }
+      ],
+      "cta": "Scarica reBrawl Classic",
+      "badge": "PIÙ POPOLARE"
+    },
+    "legacy": {
+      "name": "reBrawl Legacy",
+      "tagline": "Gameplay fluido su qualsiasi dispositivo Android.",
+      "features": [
+        {
+          "label": "Ottimizzazione",
+          "text": "Funziona su Android 4.3 (KitKat) e superiori — anche su dispositivi che non riescono a gestire il client ufficiale."
+        },
+        {
+          "label": "Prestazioni",
+          "text": "Grafica ottimizzata per un gameplay fluidissimo su dispositivi più vecchi ed economici."
+        },
+        {
+          "label": "Ideale per",
+          "text": "Giocatori che vogliono l'esperienza completa di reBrawl senza bisogno di un telefono di fascia alta."
+        }
+      ],
+      "cta": "Scarica reBrawl Legacy",
+      "badge": ""
+    }
+  },
+  "faq": {
+    "heading": "Domande",
+    "headingHighlight": "frequenti",
+    "viewAll": "Vedi tutte le domande",
+    "homeSubtitle": "Tutto ciò che devi sapere su reBrawl e sull'Archivio Ufficiale reBrawl.",
+    "items": [
+      {
+        "question": "Cos'è reBrawl?",
+        "answer": "reBrawl è il leggendario server privato di Brawl Stars che offre ai giocatori gemme illimitate, tutti i brawler completamente sbloccati fin dall'inizio e modalità di gioco personalizzate esclusive. Questo sito è l'Archivio Ufficiale reBrawl — la fonte più affidabile e completa per ogni versione di reBrawl, pronta per essere scaricata e goduta dalla community."
+      },
+      {
+        "question": "Questo è l'archivio reBrawl ufficiale?",
+        "answer": "Sì. Questo è l'Archivio Ufficiale reBrawl. Ogni APK reBrawl ospitato qui è la build originale firmata, verificata con un checksum SHA-256 per garantire autenticità e integrità. Siamo la fonte più completa e affidabile per i download di reBrawl."
+      },
+      {
+        "question": "Il download di reBrawl è sicuro?",
+        "answer": "Assolutamente. Ogni APK reBrawl nel nostro archivio è analizzato contro i virus prima dell'hosting e verificato rispetto al suo checksum SHA-256 pubblicato. Non modifichiamo, riconfezioniamo o manomettiamo mai alcuna build. Puoi verificare in modo indipendente qualsiasi download di reBrawl usando il checksum fornito."
+      },
+      {
+        "question": "Come installo l'APK reBrawl su Android?",
+        "answer": "Scarica il file APK reBrawl, poi vai su Impostazioni → Sicurezza (o Privacy su alcuni dispositivi) e abilita «Installa app sconosciute» o «Installa da fonti sconosciute» per il tuo browser o gestore file. Apri l'APK scaricato e segui l'installazione. Nessun Play Store richiesto — è davvero così semplice."
+      },
+      {
+        "question": "Serve l'accesso root per reBrawl?",
+        "answer": "Nessun accesso root richiesto. reBrawl si installa come una normale applicazione Android. Il processo è identico al sideload di qualsiasi APK — basta abilitare l'installazione da fonti sconosciute e sei a posto."
+      },
+      {
+        "question": "Quali funzionalità offre reBrawl?",
+        "answer": "reBrawl è ricco di funzionalità: gemme e monete illimitate, ogni brawler completamente potenziato e sbloccato fin dall'inizio, modalità di gioco personalizzate esclusive assenti nel client ufficiale, multigiocatore inter-regionale, tornei della community, supporto per mappe personalizzate e assolutamente nessuna meccanica pay-to-win. È l'esperienza definitiva del server privato di Brawl Stars."
+      },
+      {
+        "question": "Quale versione di Android mi serve per reBrawl?",
+        "answer": "I requisiti variano in base alla versione. La maggior parte delle build reBrawl supporta Android 5.0 e superiori. L'ultima versione (v44.0.100) richiede Android 6.0 o superiore. Ogni versione sull'Archivio Ufficiale reBrawl indica il suo requisito Android specifico così puoi trovare quella adatta al tuo dispositivo."
+      },
+      {
+        "question": "reBrawl è affiliato a Supercell?",
+        "answer": "No. reBrawl non è affiliato, approvato o collegato a Supercell Oy. Brawl Stars è un marchio di Supercell. L'Archivio Ufficiale reBrawl è gestito in modo indipendente dalla community."
+      }
+    ]
+  },
+  "archive": {
+    "heading": "Download dall'archivio",
+    "headingHighlight": "ufficiale reBrawl",
+    "subtitle": "{count} build reBrawl — tutte analizzate contro i virus, verificate con SHA-256 e pronte per il download. La tua destinazione unica per ogni APK reBrawl.",
+    "compareHeading": "Confronta le",
+    "compareHighlight": "edizioni",
+    "compareSubtitle": "Non sai quale edizione di reBrawl scegliere? Ecco come si confrontano le tre versioni — ognuna offre un'esperienza di gioco unica.",
+    "tableHeaders": {
+      "feature": "Funzionalità",
+      "mods": "Edizione Mods",
+      "classic": "Edizione Classic",
+      "legacy": "Edizione Legacy"
+    },
+    "tableRows": {
+      "customBrawlers": "Brawler personalizzati",
+      "originalGameplay": "Gameplay originale",
+      "androidVersion": "Versione Android",
+      "serverStability": "Stabilità del server"
+    },
+    "tableValues": {
+      "yes70": "Sì (70+)",
+      "no": "No",
+      "modified": "Modificato",
+      "original": "Originale",
+      "mods_android": "9.0+ consigliato",
+      "classic_android": "6.0+",
+      "legacy_android": "4.3+ (dispositivi vecchi)",
+      "high": "Alta",
+      "maximum": "Massima"
+    },
+    "versionArchive": {
+      "heading": "Archivio",
+      "headingHighlight": "versioni",
+      "recentSubtitle": "Versioni recenti conservate — tutte le build verificate.",
+      "fullSubtitle": "{count} build archiviate — tutte analizzate contro i virus e verificate con SHA-256.",
+      "viewAll": "Vedi tutte le {count} versioni"
+    },
+    "table": {
+      "version": "Versione",
+      "date": "Data",
+      "size": "Dimensione",
+      "android": "Android",
+      "sha256": "SHA-256",
+      "download": "Scarica",
+      "latest": "ULTIMA",
+      "apk": "APK"
+    }
+  },
+  "versionPages": {
+    "officialArchive": "(Archivio Ufficiale)",
+    "technicalDetails": "Dettagli",
+    "technicalDetailsHighlight": "tecnici",
+    "installGuide": "Guida all'installazione",
+    "installGuideHighlight": "e configurazione",
+    "installSubtitle": "Segui questi passaggi per far funzionare reBrawl sul tuo dispositivo — basta un minuto.",
+    "downloadCta": {
+      "version": "Versione:",
+      "size": "Dimensione:",
+      "status": "Stato:"
+    },
+    "otherVersions": {
+      "heading": "Scegli la tua edizione reBrawl",
+      "subtitle": "Ogni edizione offre un'esperienza di gioco unica. Trova quella adatta al tuo stile."
+    },
+    "faqSubtitle": "Domande comuni sull'edizione {name}.",
+    "classic": {
+      "metaTitle": "Download APK reBrawl Classic — Archivio gratuito",
+      "description": "reBrawl Classic è il preferito della community — un'esperienza Brawl Stars pura e non modificata con la libertà di un server privato. Mentre reBrawl Mods porta contenuti personalizzati caotici, Classic resta fedele alle meccaniche di gioco originali, con risorse illimitate e ogni brawler sbloccato. Se ami Brawl Stars così come l'ha progettato Supercell ma vuoi tutto disponibile fin dall'inizio, questa è l'edizione per te.",
+      "highlights": [
+        {
+          "title": "Risorse illimitate",
+          "text": "Ogni account inizia con oltre 999.999 gemme e monete d'oro. Niente grinding, niente acquisti — tutto sbloccato dal momento in cui inizi a giocare."
+        },
+        {
+          "title": "Meccaniche di gioco originali",
+          "text": "Nessun brawler programmato su misura o statistiche modificate. Gameplay Brawl Stars puro e originale — esattamente come lo conosci e lo ami."
+        },
+        {
+          "title": "Test di skin e casse",
+          "text": "Il preferito dei giocatori per aprire casse illimitate e provare ogni skin senza spendere valuta reale. Alcuni brawler personalizzati sembrano scappati da un universo Brawl Stars alternativo — ma Classic resta pulito."
+        },
+        {
+          "title": "Zero rischi per l'account",
+          "text": "Usa un nome di pacchetto unico (com.rebrawl.classic) così funziona insieme al gioco ufficiale senza mettere a rischio il tuo account principale."
+        },
+        {
+          "title": "Nessun root richiesto",
+          "text": "Funziona su dispositivi Android standard. Niente root, niente patch — basta scaricare e giocare."
+        }
+      ],
+      "techDetails": [
+        {
+          "label": "Nome del progetto",
+          "value": "reBrawl Classic (Archivio Ufficiale)"
+        },
+        { "label": "Ultima versione", "value": "v30.231" },
+        { "label": "Dimensione file", "value": "186 MB" },
+        { "label": "Nome del pacchetto", "value": "com.rebrawl.classic" },
+        { "label": "Compatibilità", "value": "Android 6.0+ consigliato" },
+        {
+          "label": "Stato di sicurezza",
+          "value": "Verificato e analizzato (senza virus)"
+        },
+        { "label": "Sviluppatore", "value": "Team reBrawl (originariamente LWARB)" }
+      ],
+      "installSteps": [
+        {
+          "title": "Preparazione",
+          "text": "Assicurati che nessun'altra versione di «LWARB» o «reBrawl» sia attualmente installata sul tuo dispositivo."
+        },
+        {
+          "title": "Download",
+          "text": "Scarica l'APK verificato di reBrawl Classic v30.231 dal link di download qui sotto."
+        },
+        {
+          "title": "Autorizzazioni",
+          "text": "Vai su Impostazioni → Sicurezza e abilita «Fonti sconosciute» per consentire l'installazione."
+        },
+        {
+          "title": "Installazione",
+          "text": "Apri il file e tocca «Installa». Se Play Protect segnala l'app, seleziona «Installa comunque» per continuare."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Perché vedo un errore «Connessione al server»?",
+          "answer": "I server master originali di reBrawl sono attualmente offline. I giocatori di solito usano reindirizzamenti DNS ospitati dalla community per connettersi, oppure usano l'app per visualizzare offline skin e risorse. Consulta la community reBrawl per le ultime guide alla connessione."
+        },
+        {
+          "question": "In cosa si differenzia reBrawl Classic da reBrawl Mods?",
+          "answer": "reBrawl Classic mantiene le meccaniche originali di Brawl Stars senza alcun brawler programmato su misura — è l'esperienza pura. reBrawl Mods va all-in con oltre 30 brawler personalizzati, abilità modificate e modalità di gioco esclusive create dalla community."
+        },
+        {
+          "question": "Il mio dispositivo è compatibile con reBrawl Classic?",
+          "answer": "reBrawl Classic richiede Android 6.0 (Marshmallow) o superiore. Funziona senza problemi sulla maggior parte dei dispositivi prodotti dopo il 2015. Nessun accesso root o hardware speciale necessario."
+        }
+      ],
+      "downloadLabel": "Scarica l'APK reBrawl Classic",
+      "downloadVersion": "v30.231",
+      "downloadSize": "186 MB",
+      "downloadStatus": "Verificato e pronto"
+    },
+    "mods": {
+      "metaTitle": "Download APK reBrawl Mods — Archivio gratuito",
+      "description": "reBrawl Mods è il terreno di gioco creativo della community — l'edizione dove tutto è permesso. Con oltre 30 brawler programmati su misura, abilità modificate e modalità di gioco esclusive che non sono mai esistite nel client ufficiale di Brawl Stars, reBrawl Mods supera i limiti di ciò che un server privato di Brawl Stars può essere. Questo è il contenuto personalizzato al suo meglio, creato da fan appassionati per la community.",
+      "highlights": [
+        {
+          "title": "Oltre 30 brawler personalizzati",
+          "text": "Personaggi completamente nuovi con abilità uniche, progettati e programmati dalla community di modding reBrawl. Contenuti creati dai fan che non troverai da nessun'altra parte in Brawl Stars."
+        },
+        {
+          "title": "Abilità e statistiche modificate",
+          "text": "I brawler esistenti ottengono abilità sovrappotenziate, poteri stella sperimentali e modifiche selvagge alle statistiche che creano il gameplay più caotico e divertente che tu abbia mai provato."
+        },
+        {
+          "title": "Modalità di gioco esclusive",
+          "text": "Modalità di gioco personalizzate create da zero — varianti boss rush, arene a munizioni illimitate e sfide di mappe progettate dalla community. Gameplay creativo al suo apice."
+        },
+        {
+          "title": "Skin della cultura pop",
+          "text": "Skin di personaggi iconici da anime, videogiochi e cultura pop — skin esclusive disponibili solo in reBrawl Mods. Abbastanza skin da far dubitare al tuo brawler preferito della propria identità."
+        },
+        {
+          "title": "Nessun root richiesto",
+          "text": "Si installa come un APK standard su qualsiasi dispositivo Android 6.0+. Niente root o configurazioni avanzate necessarie — basta scaricare e iniziare."
+        }
+      ],
+      "techDetails": [
+        { "label": "Nome del progetto", "value": "reBrawl Mods (Archivio Ufficiale)" },
+        { "label": "Ultima versione", "value": "v30.231-mod" },
+        { "label": "Dimensione file", "value": "210 MB" },
+        { "label": "Nome del pacchetto", "value": "com.rebrawl.mods" },
+        { "label": "Compatibilità", "value": "Android 6.0+ consigliato" },
+        {
+          "label": "Stato di sicurezza",
+          "value": "Verificato e analizzato (senza virus)"
+        },
+        { "label": "Sviluppatore", "value": "Team reBrawl" }
+      ],
+      "installSteps": [
+        {
+          "title": "Preparazione",
+          "text": "Disinstalla qualsiasi build precedente di reBrawl Mods per evitare conflitti di versione durante l'installazione."
+        },
+        {
+          "title": "Download",
+          "text": "Scarica l'APK verificato di reBrawl Mods v30.231-mod dal link di download qui sotto."
+        },
+        {
+          "title": "Autorizzazioni",
+          "text": "Vai su Impostazioni → Sicurezza e abilita «Fonti sconosciute» per consentire l'installazione."
+        },
+        {
+          "title": "Installazione",
+          "text": "Apri il file e tocca «Installa». Se Play Protect segnala l'app, seleziona «Installa comunque» per continuare."
+        }
+      ],
+      "faq": [
+        {
+          "question": "I brawler personalizzati sono bilanciati?",
+          "answer": "I brawler personalizzati di reBrawl Mods sono intenzionalmente sovrappotenziati e sperimentali. L'obiettivo è il divertimento creativo, non l'equilibrio competitivo. Aspettati un gameplay caotico in stile sandbox — è ciò che lo rende un preferito dei giocatori."
+        },
+        {
+          "question": "Posso giocare con gli utenti di reBrawl Classic?",
+          "answer": "No. reBrawl Mods e reBrawl Classic funzionano su server separati con dati di gioco diversi. I giocatori di ciascuna versione possono trovare partite solo con altri della stessa edizione."
+        },
+        {
+          "question": "Perché la dimensione del file di reBrawl Mods è maggiore di Classic?",
+          "answer": "reBrawl Mods include risorse aggiuntive per oltre 30 brawler personalizzati, skin esclusive e modalità di gioco modificate — tutto quel contenuto personalizzato si accumula, ma ne vale la pena."
+        }
+      ],
+      "downloadLabel": "Scarica l'APK reBrawl Mods",
+      "downloadVersion": "v30.231-mod",
+      "downloadSize": "210 MB",
+      "downloadStatus": "Verificato e pronto"
+    },
+    "legacy": {
+      "metaTitle": "Download APK reBrawl Legacy — Archivio gratuito",
+      "description": "reBrawl Legacy è progettato appositamente per dispositivi Android più vecchi ed economici. Con grafica ottimizzata, dimensioni delle risorse ridotte e compatibilità che risale ad Android 4.3 (KitKat), reBrawl Legacy garantisce che ogni giocatore possa godersi l'esperienza reBrawl indipendentemente dal proprio hardware. Nessun telefono lasciato indietro — è ciò che rende questa edizione una preferita della community per i giocatori con dispositivi economici.",
+      "highlights": [
+        {
+          "title": "Compatibilità ultra-ampia",
+          "text": "Funziona su Android 4.3 (KitKat) e superiori — portando reBrawl su dispositivi che non possono più eseguire il client ufficiale di Brawl Stars."
+        },
+        {
+          "title": "Prestazioni ottimizzate",
+          "text": "Grafica semplificata ed effetti particellari ridotti offrono un gameplay creativo e fluido su dispositivi con appena 1 GB di RAM."
+        },
+        {
+          "title": "Dimensione del file ridotta",
+          "text": "Risorse compresse mantengono l'APK reBrawl sotto i 95 MB — perfetto per dispositivi con spazio di archiviazione limitato."
+        },
+        {
+          "title": "Ricco di funzionalità",
+          "text": "Nonostante le ottimizzazioni, tutti i brawler, gemme, monete e modalità di gioco principali sono completamente sbloccati e disponibili fin dall'inizio."
+        },
+        {
+          "title": "Nessun root richiesto",
+          "text": "Installazione APK standard. Niente root, niente patch — basta scaricare reBrawl Legacy e iniziare a giocare."
+        }
+      ],
+      "techDetails": [
+        {
+          "label": "Nome del progetto",
+          "value": "reBrawl Legacy (Archivio Ufficiale)"
+        },
+        { "label": "Ultima versione", "value": "v28.189-lite" },
+        { "label": "Dimensione file", "value": "93 MB" },
+        { "label": "Nome del pacchetto", "value": "com.rebrawl.legacy" },
+        { "label": "Compatibilità", "value": "Android 4.3+ (KitKat)" },
+        {
+          "label": "Stato di sicurezza",
+          "value": "Verificato e analizzato (senza virus)"
+        },
+        { "label": "Sviluppatore", "value": "Team reBrawl" }
+      ],
+      "installSteps": [
+        {
+          "title": "Preparazione",
+          "text": "Rimuovi qualsiasi installazione esistente di reBrawl che potrebbe entrare in conflitto con il nome del pacchetto reBrawl Legacy."
+        },
+        {
+          "title": "Download",
+          "text": "Scarica l'APK verificato di reBrawl Legacy v28.189-lite dal link di download qui sotto."
+        },
+        {
+          "title": "Autorizzazioni",
+          "text": "Vai su Impostazioni → Sicurezza e abilita «Fonti sconosciute» per consentire l'installazione."
+        },
+        {
+          "title": "Installazione",
+          "text": "Apri il file e tocca «Installa». Sulle versioni più vecchie di Android, potresti dover usare un gestore file per individuare il download."
+        }
+      ],
+      "faq": [
+        {
+          "question": "reBrawl Legacy funzionerà sul mio vecchio telefono?",
+          "answer": "Se il tuo dispositivo esegue Android 4.3 o superiore e ha almeno 1 GB di RAM, reBrawl Legacy dovrebbe funzionare benissimo. È stato ottimizzato specificamente per dispositivi che non riescono a gestire le build moderne di Brawl Stars."
+        },
+        {
+          "question": "Perché reBrawl Legacy ha un aspetto diverso da Classic?",
+          "answer": "reBrawl Legacy usa texture ottimizzate, effetti particellari semplificati ed elementi dell'interfaccia a risoluzione inferiore per mantenere fluido il frame rate su hardware più vecchio. Il gameplay resta la stessa ottima esperienza."
+        },
+        {
+          "question": "reBrawl Legacy ha tutti i brawler?",
+          "answer": "reBrawl Legacy include il roster di brawler della sua versione base (v28). I brawler successivi richiedono funzionalità più recenti del motore di gioco, ma ottieni comunque un roster completo di personaggi amati dai fan con cui giocare."
+        }
+      ],
+      "downloadLabel": "Scarica l'APK reBrawl Legacy",
+      "downloadVersion": "v28.189-lite",
+      "downloadSize": "93 MB",
+      "downloadStatus": "Verificato e pronto"
+    }
+  },
+  "timeline": [
+    {
+      "year": "2019",
+      "title": "Lancio della beta privata",
+      "description": "reBrawl si apre a un gruppo selezionato di tester — offrendo gemme, monete illimitate e ogni brawler fin dal primo giorno. La community di Brawl Stars scopre un nuovo modo di giocare."
+    },
+    {
+      "year": "2019",
+      "title": "Rilascio pubblico",
+      "description": "Il server si apre a tutti i giocatori del mondo. Entro la prima settimana, oltre 10.000 giocatori si uniscono. La copertura si diffonde su forum di gioco, subreddit e canali YouTube. La community attiva cresce in fretta."
+    },
+    {
+      "year": "2020",
+      "title": "Grande aggiornamento versione 30",
+      "description": "reBrawl raggiunge la parità con Brawl Stars v30 e introduce modalità di gioco personalizzate esclusive e tornei ospitati dalla community che non si trovavano da nessun'altra parte."
+    },
+    {
+      "year": "2021",
+      "title": "Epoca d'oro — 500.000 giocatori",
+      "description": "reBrawl supera i 500.000 giocatori registrati. Eventi settimanali della community, concorsi di mappe personalizzate ed esposizioni di brawler definiscono l'epoca d'oro del gameplay creativo sui server privati."
+    },
+    {
+      "year": "2023",
+      "title": "L'Archivio Ufficiale reBrawl va online",
+      "description": "Ogni versione dell'APK diventa disponibile tramite l'Archivio Ufficiale reBrawl — analizzata contro i virus, verificata con SHA-256 e pronta per il download. Il server privato preferito della community è sempre a portata di mano."
+    }
+  ],
+  "aboutPage": {
+    "heroSubtitle": "La casa guidata dalla community di reBrawl — il server privato di Brawl Stars più famoso al mondo. Contenuti personalizzati, skin esclusive e un'esperienza fresca per ogni giocatore.",
+    "whoWeAre": {
+      "heading": "Chi",
+      "headingHighlight": "siamo",
+      "p1": "Benvenuto nell'Archivio Ufficiale reBrawl. Siamo un team di fan dedicati di Brawl Stars, appassionati di gaming mobile e membri di lunga data della community reBrawl.",
+      "p2": "La nostra missione è semplice: fornire una risorsa sicura, trasparente e ricca di funzionalità per i giocatori che vogliono esplorare tutto ciò che reBrawl ha da offrire — dai contenuti personalizzati caotici di reBrawl Mods all'esperienza fluida e ottimizzata di reBrawl Legacy."
+    },
+    "values": {
+      "heading": "Perché",
+      "headingHighlight": "l'abbiamo creato",
+      "subtitle": "La community reBrawl merita una casa affidabile per download verificati, APK reBrawl sicuri e informazioni oneste sull'esperienza del server privato di Brawl Stars.",
+      "items": [
+        {
+          "title": "Download verificati",
+          "description": "Ospitiamo ogni versione di reBrawl esattamente come l'hanno rilasciata gli sviluppatori originali — verificata, analizzata contro i virus e pronta per il download."
+        },
+        {
+          "title": "Sicuro e affidabile",
+          "description": "Ogni APK reBrawl nell'Archivio Ufficiale reBrawl è scansionato e verificato digitalmente. Niente malware, niente adware — solo build pulite di cui ti puoi fidare."
+        },
+        {
+          "title": "La community prima di tutto",
+          "description": "Forniamo informazioni oneste e chiare. Se qualcosa ha bisogno di spiegazioni, lo scomponiamo. La community attiva merita trasparenza."
+        }
+      ]
+    },
+    "editions": {
+      "heading": "Esplora le",
+      "headingHighlight": "edizioni reBrawl",
+      "subtitle": "Tre edizioni uniche, ognuna con il suo sapore dell'esperienza reBrawl. Scopri brawler personalizzati, skin esclusive e gameplay creativo in tutte e tre.",
+      "items": [
+        {
+          "name": "reBrawl Mods",
+          "description": "Il terreno di gioco creativo — oltre 30 brawler personalizzati, skin esclusive e modalità di gioco create dai fan che superano i limiti di Brawl Stars."
+        },
+        {
+          "name": "reBrawl Classic",
+          "description": "Il preferito della community — le meccaniche originali di Brawl Stars con risorse illimitate e ogni brawler sbloccato fin dall'inizio."
+        },
+        {
+          "name": "reBrawl Legacy",
+          "description": "Ottimizzato per ogni dispositivo — gameplay fluido su telefoni Android più vecchi ed economici così nessun giocatore viene lasciato indietro."
+        }
+      ]
+    },
+    "trust": {
+      "heading": "Perché",
+      "headingHighlight": "fidarsi",
+      "headingSuffix": "di noi?",
+      "text": "Non siamo gli sviluppatori di reBrawl — siamo un progetto indipendente, guidato dalla community e gestito da appassionati fan di Brawl Stars. Mantenendo l'Archivio Ufficiale reBrawl, garantiamo che gli incredibili contenuti personalizzati, le innovazioni creative di gameplay e le funzionalità guidate dalla community create dal team reBrawl siano sempre accessibili ai giocatori.",
+      "boxTitle": "Trasparenza prima dei clic",
+      "boxText": "Le nostre guide sono scritte sulla base di test reali sui dispositivi (da Android 4.3 ad Android 14) e di esperienza diretta con ogni edizione di reBrawl. Crediamo in informazioni oneste e chiare — non in clickbait."
+    },
+    "cta": {
+      "heading": "Esplora l'",
+      "headingHighlight": "Archivio Ufficiale reBrawl",
+      "subtitle": "Sfoglia la collezione completa di build reBrawl, scopri contenuti personalizzati o mettiti in contatto con il team.",
+      "browseArchive": "Sfoglia l'archivio",
+      "contactUs": "Contattaci"
+    }
+  },
+  "faqPage": {
+    "heading": "Domande",
+    "headingHighlight": "frequenti",
+    "subtitle": "Tutto ciò che devi sapere su reBrawl — download, installazione, contenuti personalizzati e l'Archivio Ufficiale reBrawl."
+  },
+  "contactPage": {
+    "heading": "Contatta",
+    "headingHighlight": "ci",
+    "subtitle": "Hai una domanda, hai trovato un problema o vuoi contribuire alla community? Contatta il team dell'Archivio Ufficiale reBrawl — adoriamo ricevere notizie dai nostri compagni fan di Brawl Stars.",
+    "formHeading": "Invia un",
+    "formHighlight": "messaggio",
+    "formSubtitle": "Compila il modulo qui sotto e ti risponderemo entro 24-48 ore.",
+    "channelsHeading": "Altri",
+    "channelsHighlight": "canali",
+    "channelsSubtitle": "Preferisci un altro modo per contattarci? Scegli il canale che fa più al caso tuo.",
+    "urgentNotice": "Per questioni urgenti di DMCA o sicurezza, includi",
+    "urgentTag": "[URGENTE]",
+    "urgentSuffix": "nell'oggetto del messaggio.",
+    "channels": [
+      {
+        "title": "E-mail",
+        "description": "Per richieste generali, domande di partnership o qualsiasi cosa relativa a reBrawl.",
+        "linkText": "contact@rebrawl.app"
+      },
+      {
+        "title": "Reddit",
+        "description": "Unisciti alla community attiva su r/ReBrawl per discussioni, aggiornamenti entusiasmanti e supporto.",
+        "linkText": "r/ReBrawl"
+      }
+    ]
+  },
+  "dmcaPage": {
+    "heroSubtitle": "L'Archivio Ufficiale reBrawl rispetta il copyright e risponde prontamente alle richieste valide di rimozione ai sensi del DMCA.",
+    "overviewHeading": "Avviso",
+    "overviewHeadingHighlight": "DMCA",
+    "overviewText": "Rispettiamo i requisiti del DMCA statunitense ed esaminiamo le rivendicazioni di copyright per i contenuti ospitati su questo sito. Se ritieni che la tua opera sia stata usata senza autorizzazione, invia una richiesta valida di rimozione e risponderemo il più rapidamente possibile.",
+    "processHeading": "Come inviare",
+    "processText": "Invia un avviso DMCA al nostro team con le informazioni richieste. Un avviso valido ci aiuta a elaborare la tua richiesta più velocemente e mantiene l'archivio conforme.",
+    "processItems": [
+      "Il tuo nome legale completo e i tuoi recapiti.",
+      "Una descrizione dell'opera protetta da copyright che ritieni sia stata violata.",
+      "L'URL del contenuto che ritieni violi i tuoi diritti.",
+      "Una dichiarazione che ritieni in buona fede che l'uso non sia autorizzato.",
+      "Una dichiarazione resa sotto pena di falsa testimonianza che le informazioni nell'avviso sono accurate."
+    ],
+    "contactText": "Invia gli avvisi DMCA a contact@rebrawl.app con l'oggetto [DMCA]."
+  },
+  "privacyPolicyPage": {
+    "heroSubtitle": "Raccogliamo solo i dati necessari per supportare i download, fornire assistenza clienti e mantenere sicuro l'archivio.",
+    "overviewHeading": "Informativa sulla",
+    "overviewHeadingHighlight": "privacy",
+    "overviewText": "L'Archivio Ufficiale reBrawl si impegna a proteggere la tua privacy. Non vendiamo dati personali e usiamo le informazioni solo per gestire il sito, rispondere alle richieste e migliorare l'esperienza utente.",
+    "collectionHeading": "Informazioni che raccogliamo",
+    "collectionItems": [
+      "I recapiti che fornisci quando ci contatti o richiedi assistenza.",
+      "Dati tecnici come il tipo di browser, il dispositivo e le abitudini di utilizzo per aiutare a migliorare il sito.",
+      "Cookie e dati analitici per capire come i visitatori usano l'archivio."
+    ],
+    "useHeading": "Come usiamo i dati",
+    "useText": "Usiamo i dati per rispondere alle richieste, proteggere il sito dagli abusi e garantire che i download funzionino senza problemi. Non condividiamo dettagli personali con terze parti se non richiesto dalla legge.",
+    "rightsHeading": "I tuoi diritti",
+    "rightsText": "Puoi richiedere l'accesso ai dati che conserviamo su di te o chiederci di correggere informazioni inesatte. Per richieste relative alla privacy, contatta contact@rebrawl.app."
+  },
+  "termsPage": {
+    "heroSubtitle": "Utilizzando l'Archivio Ufficiale reBrawl, accetti questi termini che regolano l'uso del sito, i download e le clausole di esclusione sui contenuti.",
+    "overviewHeading": "Termini e",
+    "overviewHeadingHighlight": "condizioni",
+    "overviewText": "Questi termini spiegano come puoi usare l'Archivio Ufficiale reBrawl. Tutti i download sono forniti così come sono, e sei responsabile del rispetto di qualsiasi legge locale applicabile durante l'installazione dei contenuti.",
+    "usageHeading": "Uso consentito",
+    "usageText": "Puoi sfogliare l'archivio, scaricare APK e usare i contenuti per scopi personali e non commerciali. Non abusare del sito né tentare di aggirare le protezioni di download.",
+    "downloadsHeading": "Responsabilità di download",
+    "downloadsText": "Tutti i download di APK sono forniti a scopo informativo e di archiviazione. Sei responsabile di verificare la compatibilità con il tuo dispositivo e di installare le app in sicurezza.",
+    "disclaimerHeading": "Esclusione di responsabilità",
+    "disclaimerText": "L'Archivio Ufficiale reBrawl è un progetto indipendente e non è affiliato a Supercell. Non garantiamo un accesso ininterrotto e non siamo responsabili di alcun danno derivante dall'uso del sito o dei file scaricati.",
+    "changesHeading": "Modifiche",
+    "changesText": "Possiamo aggiornare questi termini in qualsiasi momento. L'uso continuato del sito dopo le modifiche costituisce accettazione dei termini aggiornati."
+  },
+  "contactForm": {
+    "name": "Nome",
+    "namePlaceholder": "Il tuo nome",
+    "email": "E-mail",
+    "emailPlaceholder": "tu@esempio.com",
+    "subject": "Oggetto",
+    "subjectPlaceholder": "Di cosa si tratta?",
+    "message": "Messaggio",
+    "messagePlaceholder": "Raccontaci di più...",
+    "sending": "Invio in corso...",
+    "send": "Invia messaggio",
+    "sent": "Messaggio inviato. Ti risponderemo entro 24-48 ore.",
+    "error": "Qualcosa è andato storto."
+  },
+  "trustBar": [
+    { "label": "Archivio Ufficiale", "highlight": true },
+    { "label": "Analizzato contro i virus" },
+    { "label": "Verificato con SHA-256" },
+    { "label": "150+ versioni archiviate" },
+    { "label": "Conservato dal 2019" },
+    { "label": "Download gratuito" }
+  ],
+  "disclaimer": {
+    "heading": "Avviso importante",
+    "text": "L'Archivio Ufficiale reBrawl è un progetto indipendente e guidato dalla community. reBrawl non è affiliato, approvato o collegato a Supercell Oy. Brawl Stars® è un marchio registrato di Supercell. Tutti gli APK reBrawl ospitati qui sono disponibili affinché la community li scarichi e ne goda. Usali a tua discrezione."
+  },
+  "historyTimeline": {
+    "heading": "La storia di",
+    "headingHighlight": "ReBrawl",
+    "subtitle": "Dalla beta privata a mezzo milione di giocatori — la storia del server privato di Brawl Stars più amato."
+  },
+  "footer": {
+    "tagline": "L'Archivio Ufficiale reBrawl — il leggendario server privato di Brawl Stars. Ogni versione verificata e pronta per il download per la community.",
+    "navigate": "Naviga",
+    "legal": "Note legali",
+    "home": "Home",
+    "about": "Chi siamo",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "apkArchive": "Archivio APK",
+    "disclaimer": "Esclusione di responsabilità",
+    "safetyInfo": "Info sicurezza",
+    "dmca": "DMCA",
+    "privacyPolicy": "Informativa sulla privacy",
+    "terms": "Termini e condizioni",
+    "notAffiliated": "Non affiliato a Supercell Oy.",
+    "trademark": "Brawl Stars® è un marchio di Supercell.",
+    "copyright": "Archivio Ufficiale reBrawl. Un progetto guidato dalla community.",
+    "officialArchive": "Archivio Ufficiale"
+  },
+  "downloadButton": {
+    "startsIn": "Il download inizia tra {seconds} s..."
+  },
+  "common": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "apkArchive": "Archivio APK",
+    "skipToContent": "Vai al contenuto principale"
+  }
+}

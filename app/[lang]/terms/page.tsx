@@ -19,7 +19,7 @@ export async function generateMetadata({
   return {
     title: dict.meta.terms.title,
     description: dict.meta.terms.description,
-    alternates: getAlternates("/terms"),
+    alternates: getAlternates("/terms", lang),
   };
 }
 

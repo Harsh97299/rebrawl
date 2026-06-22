@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: dict.meta.about.title,
     description: dict.meta.about.description,
-    alternates: getAlternates("/about"),
+    alternates: getAlternates("/about", lang),
   }
 }
 

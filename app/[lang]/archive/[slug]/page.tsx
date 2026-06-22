@@ -117,7 +117,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: (page as { metaTitle: string }).metaTitle,
     description: (page as { description: string }).description.slice(0, 160),
-    alternates: getAlternates(`/archive/${slug}`),
+    alternates: getAlternates(`/archive/${slug}`, lang),
   }
 }
 

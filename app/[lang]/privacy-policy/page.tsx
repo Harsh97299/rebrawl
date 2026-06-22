@@ -19,7 +19,7 @@ export async function generateMetadata({
   return {
     title: dict.meta.privacy.title,
     description: dict.meta.privacy.description,
-    alternates: getAlternates("/privacy-policy"),
+    alternates: getAlternates("/privacy-policy", lang),
   };
 }
 
