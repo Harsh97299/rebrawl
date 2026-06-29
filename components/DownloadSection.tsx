@@ -67,7 +67,7 @@ export default function DownloadSection({ dict, lang }: DownloadSectionProps) {
                 accent={v.accent}
                 features={vDict.features}
                 cta={vDict.cta}
-                href={localePath(`/archive/${v.id}`, lang)}
+                href={localePath(`/download/${v.id}`, lang)}
                 badge={vDict.badge}
               />
             )

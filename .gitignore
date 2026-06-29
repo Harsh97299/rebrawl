@@ -43,3 +43,5 @@ next-env.d.ts
 # Large APK binaries — host externally
 public/apk/
 *.apk
+
+rebrawl_1.1.zip

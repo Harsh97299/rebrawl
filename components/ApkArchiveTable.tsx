@@ -75,7 +75,7 @@ export default function ApkArchiveTable({
             </div>
             {compact && (
               <Link
-                href={localePath("/archive", lang)}
+                href={localePath("/download", lang)}
                 className="hidden sm:inline-flex items-center gap-2 text-brand-yellow font-bold text-sm hover:underline shrink-0"
               >
                 {a.viewAll.replace("{count}", String(allReleases.length))}
@@ -158,7 +158,7 @@ export default function ApkArchiveTable({
         {compact && (
           <div className="mt-5 text-center sm:hidden">
             <Link
-              href={localePath("/archive", lang)}
+              href={localePath("/download", lang)}
               className="inline-flex items-center gap-2 text-brand-yellow font-bold text-sm hover:underline"
             >
               {a.viewAll.replace("{count}", String(allReleases.length))}

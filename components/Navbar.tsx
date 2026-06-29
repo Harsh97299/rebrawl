@@ -120,7 +120,7 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
               onMouseLeave={handleArchiveLeave}
             >
               <Link
-                href={localePath("/archive", lang)}
+                href={localePath("/download", lang)}
                 className="flex items-center gap-1 text-text-muted hover:text-white text-sm font-medium transition-colors"
               >
                 {dict.archive}
@@ -149,7 +149,7 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
                     return (
                       <Link
                         key={v.id}
-                        href={localePath(`/archive/${v.id}`, lang)}
+                        href={localePath(`/download/${v.id}`, lang)}
                         className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors"
                         onClick={() => setArchiveOpen(false)}
                       >
@@ -173,7 +173,7 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
                   })}
                   <div className="border-t border-white/5">
                     <Link
-                      href={localePath("/archive", lang)}
+                      href={localePath("/download", lang)}
                       className="flex items-center gap-2 px-4 py-3 text-text-muted hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
                       onClick={() => setArchiveOpen(false)}
                     >
@@ -275,7 +275,7 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
               return (
                 <Link
                   key={v.id}
-                  href={localePath(`/archive/${v.id}`, lang)}
+                  href={localePath(`/download/${v.id}`, lang)}
                   onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
                   className={`flex items-center gap-3 py-2.5 px-6 text-sm font-medium transition-colors hover:bg-white/5 rounded-lg ${accentColors[v.accent]}`}
                 >
@@ -285,7 +285,7 @@ export default function Navbar({ lang, dict, downloadVersions }: NavbarProps) {
               )
             })}
             <Link
-              href={localePath("/archive", lang)}
+              href={localePath("/download", lang)}
               onClick={() => { setOpen(false); setMobileArchiveOpen(false) }}
               className="py-2.5 px-6 text-sm font-medium text-text-muted hover:text-white transition-colors hover:bg-white/5 rounded-lg block"
             >

@@ -2,11 +2,11 @@
   "meta": {
     "home": {
       "title": "reBrawl — Resmi Arşiv | Brawl Stars Özel Sunucu APK İndir",
-      "description": "Brawl Stars'ı yeni bir şekilde deneyimlemek mi istiyorsunuz? Resmi reBrawl Arşivi'nde her reBrawl APK sürümü indirmeye hazır — sınırsız elmas, tüm savaşçılar açık, özel oyun modları ve özel içerikler. Doğrulanmış ve virüs taramasından geçmiş."
+      "description": "Her reBrawl APK sürümü indirmeye hazır — sınırsız elmas, tüm savaşçılar açık, özel oyun modları. Ücretsiz ve virüs taramasından geçmiş."
     },
     "about": {
       "title": "Hakkımızda — reBrawl",
-      "description": "Resmi reBrawl Arşivi hakkında bilgi edinin — dünyanın en ünlü Brawl Stars özel sunucusu için topluluk tarafından yönetilen merkez. Özel içerikleri, özel kostümleri ve reBrawl'un sunduğu her şeyi keşfedin."
+      "description": "Resmi reBrawl Arşivi hakkında bilgi edinin — dünyanın en ünlü Brawl Stars özel sunucusu için topluluk merkezi. Özel içerikleri ve reBrawl'u keşfedin."
     },
     "dmca": {
       "title": "DMCA Bildirimi — reBrawl",
@@ -14,7 +14,7 @@
     },
     "privacy": {
       "title": "Gizlilik Politikası — reBrawl",
-      "description": "reBrawl APK indirmelerini desteklerken verileri nasıl topladığımızı, kullandığımızı ve koruduğumuzu anlamak için Resmi reBrawl Arşivi gizlilik politikasını okuyun."
+      "description": "reBrawl APK indirmelerini desteklerken verilerinizi nasıl topladığımızı ve koruduğumuzu anlamak için Resmi reBrawl Arşivi gizlilik politikasını okuyun."
     },
     "terms": {
       "title": "Şartlar ve Koşullar — reBrawl",
@@ -22,15 +22,15 @@
     },
     "archive": {
       "title": "reBrawl Arşiv İndirmeleri — Tüm APK Sürümleri",
-      "description": "Resmi reBrawl Arşivi'nin tamamına göz atın. Her reBrawl APK sürümü virüs taramasından geçmiş, SHA-256 ile doğrulanmış ve ücretsiz indirmeye hazır. reBrawl Mods, reBrawl Classic ve reBrawl Legacy'yi bulun."
+      "description": "Her reBrawl APK sürümü ücretsiz — Mods, Classic veya Legacy. Her derleme virüs taramasından geçmiş ve SHA-256 ile doğrulanmıştır."
     },
     "faq": {
       "title": "SSS — reBrawl Soru ve Cevaplar",
-      "description": "reBrawl, Resmi reBrawl Arşivi, reBrawl APK güvenliği, kurulum talimatları, özel savaşçılar ve daha fazlası hakkında sıkça sorulan sorular. Bu Brawl Stars özel sunucusu hakkında bilmeniz gereken her şey."
+      "description": "reBrawl APK indirme, kurulum, özel savaşçılar ve Brawl Stars özel sunucusu soruları. Resmi reBrawl Arşivi tarafından yanıtlandı."
     },
     "contact": {
       "title": "Bize Ulaşın — reBrawl",
-      "description": "Resmi reBrawl Arşivi ekibiyle iletişime geçin. Sorunları bildirin, reBrawl indirme hakkında sorular sorun veya Brawl Stars özel sunucu deneyiminiz hakkında geri bildirim paylaşın."
+      "description": "Resmi reBrawl Arşivi ekibiyle iletişime geçin. Sorunları bildirin, reBrawl APK indirme hakkında soru sorun veya geri bildirim paylaşın."
     },
     "defaultTitle": "reBrawl — Resmi Arşiv | Brawl Stars Özel Sunucu İndir",
     "titleTemplate": "%s | Resmi reBrawl Arşivi",
@@ -45,7 +45,7 @@
     "about": "Hakkımızda",
     "faq": "SSS",
     "contact": "İletişim",
-    "archive": "Arşiv",
+    "archive": "İndir",
     "allVersions": "Tüm Sürümler",
     "downloadApk": "APK İndir",
     "openMenu": "Menüyü aç",
@@ -57,7 +57,7 @@
     "headlineLine3": "Özel Sunucu",
     "subtitle": "Resmi reBrawl Arşivi'ne hoş geldiniz. Her sürüm doğrulanmış ve indirmeye hazır. Sınırsız elmas, tüm savaşçılar açık, özel oyun modları ve deneyimi taze tutan bir topluluk.",
     "ctaDownload": "Son APK'yı İndir",
-    "ctaArchive": "Arşivi Keşfet"
+    "ctaArchive": "İndirmeleri Keşfet"
   },
   "stats": {
     "playersServed": "Oyuncu Hizmet Verildi",
@@ -246,7 +246,7 @@
     },
     "versionArchive": {
       "heading": "Sürüm",
-      "headingHighlight": "Arşivi",
+      "headingHighlight": "İndirmeleri",
       "recentSubtitle": "Son korunan sürümler — tüm yapılar doğrulanmış.",
       "fullSubtitle": "{count} yapı arşivlendi — tümü virüs taramasından geçmiş ve SHA-256 ile doğrulanmış.",
       "viewAll": "Tüm {count} sürümü görüntüle"
@@ -272,7 +272,8 @@
     "downloadCta": {
       "version": "Sürüm:",
       "size": "Boyut:",
-      "status": "Durum:"
+      "status": "Durum:",
+      "countdown": "İndirme {seconds} sn içinde başlıyor..."
     },
     "otherVersions": {
       "heading": "reBrawl Sürümünüzü Seçin",
@@ -305,16 +306,34 @@
         }
       ],
       "techDetails": [
-        { "label": "Proje Adı", "value": "reBrawl Classic (Resmi Arşiv)" },
-        { "label": "Son Sürüm", "value": "v30.231" },
-        { "label": "Dosya Boyutu", "value": "186 MB" },
-        { "label": "Paket Adı", "value": "com.rebrawl.classic" },
-        { "label": "Uyumluluk", "value": "Android 6.0+ Önerilir" },
+        {
+          "label": "Proje Adı",
+          "value": "reBrawl Classic (Resmi Arşiv)"
+        },
+        {
+          "label": "Son Sürüm",
+          "value": "v30.231"
+        },
+        {
+          "label": "Dosya Boyutu",
+          "value": "186 MB"
+        },
+        {
+          "label": "Paket Adı",
+          "value": "com.rebrawl.classic"
+        },
+        {
+          "label": "Uyumluluk",
+          "value": "Android 6.0+ Önerilir"
+        },
         {
           "label": "Güvenlik Durumu",
           "value": "Doğrulanmış ve Taranmış (Virüssüz)"
         },
-        { "label": "Geliştirici", "value": "reBrawl Ekibi (Önceden LWARB)" }
+        {
+          "label": "Geliştirici",
+          "value": "reBrawl Ekibi (Önceden LWARB)"
+        }
       ],
       "installSteps": [
         {
@@ -379,16 +398,34 @@
         }
       ],
       "techDetails": [
-        { "label": "Proje Adı", "value": "reBrawl Mods (Resmi Arşiv)" },
-        { "label": "Son Sürüm", "value": "v30.231-mod" },
-        { "label": "Dosya Boyutu", "value": "210 MB" },
-        { "label": "Paket Adı", "value": "com.rebrawl.mods" },
-        { "label": "Uyumluluk", "value": "Android 6.0+ Önerilir" },
+        {
+          "label": "Proje Adı",
+          "value": "reBrawl Mods (Resmi Arşiv)"
+        },
+        {
+          "label": "Son Sürüm",
+          "value": "v30.231-mod"
+        },
+        {
+          "label": "Dosya Boyutu",
+          "value": "210 MB"
+        },
+        {
+          "label": "Paket Adı",
+          "value": "com.rebrawl.mods"
+        },
+        {
+          "label": "Uyumluluk",
+          "value": "Android 6.0+ Önerilir"
+        },
         {
           "label": "Güvenlik Durumu",
           "value": "Doğrulanmış ve Taranmış (Virüssüz)"
         },
-        { "label": "Geliştirici", "value": "reBrawl Ekibi" }
+        {
+          "label": "Geliştirici",
+          "value": "reBrawl Ekibi"
+        }
       ],
       "installSteps": [
         {
@@ -453,16 +490,34 @@
         }
       ],
       "techDetails": [
-        { "label": "Proje Adı", "value": "reBrawl Legacy (Resmi Arşiv)" },
-        { "label": "Son Sürüm", "value": "v28.189-lite" },
-        { "label": "Dosya Boyutu", "value": "93 MB" },
-        { "label": "Paket Adı", "value": "com.rebrawl.legacy" },
-        { "label": "Uyumluluk", "value": "Android 4.3+ (KitKat)" },
+        {
+          "label": "Proje Adı",
+          "value": "reBrawl Legacy (Resmi Arşiv)"
+        },
+        {
+          "label": "Son Sürüm",
+          "value": "v28.189-lite"
+        },
+        {
+          "label": "Dosya Boyutu",
+          "value": "93 MB"
+        },
+        {
+          "label": "Paket Adı",
+          "value": "com.rebrawl.legacy"
+        },
+        {
+          "label": "Uyumluluk",
+          "value": "Android 4.3+ (KitKat)"
+        },
         {
           "label": "Güvenlik Durumu",
           "value": "Doğrulanmış ve Taranmış (Virüssüz)"
         },
-        { "label": "Geliştirici", "value": "reBrawl Ekibi" }
+        {
+          "label": "Geliştirici",
+          "value": "reBrawl Ekibi"
+        }
       ],
       "installSteps": [
         {
@@ -587,9 +642,11 @@
       "heading": "Resmi reBrawl",
       "headingHighlight": "Arşivi'ni Keşfedin",
       "subtitle": "reBrawl yapılarının tam koleksiyonuna göz atın, özel içerikleri keşfedin veya ekiple iletişime geçin.",
-      "browseArchive": "Arşive Göz At",
+      "browseArchive": "İndirmelere Göz At",
       "contactUs": "Bize Ulaşın"
-    }
+    },
+    "heading": "Hakkımızda",
+    "headingHighlight": ""
   },
   "faqPage": {
     "heading": "Sıkça Sorulan",
@@ -619,6 +676,11 @@
         "title": "Reddit",
         "description": "Tartışmalar, heyecan verici güncellemeler ve destek için r/ReBrawl'daki aktif topluluğa katılın.",
         "linkText": "r/ReBrawl"
+      },
+      {
+        "title": "Posta Adresi",
+        "description": "Fiziksel posta veya belgeleri ABD ofisimize gönderin.",
+        "linkText": "2560 First St, Industrial Park, Apt 923\nDallas, FL 4102\nUnited States"
       }
     ]
   },
@@ -683,16 +745,29 @@
     "error": "Bir şeyler ters gitti."
   },
   "trustBar": [
-    { "label": "Resmi Arşiv", "highlight": true },
-    { "label": "Virüs Taramalı" },
-    { "label": "SHA-256 Doğrulanmış" },
-    { "label": "150+ Sürüm Arşivlendi" },
-    { "label": "2019'dan Beri Korunuyor" },
-    { "label": "Ücretsiz İndirme" }
+    {
+      "label": "Resmi Arşiv",
+      "highlight": true
+    },
+    {
+      "label": "Virüs Taramalı"
+    },
+    {
+      "label": "SHA-256 Doğrulanmış"
+    },
+    {
+      "label": "150+ Sürüm Arşivlendi"
+    },
+    {
+      "label": "2019'dan Beri Korunuyor"
+    },
+    {
+      "label": "Ücretsiz İndirme"
+    }
   ],
   "disclaimer": {
     "heading": "Önemli Bildirim",
-    "text": "Resmi reBrawl Arşivi bağımsız, topluluk tarafından yönetilen bir projedir. reBrawl, Supercell Oy ile bağlantılı değildir, onaylanmamıştır veya ona bağlı değildir. Brawl Stars\u00ae, Supercell'in tescilli ticari markasıdır. Burada barındırılan tüm reBrawl APK'ları topluluğun indirip keyifle oynaması için mevcuttur. Kendi takdirinize bağlı olarak kullanın."
+    "text": "Resmi reBrawl Arşivi bağımsız, topluluk tarafından yönetilen bir projedir. reBrawl, Supercell Oy ile bağlantılı değildir, onaylanmamıştır veya ona bağlı değildir. Brawl Stars®, Supercell'in tescilli ticari markasıdır. Burada barındırılan tüm reBrawl APK'ları topluluğun indirip keyifle oynaması için mevcuttur. Kendi takdirinize bağlı olarak kullanın."
   },
   "historyTimeline": {
     "heading": "ReBrawl",
@@ -707,16 +782,17 @@
     "about": "Hakkımızda",
     "faq": "SSS",
     "contact": "İletişim",
-    "apkArchive": "APK Arşivi",
+    "apkArchive": "APK İndirmeleri",
     "disclaimer": "Sorumluluk Reddi",
     "safetyInfo": "Güvenlik Bilgisi",
     "dmca": "DMCA",
     "privacyPolicy": "Gizlilik Politikası",
     "terms": "Şartlar ve Koşullar",
     "notAffiliated": "Supercell Oy ile bağlantılı değildir.",
-    "trademark": "Brawl Stars\u00ae, Supercell'in ticari markasıdır.",
+    "trademark": "Brawl Stars®, Supercell'in ticari markasıdır.",
     "copyright": "Resmi reBrawl Arşivi. Topluluk tarafından yönetilen bir proje.",
-    "officialArchive": "Resmi Arşiv"
+    "officialArchive": "Resmi Arşiv",
+    "address": "2560 First St, Industrial Park, Apt 923\nDallas, FL 4102\nUnited States"
   },
   "downloadButton": {
     "startsIn": "İndirme {seconds} saniye içinde başlıyor..."
@@ -724,7 +800,7 @@
   "common": {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
-    "apkArchive": "APK Arşivi",
+    "apkArchive": "APK İndirmeleri",
     "skipToContent": "Ana içeriğe atla"
   }
 }

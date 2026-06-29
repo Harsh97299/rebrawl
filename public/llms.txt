@@ -15,10 +15,10 @@ The Official reBrawl Archive preserves every version of reBrawl, the most popula
 ## Key Pages
 
 - Homepage: https://rebrawl.app
-- Archive Downloads: https://rebrawl.app/archive
-- reBrawl Mods: https://rebrawl.app/archive/mods
-- reBrawl Classic: https://rebrawl.app/archive/classic
-- reBrawl Legacy: https://rebrawl.app/archive/legacy
+- Archive Downloads: https://rebrawl.app/download
+- reBrawl Mods: https://rebrawl.app/download/mods
+- reBrawl Classic: https://rebrawl.app/download/classic
+- reBrawl Legacy: https://rebrawl.app/download/legacy
 - FAQ: https://rebrawl.app/faq
 - About: https://rebrawl.app/about
 - Contact: https://rebrawl.app/contact

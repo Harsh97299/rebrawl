@@ -107,7 +107,7 @@ export function buildSoftwareApplicationJsonLd() {
     applicationCategory: "GameApplication",
     operatingSystem: "Android",
     softwareVersion: "44.0.100",
-    downloadUrl: `${BASE_URL}/archive`,
+    downloadUrl: `${BASE_URL}/download`,
     fileSize: "142 MB",
     requirements: "Android 6.0+",
     offers: {
@@ -165,7 +165,7 @@ export function buildWebSiteJsonLd() {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${BASE_URL}/archive?v={search_term_string}`,
+        urlTemplate: `${BASE_URL}/download?v={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },

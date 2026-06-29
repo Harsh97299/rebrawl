@@ -1,15 +1,17 @@
 "use client"
 import { useState, useEffect, useCallback } from "react"
 
-const COUNTDOWN_SECONDS = 10
+const COUNTDOWN_SECONDS = 15
 
 export default function DownloadButton({
   href,
   label,
+  countdownLabel,
   className,
 }: {
   href: string
   label: string
+  countdownLabel: string
   className: string
 }) {
   const [countdown, setCountdown] = useState<number | null>(null)
@@ -58,7 +60,7 @@ export default function DownloadButton({
               strokeLinecap="round"
             />
           </svg>
-          Download starts in {countdown}s...
+          {countdownLabel.replace("{seconds}", String(countdown))}
         </>
       ) : (
         <>

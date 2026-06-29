@@ -56,7 +56,7 @@ export default function Hero({ lang, dict }: HeroProps) {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
           <a
-            href={localePath("/archive/classic", lang)}
+            href={localePath("/download/classic", lang)}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-yellow text-bg-base rounded-xl font-extrabold text-lg hover:bg-brand-gold hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 shadow-xl shadow-brand-yellow/20"
           >
             <svg
@@ -71,7 +71,7 @@ export default function Hero({ lang, dict }: HeroProps) {
             {dict.hero.ctaDownload}
           </a>
           <a
-            href={localePath("/archive", lang)}
+            href={localePath("/download", lang)}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/15 text-white rounded-xl font-bold text-lg hover:bg-white/10 hover:border-white/25 transition-all duration-200"
           >
             {dict.hero.ctaArchive}

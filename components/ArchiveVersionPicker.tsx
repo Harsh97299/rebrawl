@@ -75,7 +75,7 @@ export default function ArchiveVersionPicker({ lang, dict }: ArchiveVersionPicke
         return (
           <Link
             key={v.id}
-            href={localePath(`/archive/${v.id}`, lang)}
+            href={localePath(`/download/${v.id}`, lang)}
             className={`group flex h-full flex-col overflow-hidden rounded-2xl bg-bg-elevated border transition-all duration-300 hover:-translate-y-1.5 ${a.border} ${a.glow} shadow-xl shadow-black/30`}
           >
             {/* Featured image */}

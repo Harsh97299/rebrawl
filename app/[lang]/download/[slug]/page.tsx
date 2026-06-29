@@ -117,7 +117,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: (page as { metaTitle: string }).metaTitle,
     description: (page as { description: string }).description.slice(0, 160),
-    alternates: getAlternates(`/archive/${slug}`, lang),
+    alternates: getAlternates(`/download/${slug}`, lang),
   }
 }
 
@@ -144,8 +144,8 @@ export default async function VersionPage({ params }: PageProps) {
           __html: JSON.stringify(
             buildBreadcrumbJsonLd([
               { name: dict.common.home, url: "/" },
-              { name: dict.common.apkArchive, url: "/archive" },
-              { name: versionName, url: `/archive/${slug}` },
+              { name: dict.common.apkArchive, url: "/download" },
+              { name: versionName, url: `/download/${slug}` },
             ], locale)
           ),
         }}
@@ -188,7 +188,7 @@ export default async function VersionPage({ params }: PageProps) {
               {dict.common.home}
             </Link>
             <span aria-hidden="true">›</span>
-            <Link href={localePath("/archive", locale)} className="hover:text-white transition-colors">
+            <Link href={localePath("/download", locale)} className="hover:text-white transition-colors">
               {dict.common.apkArchive}
             </Link>
             <span aria-hidden="true">›</span>
@@ -337,6 +337,7 @@ export default async function VersionPage({ params }: PageProps) {
             <DownloadButton
               href={version.downloadUrl}
               label={versionDict.cta}
+              countdownLabel={dict.versionPages.downloadCta.countdown}
               className={`inline-flex items-center gap-2.5 px-10 py-4 rounded-xl text-base font-extrabold shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.99] ${a.button}`}
             />
           </div>
@@ -371,7 +372,7 @@ export default async function VersionPage({ params }: PageProps) {
                 return (
                   <Link
                     key={v.id}
-                    href={localePath(`/archive/${v.id}`, locale)}
+                    href={localePath(`/download/${v.id}`, locale)}
                     className={`flex items-center gap-4 p-5 rounded-xl border bg-bg-elevated hover:bg-bg-hover transition-all duration-200 ${va.border}`}
                   >
                     <div className={`relative w-14 h-14 shrink-0 ${va.imageGlow}`}>

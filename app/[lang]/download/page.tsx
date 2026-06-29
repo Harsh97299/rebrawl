@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: dict.meta.archive.title,
     description: dict.meta.archive.description,
-    alternates: getAlternates("/archive", lang),
+    alternates: getAlternates("/download", lang),
   }
 }
 
@@ -37,7 +37,7 @@ export default async function ArchivePage({ params }: PageProps) {
           __html: JSON.stringify(
             buildBreadcrumbJsonLd([
               { name: dict.common.home, url: "/" },
-              { name: dict.common.apkArchive, url: "/archive" },
+              { name: dict.common.apkArchive, url: "/download" },
             ], lang as Locale)
           ),
         }}

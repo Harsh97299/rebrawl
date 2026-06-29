@@ -21,6 +21,7 @@ type FooterDict = {
   trademark: string;
   copyright: string;
   officialArchive: string;
+  address: string;
 };
 
 interface FooterProps {
@@ -32,7 +33,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   const navLinks = [
     { href: localePath("/", lang), label: dict.home },
     { href: localePath("/about", lang), label: dict.about },
-    { href: localePath("/archive", lang), label: dict.apkArchive },
+    { href: localePath("/download", lang), label: dict.apkArchive },
     { href: localePath("/faq", lang), label: dict.faq },
     { href: localePath("/contact", lang), label: dict.contact },
   ];
@@ -77,6 +78,9 @@ export default function Footer({ lang, dict }: FooterProps) {
             <p className="text-text-muted text-sm leading-relaxed max-w-xs">
               {dict.tagline}
             </p>
+            <address className="not-italic text-text-muted text-xs leading-relaxed max-w-xs mt-3 whitespace-pre-line">
+              {dict.address}
+            </address>
           </div>
 
           {/* Navigation */}

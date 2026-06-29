@@ -130,7 +130,7 @@ export default async function AboutPage({ params }: PageProps) {
 
           <div className="max-w-3xl">
             <h1 className="font-display text-5xl md:text-6xl font-extrabold text-white mb-4">
-              About <span className="text-brand-yellow">Us</span>
+              {t.heading} <span className="text-brand-yellow">{t.headingHighlight}</span>
             </h1>
             <p className="text-text-muted text-xl leading-relaxed">
               {t.heroSubtitle}
@@ -384,7 +384,7 @@ export default async function AboutPage({ params }: PageProps) {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href={localePath("/archive", lang as Locale)}
+              href={localePath("/download", lang as Locale)}
               className="px-8 py-3 rounded-xl bg-brand-yellow text-bg-base font-bold text-sm hover:bg-brand-gold transition-all duration-200 shadow-md shadow-brand-yellow/20"
             >
               {t.cta.browseArchive}
